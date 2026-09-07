@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recebemos o seu contato</title>
+<meta name="description" content="Recebemos a sua mensagem.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#080c1a">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<meta name="facebook-domain-verification" content="11botkgcba40pb3osep2qvar07lumc">
+<link rel="stylesheet" href="assets/css/site.css?v=4">
+<script src="assets/js/config.js?v=4"></script>
+<script src="assets/js/tracking.js?v=4"></script>
+</head>
+<body>
+
+<main class="doc centro">
+  <div class="icone" style="margin:0 auto 20px;width:64px;height:64px;border-radius:20px">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="width:30px;height:30px"><polyline points="20 6 9 17 4 12"/></svg>
+  </div>
+  <h1>Recebemos o seu contato.</h1>
+  <p class="chamada">Já está com a gente. A resposta sai no mesmo dia útil, pelo WhatsApp que você deixou.</p>
+
+  <div class="acoes acoes--centro" style="margin-top:30px">
+    <a class="btn btn--zap btn--g" data-zap="Olá! Acabei de preencher o formulário no site." data-ms="whatsapp" data-ms-origem="obrigado">Adiantar pelo WhatsApp</a>
+    <a class="btn btn--linha-escura btn--g" id="voltar" href="/">Voltar</a>
+  </div>
+</main>
+
+<footer class="rodape" style="margin-top:40px">
+  <div class="env">
+    <div class="rodape__fim" style="padding-top:0;border:0">
+      <p>© <span id="ano">2026</span></p>
+      <p><a href="privacidade.html">Política de privacidade</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js?v=4"></script>
+<script>
+  document.getElementById('ano').textContent = new Date().getFullYear();
+  /* volta para a página de onde a pessoa veio (landing ou institucional) */
+  try {
+    var de = document.referrer;
+    if (de && de.indexOf(location.host) > -1 && de.indexOf('obrigado') === -1) {
+      document.getElementById('voltar').href = de;
+    }
+  } catch (e) {}
+  /* Confirmação de lead: conta a conversão ao abrir.
+     Só entra em uso quando paginaObrigado = true no config.js. */
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.MS_CONFIG && window.MS_CONFIG.paginaObrigado && window.MS) window.MS.evento('lead');
+  });
+</script>
+</body>
+</html>
