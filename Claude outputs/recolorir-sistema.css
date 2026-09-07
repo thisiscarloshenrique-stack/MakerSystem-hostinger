@@ -1,0 +1,46 @@
+/* ============================================================
+   VENDE+ — recolorização da marca
+   Arquivo a alterar: css/app.css do sistema (vendemais.makersystem.com.br)
+   Data: 07/09/2026
+
+   O QUE FAZER: dentro do bloco :root do app.css, substituir os oito
+   valores --brand-* pelos de baixo. Não mexer em mais nada — as cores
+   semânticas (--green-*, --red-*, --amber-*, --blue-*, --ink-*)
+   continuam como estão, porque significam status e não marca.
+
+   POR QUE SÓ ISSO BASTA: o sistema inteiro se pinta a partir desses
+   oito tokens. Trocando aqui, muda a barra lateral, os botões, os
+   realces, os selos e os focos de uma vez só.
+   ============================================================ */
+
+:root{
+  /* ---- ANTES (índigo/roxo) ----      ---- DEPOIS (navy da marca) ---- */
+  --brand-900:#041028;   /* era #191635 — fundo da barra lateral        */
+  --brand-800:#04173A;   /* era #241f4d — segundo nível do escuro       */
+  --brand-700:#062B63;   /* era #3730a3 — AZUL MARINHO OFICIAL do Vende+*/
+  --brand-600:#0A57B5;   /* era #4f46e5 — botão primário                */
+  --brand-500:#1268CF;   /* era #6366f1 — hover e realce                */
+  --brand-300:#8FB4E8;   /* era #a5b4fc — texto secundário no escuro    */
+  --brand-100:#DDE9F9;   /* era #e0e7ff — pastilhas e fundos suaves     */
+  --brand-50:#F1F6FC;    /* era #eef2ff — fundo mais claro              */
+}
+
+/* ============================================================
+   CONTRASTE CONFERIDO (WCAG 2.1) — nenhum caso piora em relação ao roxo:
+
+     branco sobre o botão --brand-600 ......  6,90:1   (antes 6,29:1)  AAA
+     branco sobre a barra --brand-900 ...... 18,92:1   (antes 17,39:1) AAA
+     --brand-300 sobre --brand-900 .........  8,89:1                   AAA
+     --brand-700 sobre --brand-50 .......... 12,60:1                   AAA
+     --brand-700 sobre --brand-100 ......... 11,15:1                   AAA
+
+   O verde da marca (#18D64A) NÃO entra aqui de propósito: dentro do
+   sistema o verde significa "deu certo / está ativo", e misturar marca
+   com status confunde. Ele fica para os pontos de venda (site, landing,
+   material de divulgação). É a mesma regra do guia: não usar a mesma cor
+   para dizer coisas diferentes.
+   ============================================================ */
+
+/* OPCIONAL — se o --violet-600 (#7c3aed) ainda aparecer em algum selo
+   depois da troca, ele é resto do tema roxo. Trocar por: */
+/* --violet-600:#0A3C86; */
