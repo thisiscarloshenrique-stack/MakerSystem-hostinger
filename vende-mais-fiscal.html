@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Vende+ · O sistema para loja de moda que diz qual cliente chamar hoje</title>
-<meta name="description" content="O Vende+ aprende o gosto de cada cliente sozinho, cruza com o seu estoque e entrega todo dia quem chamar, qual peça oferecer e por quê. PDV, estoque com grade, condicional, financeiro e catálogo online. 14 dias grátis, sem cartão.">
+<title>Vende+ Fiscal · NFC-e e NF-e sem pagar por sistema inteiro</title>
+<meta name="description" content="Emissão de NFC-e no balcão e NF-e para o cliente, cancelamento, carta de correção, contingência e os XMLs do mês entregues ao seu contador. Simples, no navegador, para quem só precisa que a nota saia.">
 <meta name="theme-color" content="#062B63">
-<link rel="canonical" href="https://makersystem.com.br/vende-mais.html">
+<link rel="canonical" href="https://makersystem.com.br/vende-mais-fiscal.html">
 <link rel="icon" href="img/vendemais-favicon-32.png" sizes="32x32">
 <link rel="icon" href="img/vendemais-favicon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="img/vendemais-favicon-180.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Vende+ · O sistema para loja de moda que diz qual cliente chamar hoje">
-<meta property="og:description" content="Todo dia de manhã, uma fila curta de clientes para chamar — com a peça certa e o motivo por escrito.">
-<meta property="og:url" content="https://makersystem.com.br/vende-mais.html">
+<meta property="og:title" content="Vende+ Fiscal · NFC-e e NF-e sem pagar por sistema inteiro">
+<meta property="og:description" content="Faz uma coisa e faz bem: a nota sai, o XML fica guardado e o contador pega sozinho no fim do mês.">
+<meta property="og:url" content="https://makersystem.com.br/vende-mais-fiscal.html">
 <meta property="og:site_name" content="Vende+">
 <meta property="og:image" content="https://makersystem.com.br/assets/img/og-vende-mais.png">
 <meta property="og:locale" content="pt_BR">
@@ -30,12 +30,13 @@
 <script src="assets/js/tracking.js?v=4"></script>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Vende+",
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Vende+ Fiscal",
 "applicationCategory":"BusinessApplication","operatingSystem":"Web",
-"description":"Sistema de gestão para lojas de moda com PDV, estoque com grade de tamanhos, catálogo online, emissão fiscal e gatilhos de venda.",
+"description":"Emissor de NFC-e e NF-e no navegador, com guarda de XML, cancelamento, carta de correção e portal para o contador.",
 "offers":{"@type":"Offer","priceCurrency":"BRL","availability":"https://schema.org/InStock"}}
 </script>
 <style>
+
 /* ==========================================================================
    VENDE+ — design tokens
    Paleta oficial: navy #062B63 · verde #18D64A · branco · preto
@@ -493,7 +494,11 @@ h1 .hl{color:var(--green-bright)}
 .lgpd a{color:var(--green-ink);text-decoration:underline}
 @media (min-width:760px){.lgpd{left:auto;right:20px;max-width:560px}}
 
-/* ---------- seletor de segmento (Moda / Restaurante / Fiscal) ---------- */
+/* ==========================================================================
+   VENDE+ FISCAL — componentes desta página
+   ========================================================================== */
+
+/* ---------- seletor de segmento ---------- */
 .seg{background:var(--navy-900);border-bottom:1px solid rgba(255,255,255,.10)}
 .seg .wrap{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;padding:.55rem 0}
 .seg .rot{font-size:var(--fs-xs);letter-spacing:.12em;text-transform:uppercase;color:#93A9C9;font-weight:800;margin-right:.35rem}
@@ -501,7 +506,58 @@ h1 .hl{color:var(--green-bright)}
   font-size:var(--fs-sm);font-weight:700;text-decoration:none;color:#C9D8EE;border:1px solid rgba(255,255,255,.22)}
 .seg a:hover{background:rgba(255,255,255,.10);color:#fff}
 .seg a[aria-current="page"]{background:var(--green);color:var(--navy);border-color:var(--green)}
-@media (min-width:861px){.site-footer .cols--5{grid-template-columns:1.35fr repeat(4,1fr)}}
+
+/* ---------- cartão de documento autorizado (mockup do hero) ---------- */
+.doc{background:var(--mock-bg);color:var(--mock-ink);border-radius:16px;padding:1.1rem;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.doc + .doc{margin-top:.7rem}
+.doc .dtop{display:flex;align-items:center;gap:.75rem;padding-bottom:.8rem;border-bottom:1px solid var(--mock-line)}
+.doc .selo{flex:none;width:42px;height:42px;border-radius:11px;background:rgba(8,117,39,.14);color:#087527;
+  display:grid;place-items:center;font-weight:900;font-size:1.1rem}
+.doc .dtop b{display:block;font-size:1.02rem;letter-spacing:-.01em;color:var(--mock-ink)}
+.doc .dtop span{font-size:var(--fs-xs);color:var(--mock-ink-3)}
+.doc .sit{margin-left:auto;text-align:right;flex:none}
+.doc .sit b{display:block;font-size:.92rem;font-weight:800;color:#087527;letter-spacing:-.01em}
+.doc .sit span{font-size:.625rem;letter-spacing:.12em;color:var(--mock-ink-3);font-weight:700}
+.doc dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem .9rem;margin:.85rem 0 0}
+.doc dt{font-size:var(--fs-xs);color:var(--mock-ink-3);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.doc dd{margin:0;font-size:var(--fs-sm);color:var(--mock-ink);font-variant-numeric:tabular-nums;word-break:break-all}
+.doc .row{display:flex;gap:.55rem;margin-top:.95rem}
+.doc .row .btn{flex:1;min-height:44px;font-size:var(--fs-sm);padding:.5rem .8rem}
+.doc .row .btn--outline{color:var(--mock-ink);border-color:var(--mock-line);background:transparent}
+
+/* ---------- é para você / não é para você ---------- */
+.serve{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);margin-top:var(--s4)}
+@media (max-width:820px){.serve{grid-template-columns:1fr}}
+.quadro{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--s3)}
+.quadro h3{font-size:var(--fs-h3);font-weight:800;margin-bottom:.2rem}
+.quadro .sub{font-size:var(--fs-sm);color:var(--ink-3);margin-bottom:var(--s2)}
+.quadro--nao{background:var(--bg-soft);border-color:var(--line-strong)}
+.naos{display:grid;gap:.7rem}
+.naos li{display:flex;gap:.7rem;align-items:flex-start;font-size:var(--fs-sm);color:var(--ink-2)}
+.naos .xx{flex:none;width:22px;height:22px;border-radius:6px;background:#FDECEA;color:#A32B24;
+  display:grid;place-items:center;font-size:.72rem;font-weight:900;margin-top:.15rem}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .naos .xx{background:#4A1512;color:#FFC9C4}
+}
+
+/* ---------- passos ---------- */
+.fluxo{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s2);margin-top:var(--s5)}
+@media (max-width:820px){.fluxo{grid-template-columns:1fr}}
+.passo{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--s3)}
+.passo .et{font-size:var(--fs-xs);font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green-ink);margin-bottom:.45rem}
+.passo h3{font-size:1.05rem;font-weight:800;margin-bottom:.35rem}
+.passo p{font-size:var(--fs-sm);color:var(--ink-2)}
+
+/* ---------- plano único ---------- */
+.plano-um{max-width:520px;margin:var(--s5) auto 0}
+.plano-um .plan{padding:var(--s4)}
+
+/* ---------- caminho de crescimento ---------- */
+.cresce{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);margin-top:var(--s5)}
+@media (max-width:820px){.cresce{grid-template-columns:1fr}}
+.cresce .card h3{margin-bottom:.5rem}
+.cresce .card .btn{margin-top:var(--s3)}
+
 </style>
 </head>
 <body>
@@ -509,18 +565,18 @@ h1 .hl{color:var(--green-bright)}
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="#topo" aria-label="Vende+ — sistema para loja de moda">
+    <a class="brand" href="#topo" aria-label="Vende+ Fiscal — emissor de nota fiscal">
       <img src="img/vendemais-logo-branco.png" alt="Vende+" width="107" height="36">
-      <span class="sub">Sistema para loja de moda</span>
+      <span class="sub">Só a nota fiscal</span>
     </a>
     <nav class="nav" aria-label="Seções da página">
-      <a href="#problema">Por que</a>
-      <a href="#gatilhos">Gatilhos</a>
-      <a href="#recursos">Recursos</a>
-      <a href="#planos">Planos</a>
+      <a href="#para-quem">Para quem é</a>
+      <a href="#recursos">O que faz</a>
+      <a href="#contador">Contador</a>
+      <a href="#preco">Preço</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
-    <a class="btn btn--primary btn--sm" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=site" data-teste data-ms="teste" data-ms-origem="topo">14 dias grátis</a>
+    <a class="btn btn--primary btn--sm" href="#falar" data-ms="cta" data-ms-origem="topo">Falar sobre o Fiscal</a>
     <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="nav-mob" aria-label="Abrir menu">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -528,10 +584,10 @@ h1 .hl{color:var(--green-bright)}
   <nav class="nav-mob" id="nav-mob" aria-label="Menu">
     <div class="wrap">
       <ul>
-        <li><a href="#problema">Por que</a></li>
-        <li><a href="#gatilhos">Gatilhos</a></li>
-        <li><a href="#recursos">Recursos</a></li>
-        <li><a href="#planos">Planos</a></li>
+        <li><a href="#para-quem">Para quem é</a></li>
+        <li><a href="#recursos">O que faz</a></li>
+        <li><a href="#contador">Contador</a></li>
+        <li><a href="#preco">Preço</a></li>
         <li><a href="#duvidas">Dúvidas</a></li>
       </ul>
     </div>
@@ -541,9 +597,9 @@ h1 .hl{color:var(--green-bright)}
 <div class="seg">
   <div class="wrap">
     <span class="rot">Vende+ para</span>
-    <a href="vende-mais.html" aria-current="page">Moda</a>
+    <a href="vende-mais.html">Moda</a>
     <a href="vende-mais-restaurante.html">Restaurante</a>
-    <a href="vende-mais-fiscal.html">Só nota fiscal</a>
+    <a href="vende-mais-fiscal.html" aria-current="page">Só nota fiscal</a>
   </div>
 </div>
 
@@ -553,179 +609,147 @@ h1 .hl{color:var(--green-bright)}
   <section class="hero">
     <div class="wrap grid">
       <div>
-        <p class="pill"><span class="dot" aria-hidden="true"></span>14 dias grátis, sem cartão — feito para loja de roupa</p>
-        <h1>Sua cliente não sumiu.<br><span class="hl">Ela só não foi chamada.</span></h1>
-        <p class="lead">O Vende+ aprende o gosto de cada cliente sozinho, cruza com o que está pendurado na sua arara e te entrega, todo dia, <strong style="color:#fff">quem chamar, qual peça oferecer e por quê</strong>.</p>
+        <p class="pill"><span class="dot" aria-hidden="true"></span>No ar hoje · emissor simples, sem módulo que você não usa</p>
+        <h1>Você não precisa de um sistema inteiro.<br><span class="hl">Precisa que a nota saia.</span></h1>
+        <p class="lead">O Vende+ Fiscal faz uma coisa só e faz bem: emite <strong style="color:#fff">NFC-e no balcão e NF-e para o cliente</strong>, guarda os XMLs e entrega tudo ao seu contador no fim do mês. Sem tela que você nunca vai abrir e sem mensalidade de sistema completo.</p>
         <div class="actions">
-          <a class="btn btn--primary" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=site" data-teste data-ms="teste" data-ms-origem="hero">Começar 14 dias grátis</a>
-          <a class="btn btn--ghost" href="#demo" data-demo data-ms="demo" data-ms-origem="hero">Ver a demonstração</a>
+          <a class="btn btn--primary" href="#falar" data-ms="cta" data-ms-origem="hero">Falar sobre o Fiscal</a>
+          <a class="btn btn--ghost" href="#para-quem" data-ms="cta" data-ms-origem="hero-secundario">Ver se serve para mim</a>
         </div>
         <div class="trust">
-          <span><b>Você mesmo cria a loja</b> — em dois minutos</span>
-          <span><b>Sem instalar</b> — abre no navegador</span>
-          <span><b>Sem cartão</b> para testar</span>
+          <span><b>Abre no navegador</b> — sem instalar nada</span>
+          <span><b>XML guardado</b> pelos 5 anos que a lei pede</span>
+          <span><b>Contador pega sozinho</b> — sem te ligar dia 5</span>
         </div>
       </div>
 
-      <div class="mock" role="img" aria-label="Exemplo da tela de gatilhos do Vende+: Juliana Prado, 87% de chance, vestido midi floral tamanho M em estoque, com quatro motivos listados.">
-        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>Vende+ · gatilhos de hoje</span></div>
+      <div class="mock" role="img" aria-label="Exemplo do Vende+ Fiscal: NFC-e número 000.124.318 autorizada pela SEFAZ às 19h42, com protocolo e chave de acesso, e os botões de imprimir cupom e enviar por e-mail.">
+        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>Vende+ Fiscal · emissão</span></div>
 
-        <div class="card-lead">
-          <div class="top">
-            <span class="avatar" aria-hidden="true">JP</span>
-            <span class="who"><b>Juliana Prado</b><span>última compra há 41 dias</span></span>
-            <span class="chance"><b>87%</b><span>CHANCE</span></span>
+        <div class="doc">
+          <div class="dtop">
+            <span class="selo" aria-hidden="true">✓</span>
+            <span><b>NFC-e 000.124.318</b><span>Série 1 · venda no balcão</span></span>
+            <span class="sit"><b>Autorizada</b><span>SEFAZ · 19:42</span></span>
           </div>
-          <div class="piece">
-            <span class="sw" aria-hidden="true"></span>
-            <span><b>Vestido midi floral</b><span>Tam. M · em estoque</span></span>
-          </div>
-          <ul class="why">
-            <li>Levou vestido nas 3 últimas compras</li>
-            <li>Estampa floral aparece em 4 das 6 peças dela</li>
-            <li>Costuma voltar a cada 34 dias — já passou de 41</li>
-            <li>Preço dentro do que ela costuma pagar por peça</li>
-          </ul>
+          <dl>
+            <dt>Protocolo</dt><dd>317260009418823</dd>
+            <dt>Chave</dt><dd>3226 0932 5407 8400 0137 6500 1000 1243 1810 4318 22</dd>
+            <dt>Total</dt><dd>R$ 148,90 · cartão de débito</dd>
+          </dl>
           <div class="row">
-            <span class="btn btn--primary">Chamar no WhatsApp</span>
-            <span class="btn btn--outline">Levar pro PDV</span>
+            <span class="btn btn--primary">Imprimir cupom</span>
+            <span class="btn btn--outline">Enviar por e-mail</span>
           </div>
         </div>
 
-        <div class="card-lead">
-          <div class="top">
-            <span class="avatar" aria-hidden="true">RC</span>
-            <span class="who"><b>Renata Castro</b><span>aniversário este mês</span></span>
-            <span class="chance"><b>74%</b><span>CHANCE</span></span>
-          </div>
-          <div class="piece">
-            <span class="sw" aria-hidden="true" style="background:linear-gradient(135deg,#EDEAE3,#CFC8BA)"></span>
-            <span><b>Blazer alfaiataria off-white</b><span>Tam. G · última peça</span></span>
+        <div class="doc">
+          <div class="dtop">
+            <span class="selo" aria-hidden="true">✓</span>
+            <span><b>NF-e 000.001.204</b><span>Série 1 · venda para empresa</span></span>
+            <span class="sit"><b>Autorizada</b><span>SEFAZ · 18:05</span></span>
           </div>
         </div>
 
-        <p class="foot">Recalculado a cada venda — nada de lista velha.</p>
+        <p class="foot">Autorizou, imprimiu e guardou o XML. É esse o trabalho.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ PRINTS DO SISTEMA ============ -->
-  <section class="band band--soft" id="por-dentro">
+  <!-- ============ PARA QUEM É ============ -->
+  <section class="band" id="para-quem">
     <div class="wrap">
-      <p class="eyebrow">Por dentro</p>
-      <h2 class="section-title">É o sistema rodando, com uma loja de demonstração.</h2>
-      <p class="lead">No computador da loja, no tablet do provador e no celular da cliente — é o mesmo sistema, sem instalar nada.</p>
+      <p class="eyebrow">Antes de tudo</p>
+      <h2 class="section-title">Este aqui é o produto pequeno. E ele foi feito pequeno de propósito.</h2>
+      <p class="lead">A gente prefere perder a venda a te empurrar o plano errado. O Vende+ Fiscal resolve a obrigação e o básico do dia. Se a sua operação precisa de mais que isso, o certo é o Vende+ completo — e a gente vai dizer isso na conversa, não depois que você assinar.</p>
 
-      <div class="shots shots--par">
-        <figure class="shot" style="margin:0">
-          <img src="img/print-gatilhos.jpg" width="1240" height="636" loading="lazy" decoding="async"
-               alt="Tela Vende+ do sistema: 48 oportunidades abertas, R$ 7,4 mil de potencial na mesa e a fila de contato do dia, cada linha com a cliente, a peça sugerida e os motivos escritos.">
-          <figcaption>A fila de contatos do dia, no computador da loja.</figcaption>
-        </figure>
-        <figure class="shot" style="margin:0">
-          <img src="img/print-pdv.jpg" width="1240" height="636" loading="lazy" decoding="async"
-               alt="PDV do Vende+ com a grade de tamanhos aberta: vestido floral midi azul em PP, P, M, G e GG, com o estoque de cada tamanho.">
-          <figcaption>O PDV escolhendo o tamanho na grade, com o estoque de cada peça à vista.</figcaption>
-        </figure>
+      <div class="serve">
+        <div class="quadro">
+          <h3>É para você se…</h3>
+          <p class="sub">Nesses casos o Fiscal resolve inteiro.</p>
+          <ul class="checks">
+            <li><span class="ck" aria-hidden="true">✓</span>O seu contador está cobrando NFC-e ou NF-e e você não emite hoje</li>
+            <li><span class="ck" aria-hidden="true">✓</span>Você saiu do MEI e agora é obrigado a emitir</li>
+            <li><span class="ck" aria-hidden="true">✓</span>Você paga caro por um sistema grande e só usa a tela de nota</li>
+            <li><span class="ck" aria-hidden="true">✓</span>Você vende no balcão, quer o cupom saindo e o caixa fechando</li>
+            <li><span class="ck" aria-hidden="true">✓</span>Você precisa dos XMLs organizados sem virar assunto todo mês</li>
+            <li><span class="ck" aria-hidden="true">✓</span>Você tem um ponto só e não quer instalar servidor em lugar nenhum</li>
+          </ul>
+        </div>
+
+        <div class="quadro quadro--nao">
+          <h3>Não é para você se…</h3>
+          <p class="sub">Aqui o Fiscal vai te deixar na mão — e o certo é o Vende+ completo.</p>
+          <ul class="naos">
+            <li><span class="xx" aria-hidden="true">✕</span>Você precisa de grade de cor e tamanho por peça</li>
+            <li><span class="xx" aria-hidden="true">✕</span>Você trabalha com condicional, romaneio ou peça “na rua”</li>
+            <li><span class="xx" aria-hidden="true">✕</span>Você vende no crediário e precisa controlar parcela e cobrança</li>
+            <li><span class="xx" aria-hidden="true">✕</span>Você paga comissão e acompanha meta de vendedor</li>
+            <li><span class="xx" aria-hidden="true">✕</span>Você quer os gatilhos de venda dizendo quem chamar hoje</li>
+            <li><span class="xx" aria-hidden="true">✕</span>Você quer catálogo online, comanda de mesa ou tela de cozinha</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ O PROBLEMA ============ -->
-  <section class="band" id="problema">
+  <!-- ============ O QUE FAZ ============ -->
+  <section class="band band--navy" id="recursos">
     <div class="wrap">
-      <p class="eyebrow">O buraco de sempre</p>
-      <h2 class="section-title">O sistema que você tem hoje só sabe o que já aconteceu.</h2>
-      <p class="lead">Ele fecha o caixa, imprime o cupom e some. Quem decide para quem mandar mensagem continua sendo a sua memória — e a sua memória tem uns 40 nomes, não 800.</p>
+      <p class="eyebrow">O que ele faz</p>
+      <h2 class="section-title">Tudo que a obrigação exige. Nada além disso.</h2>
+      <p class="lead">A lista abaixo é curta de propósito — e cada item aqui já está funcionando, não é plano para o ano que vem.</p>
 
-      <ul class="pains">
-        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>A cliente boa some por três meses e ninguém percebe.</p></li>
-        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>Você manda a mesma foto para a lista inteira — e a maioria não veste aquilo.</p></li>
-        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>A peça parada há 90 dias iria embora se tivesse sido oferecida para a pessoa certa.</p></li>
-        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>A vendedora nova não sabe o que cada cliente gosta. Esse conhecimento só existe na cabeça de quem já foi embora.</p></li>
-        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>Domingo à noite você olha a semana e não sabe dizer o que fazer na segunda.</p></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ GATILHOS ============ -->
-  <section class="band band--navy" id="gatilhos">
-    <div class="wrap">
-      <p class="eyebrow">O coração do Vende+</p>
-      <h2 class="section-title">Uma fila de contatos, pronta, todo dia de manhã.</h2>
-      <p class="lead">Não é disparo em massa. É uma lista curta, ordenada por chance de fechar, em que cada linha vem com a peça certa e o motivo por escrito — para a vendedora abrir o WhatsApp já sabendo o que dizer.</p>
-
-      <div class="grid-3">
+      <div class="features">
         <article class="card">
-          <span class="num" aria-hidden="true">1</span>
-          <h3>Quem chamar</h3>
-          <p>O sistema olha o ritmo de compra de cada cliente. Quem já passou do tempo dela sobe na fila; quem comprou ontem não é incomodado.</p>
+          <h3>NFC-e no balcão</h3>
+          <p>Venda lançada, cupom autorizado e impresso na hora, em impressora térmica comum. Se a SEFAZ estiver fora, entra em contingência e transmite quando voltar.</p>
         </article>
         <article class="card">
-          <span class="num" aria-hidden="true">2</span>
-          <h3>O que oferecer</h3>
-          <p>Escolhe uma peça específica do seu estoque: tipo que ela leva, cor que ela usa, tamanho dela disponível na grade e preço na faixa que ela costuma pagar.</p>
+          <h3>NF-e para o cliente</h3>
+          <p>Nota modelo 55 para venda a empresa, com destinatário, transporte e os campos que o contador cobra. DANFE em PDF para imprimir ou mandar por e-mail.</p>
         </article>
         <article class="card">
-          <span class="num" aria-hidden="true">3</span>
-          <h3>E por quê</h3>
-          <p>Cada sugestão vem com os motivos em português. Ninguém precisa confiar numa caixa-preta — dá para bater o olho e ver se faz sentido.</p>
+          <h3>Cancelamento e carta de correção</h3>
+          <p>Errou o valor ou o cliente desistiu? Cancela dentro do prazo legal pelo próprio sistema. Errou um dado que a lei permite corrigir? Emite a carta de correção sem ligar para ninguém.</p>
+        </article>
+        <article class="card">
+          <h3>XML guardado e organizado</h3>
+          <p>Todo documento fica guardado pelos cinco anos que a lei pede, com busca por número, data, cliente e situação. Nada de pasta no computador do caixa que some quando a máquina queima.</p>
+        </article>
+        <article class="card">
+          <h3>Entrada de nota por XML</h3>
+          <p>Chegou mercadoria? Você joga o XML do fornecedor e o sistema lê os produtos, as quantidades e o custo. Não precisa digitar nota de compra item por item.</p>
+        </article>
+        <article class="card">
+          <h3>PDV, estoque simples e caixa</h3>
+          <p>Vem junto o básico do dia: vender, ver o que tem, receber em dinheiro, cartão ou Pix e fechar o caixa no fim do expediente. Sem grade, sem condicional — o simples mesmo.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ MENSAGEM PRONTA ============ -->
-  <section class="band">
+  <!-- ============ PORTAL DO CONTADOR ============ -->
+  <section class="band band--soft" id="contador">
     <div class="wrap grid-2">
       <div>
-        <p class="eyebrow">Da fila para a conversa</p>
-        <h2 class="section-title">A mensagem sai pronta — com a foto da peça junto.</h2>
-        <p class="lead">Você clica em Enviar e o sistema escreve o texto com o nome da cliente, a peça, o tamanho e o preço. O WhatsApp abre com tudo pronto e a foto da peça vai junto. Dá para editar antes de mandar, claro.</p>
+        <p class="eyebrow">Já está no ar</p>
+        <h2 class="section-title">O seu contador não precisa mais te ligar dia 5.</h2>
+        <p class="lead">Todo mês é a mesma novela: o escritório pede os arquivos, você não sabe onde estão, alguém manda um zip pelo WhatsApp e falta nota. O Vende+ tem um portal onde o próprio contador entra e puxa o mês fechado, sozinho, sem passar por você.</p>
         <ul class="checks">
-          <li><span class="ck" aria-hidden="true">✓</span>Nada de copiar e colar de bloco de notas — nem de escrever a mesma coisa quarenta vezes.</li>
-          <li><span class="ck" aria-hidden="true">✓</span>Cada contato fica registrado: feito, com sucesso ou sem sucesso.</li>
-          <li><span class="ck" aria-hidden="true">✓</span>O que deu certo ensina o sistema a ordenar melhor a fila de amanhã.</li>
+          <li><span class="ck" aria-hidden="true">✓</span>XMLs de saída e de entrada do mês, num pacote só</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Relatório de vendas, cancelamentos e numeração — para ver se falta nota</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Totais por CFOP e por NCM, do jeito que o escritório usa</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Acesso só de leitura: ele vê o fiscal, não mexe na sua empresa</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Se ele atende várias empresas suas, troca de empresa no próprio portal</li>
         </ul>
-      </div>
-      <figure class="shot shot--linha" style="margin:0">
-        <img src="img/print-mensagem.jpg" width="1240" height="137" loading="lazy" decoding="async"
-             alt="Duas linhas da fila de contato: cliente, ritmo de compra, a peça sugerida com tamanho e preço, os motivos em português e o botão Enviar.">
-        <figcaption>Cada linha já vem com a peça, o motivo e o botão que abre a conversa.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ============ PERFIL APRENDIDO ============ -->
-  <section class="band band--soft">
-    <div class="wrap grid-2">
-      <div>
-        <p class="eyebrow">Sem formulário, sem cadastro extra</p>
-        <h2 class="section-title">O gosto da cliente é aprendido na hora de vender.</h2>
-        <p class="lead">A vendedora só faz o que já faria: registra a venda. O sistema tira dali cor, tipo de peça, tamanho, faixa de preço, tecido, estilo e ocasião — e vai formando o perfil sozinho.</p>
-        <ul class="checks">
-          <li><span class="ck" aria-hidden="true">✓</span><span><strong>Presente não suja o perfil.</strong> Uma etiqueta no cupom diz “é presente” e para quem — o tamanho e a cor vão para quem vai vestir, não para quem pagou.</span></li>
-          <li><span class="ck" aria-hidden="true">✓</span><span><strong>O sistema é honesto sobre o que sabe.</strong> O perfil aparece como aprendendo, formando ou consolidado, conforme o número de peças.</span></li>
-          <li><span class="ck" aria-hidden="true">✓</span><span><strong>Venda cancelada desfaz o aprendizado</strong>, para não deixar gosto errado gravado.</span></li>
-        </ul>
+        <p class="lead" style="font-size:var(--fs-sm)">O portal fica em <strong>contador.makersystem.com.br</strong> e o acesso é criado junto com a sua conta.</p>
       </div>
 
-      <div class="profile">
-        <div class="head">
-          <span class="avatar" aria-hidden="true">MS</span>
-          <span>
-            <b style="display:block;font-size:1.05rem">Marina Souza</b>
-            <span class="tag">perfil consolidado · 14 peças</span>
-          </span>
-        </div>
-        <ul>
-          <li>Veste M em blusa, 38 em calça</li>
-          <li>Cores: preto, off-white, terracota</li>
-          <li>Leva vestido e blusa; quase nunca calça</li>
-          <li>Ticket médio por peça: R$ 189</li>
-          <li>Volta a cada 34 dias, quase sempre no sábado</li>
-          <li>Paga no cartão, quase sempre em 2×</li>
-        </ul>
+      <div class="card">
+        <h3>Por que isso importa mais do que parece</h3>
+        <p>Nota fiscal não é só imprimir cupom. O problema de verdade aparece na apuração: falta um XML, a numeração pula, ninguém sabe o que foi cancelado — e aí vira multa, ou vira honorário extra do escritório para “organizar”.</p>
+        <p style="margin-top:var(--s2)">Quando o contador puxa direto da fonte, uma vez por mês, esse tipo de furo aparece cedo, enquanto ainda dá para corrigir. É a parte chata que a maioria dos emissores baratos simplesmente não faz.</p>
       </div>
     </div>
   </section>
@@ -734,203 +758,111 @@ h1 .hl{color:var(--green-bright)}
   <section class="band">
     <div class="wrap">
       <p class="eyebrow">Como começa</p>
-      <h2 class="section-title">Da criação da loja até a primeira fila de contatos.</h2>
+      <h2 class="section-title">Três coisas, e a primeira nota sai.</h2>
+      <p class="lead">Nenhum emissor do mundo pula estas etapas — são exigência da SEFAZ, não do sistema. A diferença é que a gente faz elas com você, sem te mandar procurar tutorial no YouTube.</p>
 
-      <div class="grid-3">
-        <article class="card">
-          <span class="num" aria-hidden="true">1</span>
-          <h3>Você cria a loja sozinho</h3>
-          <p>O cadastro não pede cartão: nome, cidade e pronto — 14 dias de teste. A loja nasce vazia, do jeito certo; se quiser ver o sistema cheio antes, um botão carrega a base de exemplo e outro zera.</p>
+      <div class="fluxo">
+        <article class="passo">
+          <p class="et">1 · Certificado</p>
+          <h3>Certificado digital A1</h3>
+          <p>É o documento que assina a nota no seu CNPJ. Se você já tem, é só subir o arquivo. Se não tem, a gente indica onde comprar e ajuda a instalar.</p>
         </article>
-        <article class="card">
-          <span class="num" aria-hidden="true">2</span>
-          <h3>Vocês vendem normalmente</h3>
-          <p>PDV com busca de peça, leitura de código de barras, grade, desconto por item e condicional. Cada venda registrada alimenta o perfil das clientes sem ninguém digitar nada a mais.</p>
+        <article class="passo">
+          <p class="et">2 · Credenciamento</p>
+          <h3>Liberação na SEFAZ</h3>
+          <p>A sua empresa precisa estar credenciada para emitir NFC-e no seu estado. A gente confere junto com o seu contador e resolve o que faltar.</p>
         </article>
-        <article class="card">
-          <span class="num" aria-hidden="true">3</span>
-          <h3>A fila começa a aparecer</h3>
-          <p>Com as primeiras compras registradas, a aba Vende+ passa a mostrar quem chamar. Cada contato marcado como sucesso ou sem sucesso deixa o sistema mais afiado.</p>
-        </article>
-      </div>
-
-      <div class="card first-day">
-        <div>
-          <h3 style="margin-bottom:var(--s2)">O que você já tem no primeiro dia</h3>
-          <ul class="checks two-col">
-            <li><span class="ck" aria-hidden="true">✓</span>PDV com grade de tamanhos, código de barras e desconto por peça</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Estoque por produto, cor e tamanho, com custo, markup e margem</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Etiquetas de preço com código de barras por tamanho</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Cadastro de clientes, fornecedores e vendedores</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Caixa, contas a pagar e a receber</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Condicional com romaneio e catálogo online</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Ajuda dentro do sistema, 24 horas</li>
-          </ul>
-        </div>
-        <div class="first-day__cta">
-          <a class="btn btn--primary" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=site" data-teste data-ms="teste" data-ms-origem="primeiro-dia">Criar minha loja</a>
-          <p>Sem cartão. Se não servir, é só parar de usar.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ NA PRÁTICA ============ -->
-  <section class="band band--navy" id="recursos">
-    <div class="wrap">
-      <p class="eyebrow">Na prática</p>
-      <h2 class="section-title">O que a sua loja resolve todo dia.</h2>
-      <p class="lead">É aqui que um sistema se prova: no que dá trabalho na segunda-feira, não no que fica bonito na apresentação.</p>
-
-      <div class="grid-2" style="margin-top:var(--s5)">
-        <div>
-          <p class="eyebrow">Da caixa para a arara</p>
-          <h3 style="font-size:var(--fs-h3);font-weight:800;margin-bottom:var(--s2)">A nota do fornecedor vira estoque — e sai etiquetada.</h3>
-          <p style="color:var(--d-ink-2);font-size:var(--fs-sm)">Chegou mercadoria: em vez de digitar 200 peças, você importa o XML da nota. O sistema lê as peças, sugere juntar as linhas do mesmo modelo numa grade só, e você confere antes de dar entrada.</p>
-          <ul class="checks">
-            <li><span class="ck" aria-hidden="true">✓</span>O XML é lido de verdade: peça, quantidade, custo e o código de barras que o fabricante já mandou.</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Sai na impressora que você tem: folha A4 adesiva (24 por folha) ou rolo térmico 60 × 40 mm.</li>
-            <li><span class="ck" aria-hidden="true">✓</span>A quantidade já vem certa: igual ao que tem em estoque de cada tamanho.</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Reetiquetar é rotina: virada de coleção, preço novo, etiqueta que descolou — filtra, marca e imprime.</li>
-          </ul>
-        </div>
-        <figure class="shot" style="margin:0">
-          <img src="img/print-etiquetas.jpg" width="1240" height="636" loading="lazy" decoding="async"
-               alt="Tela de etiquetas de preço: cada peça aberta por cor e tamanho, com o código EAN-13, o preço e quantas etiquetas imprimir de cada tamanho.">
-          <figcaption>As etiquetas saindo do estoque, uma por cor e tamanho, com o código de barras.</figcaption>
-        </figure>
-      </div>
-
-      <div class="features">
-        <article class="card">
-          <h3>Condicional sem caderno</h3>
-          <p>Quem levou, o que levou, até quando e com qual vendedora. Romaneio impresso na saída, com as peças, os valores e a data de devolução — para os dois assinarem.</p>
-        </article>
-        <article class="card">
-          <h3>Crediário que fecha</h3>
-          <p>Parcelou, virou série: cada parcela com o seu vencimento, ligada à venda que a originou. Um clique abre a origem da dívida — qual compra, quais peças, que dia.</p>
-        </article>
-        <article class="card">
-          <h3>Cobrança em lote</h3>
-          <p>Vencimentos casados no mesmo dia do mês, cobrança de vencidos em lote com a mensagem pronta no WhatsApp de cada uma, e baixa com forma de pagamento caindo no caixa certo.</p>
-        </article>
-        <article class="card">
-          <h3>Catálogo online</h3>
-          <p>A vitrine é o seu estoque. A pessoa vê as peças e as fotos, mas o preço só aparece depois que ela deixa nome, WhatsApp e aniversário. Em vez de mais uma visualização, você ganha um contato.</p>
-        </article>
-        <article class="card">
-          <h3>Nota fiscal</h3>
-          <p>Emissão de NFC-e e NF-e nos planos com o módulo fiscal, e a importação do XML da nota de compra que dá entrada no estoque para você.</p>
-        </article>
-        <article class="card">
-          <h3>Metas e comissão</h3>
-          <p>Meta da loja e meta por vendedora, comissão calculada em cima do que foi vendido, e um painel que responde “como estamos hoje”.</p>
+        <article class="passo">
+          <p class="et">3 · Primeira nota</p>
+          <h3>Uma nota de teste, com a gente junto</h3>
+          <p>A gente acompanha a primeira emissão ao vivo, confere o cupom impresso e só então você opera sozinho.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ PLANOS ============ -->
-  <section class="band" id="planos">
+  <!-- ============ PREÇO ============ -->
+  <section class="band band--soft" id="preco">
+    <div class="wrap" style="text-align:center">
+      <p class="eyebrow" style="justify-content:center">Preço</p>
+      <h2 class="section-title" style="margin-inline:auto">Um plano só. Sem escada de módulo.</h2>
+      <p class="lead" style="margin-inline:auto">O Fiscal tem um plano e um terminal. Se você precisar de mais terminais ou dos módulos de gestão, o caminho não é inchar este plano — é subir para o Vende+ completo.</p>
+    </div>
+
     <div class="wrap">
-      <p class="eyebrow">Planos</p>
-      <h2 class="section-title">Você paga pelo que a sua loja usa.</h2>
-      <p class="lead">Qualquer plano começa com 14 dias grátis, sem cartão. São dois motores independentes: a loja de moda inteira e a parte fiscal — quem só quer emitir nota não paga pelo resto, e quem quer tudo tem tudo.</p>
-
-      <div class="plans">
-        <article class="plan">
-          <h3>Fiscal</h3>
-          <p class="desc">Para quem só precisa emitir documento fiscal e controlar o básico.</p>
-          <p class="price">Sob consulta</p>
-          <p class="terms">1 terminal</p>
-          <ul>
-            <li>NFC-e e NF-e</li>
-            <li>Importação de nota de compra</li>
-            <li>Estoque simples</li>
-            <li>PDV</li>
-            <li>Financeiro e caixa</li>
-          </ul>
-          <a class="btn btn--outline btn--sm" href="#demo" data-zap="Olá! Quero saber o valor do plano Fiscal do Vende+." data-ms="whatsapp" data-ms-origem="plano-fiscal">Pedir proposta</a>
-        </article>
-
-        <article class="plan">
-          <h3>Start</h3>
-          <p class="desc">A loja de moda funcionando: vender, controlar e cadastrar.</p>
-          <p class="price">Sob consulta</p>
-          <p class="terms">1 terminal</p>
-          <ul>
-            <li>PDV com grade de tamanhos</li>
-            <li>Estoque e ficha de moda</li>
-            <li>Clientes e fornecedores</li>
-            <li>Caixa</li>
-            <li>Catálogo online</li>
-          </ul>
-          <a class="btn btn--outline btn--sm" href="#demo" data-zap="Olá! Quero saber o valor do plano Start do Vende+." data-ms="whatsapp" data-ms-origem="plano-start">Pedir proposta</a>
-        </article>
-
+      <div class="plano-um">
         <article class="plan plan--hot">
-          <span class="badge">Mais escolhido</span>
-          <h3>Pro</h3>
-          <p class="desc">Para a loja que já tem equipe, meta e contas para administrar.</p>
+          <span class="badge">O produto pequeno</span>
+          <h3>Vende+ Fiscal</h3>
+          <p class="desc">Para quem só precisa emitir a nota e manter o básico do dia em ordem.</p>
           <p class="price">Sob consulta</p>
-          <p class="terms">até 3 terminais</p>
+          <p class="terms">Assinatura mensal por empresa · 1 terminal · sem fidelidade</p>
           <ul>
-            <li>Tudo do Start</li>
-            <li>Gatilhos de venda</li>
-            <li>Condicional</li>
-            <li>Contas a pagar e receber</li>
-            <li>Comissões e metas</li>
+            <li>NFC-e e NF-e, com contingência</li>
+            <li>Cancelamento e carta de correção</li>
+            <li>XML guardado por 5 anos, com busca</li>
+            <li>Entrada de nota de compra por XML</li>
+            <li>PDV, estoque simples e caixa</li>
+            <li>Portal do contador incluído</li>
+            <li>Implantação e primeira nota acompanhadas</li>
           </ul>
-          <a class="btn btn--primary btn--sm" href="#demo" data-zap="Olá! Quero saber o valor do plano Pro do Vende+." data-ms="whatsapp" data-ms-origem="plano-pro">Pedir proposta</a>
-        </article>
-
-        <article class="plan">
-          <h3>Max</h3>
-          <p class="desc">Mais de uma loja, nota fiscal e tudo ligado no mesmo lugar.</p>
-          <p class="price">Sob consulta</p>
-          <p class="terms">terminais à vontade</p>
-          <ul>
-            <li>Tudo do Pro</li>
-            <li>Módulo fiscal completo</li>
-            <li>Multi-loja</li>
-            <li>Metas e painéis</li>
-            <li>Suporte prioritário</li>
-          </ul>
-          <a class="btn btn--outline btn--sm" href="#demo" data-zap="Olá! Quero saber o valor do plano Max do Vende+." data-ms="whatsapp" data-ms-origem="plano-max">Pedir proposta</a>
+          <a class="btn btn--primary" href="#falar" data-zap="Olá! Quero saber o valor do Vende+ Fiscal." data-ms="cta" data-ms-origem="plano-fiscal">Pedir proposta</a>
         </article>
       </div>
 
       <p style="text-align:center;margin-top:var(--s4);color:var(--ink-2);font-size:var(--fs-sm)">
-        Assinatura mensal por loja, sem fidelidade. Você testa 14 dias antes de decidir, e a gente ajuda a subir o seu cadastro atual.
+        Sem taxa de adesão escondida. Se um dia você sair, leva os seus XMLs e cadastros com você.
       </p>
     </div>
   </section>
 
-  <!-- ============ DEMONSTRAÇÃO ============ -->
-  <section class="band band--soft" id="demo">
+  <!-- ============ CRESCER ============ -->
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow">Quando apertar</p>
+      <h2 class="section-title">Você começa pequeno sem se prender ao pequeno.</h2>
+      <p class="lead">O Fiscal é o mesmo sistema dos outros dois, com menos coisa ligada. No dia em que a sua operação crescer, ninguém troca de sistema nem redigita cadastro: liga-se o módulo e o histórico continua onde estava.</p>
+
+      <div class="cresce">
+        <article class="card">
+          <h3>Vende+ para loja de moda</h3>
+          <p>Grade de cor e tamanho, condicional com romaneio, crediário, comissão, catálogo online e os gatilhos que dizem qual cliente chamar hoje e qual peça oferecer.</p>
+          <a class="btn btn--outline btn--sm" href="vende-mais.html" data-ms="cta" data-ms-origem="cresce-moda">Ver o Vende+ Moda</a>
+        </article>
+        <article class="card">
+          <h3>Vende+ para restaurante</h3>
+          <p>Comanda por mesa, ficha ou entrega, tela de pedidos na cozinha e impressão direta em cada setor de produção. Em construção — com vagas de restaurante piloto abertas.</p>
+          <a class="btn btn--outline btn--sm" href="vende-mais-restaurante.html" data-ms="cta" data-ms-origem="cresce-restaurante">Ver o Vende+ Restaurante</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FALAR ============ -->
+  <section class="band band--soft" id="falar">
     <div class="wrap grid-2" style="align-items:start">
       <div>
-        <p class="eyebrow">Demonstração</p>
-        <h2 class="section-title">Quinze minutos e você vê a sua loja rodando.</h2>
-        <p class="lead">A gente abre o sistema com dados parecidos com os seus e mostra a fila de contatos do dia. Se não fizer sentido para a sua loja, a gente fala isso na hora.</p>
+        <p class="eyebrow">Conversa de dez minutos</p>
+        <h2 class="section-title">Conte a sua situação e a gente diz se o Fiscal resolve.</h2>
+        <p class="lead">Três perguntas resolvem: o que a sua empresa vende, o que o contador está cobrando e se você já tem certificado digital. Com isso a gente já diz se o Fiscal serve, se o caso é o Vende+ completo ou se você nem precisa contratar nada agora.</p>
         <ul class="checks">
           <li><span class="ck" aria-hidden="true">✓</span>Sem compromisso e sem cartão</li>
           <li><span class="ck" aria-hidden="true">✓</span>Resposta no mesmo dia útil</li>
-          <li><span class="ck" aria-hidden="true">✓</span>Atendimento por WhatsApp, com gente de verdade</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Se não for para você, a gente fala na hora</li>
         </ul>
-        <a class="btn btn--wa" style="margin-top:var(--s3)" href="https://wa.me/5563999333307?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Vende%2B%20e%20quero%20uma%20demonstra%C3%A7%C3%A3o." data-zap="Olá! Vim pelo site do Vende+ e quero uma demonstração." data-ms="whatsapp" data-ms-origem="demo">Falar no WhatsApp</a>
+        <a class="btn btn--wa" style="margin-top:var(--s3)" href="https://wa.me/5563999333307?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Vende%2B%20Fiscal%20e%20preciso%20emitir%20nota." data-zap="Olá! Vim pelo site do Vende+ Fiscal e preciso emitir nota." data-ms="whatsapp" data-ms-origem="falar">Falar no WhatsApp</a>
       </div>
 
       <div class="form-card form">
-      <form id="form-lead" data-msg="Quero uma demonstração do Vende+ para a minha loja." novalidate>
+      <form id="form-lead" data-msg="Quero falar sobre o Vende+ Fiscal para a minha empresa." novalidate>
         <div class="field-row">
           <div class="field">
             <label for="nome">Seu nome <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
             <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como te chamam" required aria-required="true">
           </div>
           <div class="field">
-            <label for="loja">Nome da loja <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
-            <input id="loja" name="loja" type="text" autocomplete="organization" placeholder="Nome da loja" required aria-required="true">
+            <label for="loja">Nome da empresa <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
+            <input id="loja" name="loja" type="text" autocomplete="organization" placeholder="Razão social ou nome fantasia" required aria-required="true">
           </div>
         </div>
         <div class="field-row">
@@ -940,7 +872,7 @@ h1 .hl{color:var(--green-bright)}
           </div>
           <div class="field">
             <label for="email">E-mail <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
-            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@sualoja.com.br" required aria-required="true">
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@suaempresa.com.br" required aria-required="true">
           </div>
         </div>
         <div class="field-row">
@@ -949,27 +881,37 @@ h1 .hl{color:var(--green-bright)}
             <input id="cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Cidade / UF">
           </div>
           <div class="field">
-            <label for="equipe">Quantas pessoas vendem na loja?</label>
-            <select id="equipe" name="equipe">
+            <label for="doc">O que você precisa emitir?</label>
+            <select id="doc" name="documento">
               <option value="">Selecione</option>
-              <option>Só eu</option>
-              <option>2 a 3</option>
-              <option>4 a 8</option>
-              <option>Mais de 8</option>
+              <option>NFC-e (cupom do balcão)</option>
+              <option>NF-e (venda para empresa)</option>
+              <option>As duas</option>
+              <option>Ainda não sei — o contador que pediu</option>
             </select>
           </div>
         </div>
         <div class="field">
-          <label for="obs">Alguma coisa que a gente precisa saber?</label>
-          <textarea id="obs" name="observacao" placeholder="Ex.: hoje uso planilha, tenho crediário, trabalho com condicional…"></textarea>
+          <label for="cert">Você já tem certificado digital?</label>
+          <select id="cert" name="certificado">
+            <option value="">Selecione</option>
+            <option>Tenho A1 (arquivo)</option>
+            <option>Tenho A3 (cartão ou token)</option>
+            <option>Não tenho</option>
+            <option>Não sei o que é</option>
+          </select>
         </div>
-        <!-- Consentimento separado do pedido de demonstração, e NUNCA pré-marcado:
+        <div class="field">
+          <label for="obs">Alguma coisa que a gente precisa saber?</label>
+          <textarea id="obs" name="observacao" placeholder="Ex.: saí do MEI agora, já uso outro emissor, tenho duas empresas…"></textarea>
+        </div>
+        <!-- Consentimento separado do pedido de contato, e NUNCA pré-marcado:
              pela LGPD consentimento é um ato de quem preenche. -->
         <label class="aceite">
           <input type="checkbox" name="aceite" value="1">
-          <span>Quero receber por e-mail dicas de gestão para loja de moda e novidades do Vende+. Dá para sair quando quiser, num clique.</span>
+          <span>Quero receber por e-mail avisos sobre obrigações fiscais e novidades do Vende+. Dá para sair quando quiser, num clique.</span>
         </label>
-        <button class="btn btn--primary" type="submit" style="width:100%" data-ms="form" data-ms-origem="demo">Quero ver a demonstração</button>
+        <button class="btn btn--primary" type="submit" style="width:100%" data-ms="form" data-ms-origem="falar">Quero falar sobre o Fiscal</button>
         <p class="form__nota">Ao enviar, você abre uma conversa no WhatsApp com a gente. Seus dados seguem a nossa <a href="privacidade.html">política de privacidade</a>.</p>
       </form>
       <div class="form__ok">
@@ -985,48 +927,40 @@ h1 .hl{color:var(--green-bright)}
   <section class="band" id="duvidas">
     <div class="wrap">
       <p class="eyebrow">Dúvidas</p>
-      <h2 class="section-title">O que a gente mais ouve antes de assinar.</h2>
+      <h2 class="section-title">O que quase todo mundo pergunta.</h2>
 
       <div class="faq">
         <details open>
-          <summary>Como funciona o teste de 14 dias?</summary>
-          <p class="answer">Você cria a sua loja em dois minutos, sem cartão e sem falar com vendedor. São 14 dias com o sistema inteiro liberado. Se não servir, é só parar de usar — não vira cobrança.</p>
+          <summary>Preciso de certificado digital? Vocês vendem?</summary>
+          <p class="answer">Precisa — é ele que assina a nota no seu CNPJ, e isso vale para qualquer emissor. A gente não vende certificado: indicamos onde comprar, você compra no seu nome (que é como tem que ser) e a gente instala junto com você. O A1, que é arquivo, é o mais prático para sistema no navegador.</p>
         </details>
         <details>
-          <summary>Preciso instalar alguma coisa?</summary>
-          <p class="answer">Não. O Vende+ abre no navegador, no computador da loja, no tablet do provador e no celular. Nada de instalar programa em cada máquina nem de servidor dentro da loja.</p>
+          <summary>Sou MEI. Preciso disso?</summary>
+          <p class="answer">Para vender ao consumidor final, o MEI normalmente não é obrigado a emitir. A obrigação aparece quando você vende para outra empresa, ou quando sai do MEI. Se o seu caso é esse, o Fiscal serve; se não é, a gente vai te dizer que você não precisa contratar nada agora.</p>
         </details>
         <details>
-          <summary>Preciso de leitor de código de barras?</summary>
-          <p class="answer">Ajuda muito, mas não é obrigatório. Dá para buscar a peça pelo nome ou pela referência. Se você já tem um leitor USB, ele funciona sem configuração — o sistema entende como se fosse teclado.</p>
+          <summary>Já uso outro emissor. Dá para trocar sem perder o histórico?</summary>
+          <p class="answer">Dá. Os XMLs que você já emitiu continuam válidos e a gente sobe eles para o portal, então o seu contador continua puxando tudo de um lugar só. A numeração continua de onde parou, na mesma série — sem furo, que é justamente o que a fiscalização olha.</p>
         </details>
         <details>
-          <summary>Quanto tempo até o sistema começar a sugerir contatos?</summary>
-          <p class="answer">As primeiras sugestões aparecem com poucas vendas registradas, e o sistema avisa que o perfil ainda está “aprendendo”. Ele fica realmente afiado depois de algumas semanas de venda no PDV — porque é da venda que ele aprende.</p>
+          <summary>E se a SEFAZ cair no meio do movimento?</summary>
+          <p class="answer">A venda não para. O sistema entra em contingência, imprime o cupom com o aviso previsto na legislação e transmite quando o serviço volta. É exatamente para isso que a contingência existe.</p>
         </details>
         <details>
-          <summary>Já uso outro sistema. Dá para trazer meus dados?</summary>
-          <p class="answer">Dá. A gente ajuda a subir clientes, produtos e saldo de estoque a partir de planilha ou exportação do sistema atual. Isso entra junto com a implantação, sem custo separado.</p>
+          <summary>Funciona com a minha impressora?</summary>
+          <p class="answer">Funciona com impressora térmica de cupom, que é o padrão do comércio, em USB ou em rede. Se você já tem uma, provavelmente serve — mande o modelo pelo WhatsApp que a gente confirma antes de você contratar.</p>
         </details>
         <details>
-          <summary>Emite nota fiscal mesmo?</summary>
-          <p class="answer">Sim, NFC-e e NF-e nos planos com o módulo fiscal. E se a sua loja é MEI e não precisa emitir, o módulo fiscal fica desligado e você não paga por ele.</p>
+          <summary>Preciso instalar alguma coisa no computador?</summary>
+          <p class="answer">Não. Abre no navegador, em qualquer máquina. Só a impressora precisa estar ligada na máquina do caixa, como já é hoje.</p>
         </details>
         <details>
-          <summary>E se a internet cair no meio da venda?</summary>
-          <p class="answer">A venda em andamento não se perde: ela fica guardada e você retoma quando a conexão volta. Para lojas com internet instável, a gente recomenda um 4G de reserva no roteador — custa pouco e resolve.</p>
+          <summary>Se eu parar de pagar, perco meus XMLs?</summary>
+          <p class="answer">Não. Os dados são seus e continuam disponíveis para exportação. O acesso ao sistema é bloqueado, mas ninguém apaga o seu arquivo fiscal — inclusive porque a lei obriga você a guardá-lo por cinco anos.</p>
         </details>
         <details>
           <summary>Quanto custa?</summary>
-          <p class="answer">A assinatura é mensal por loja e varia com o plano e o número de terminais. Como cada loja usa um conjunto diferente de módulos, a gente passa o valor na conversa de quinze minutos — sem enrolação e sem taxa de adesão escondida.</p>
-        </details>
-        <details>
-          <summary>Meus dados ficam seguros? E se eu parar de pagar?</summary>
-          <p class="answer">Os dados são seus. A base fica em servidor com backup diário, e a qualquer momento você exporta clientes, produtos e vendas. Se parar de pagar, o acesso é bloqueado, mas os dados continuam disponíveis para exportação.</p>
-        </details>
-        <details>
-          <summary>E se a minha vendedora não souber usar?</summary>
-          <p class="answer">O PDV foi desenhado para quem atende de pé, com pressa: busca, grade, desconto e fechar. Além disso tem ajuda dentro do próprio sistema, 24 horas, que responde na tela em que a pessoa está — e o nosso WhatsApp continua ali.</p>
+          <p class="answer">A assinatura é mensal por empresa, com um terminal. Como o valor muda conforme o volume de notas e o estado, a gente passa na conversa de dez minutos — sem taxa de adesão escondida e sem fidelidade.</p>
         </details>
       </div>
     </div>
@@ -1035,11 +969,11 @@ h1 .hl{color:var(--green-bright)}
   <!-- ============ CTA FINAL ============ -->
   <section class="band band--navy">
     <div class="wrap final">
-      <h2>Amanhã de manhã, você já sabe para quem mandar mensagem.</h2>
-      <p class="lead" style="margin-inline:auto">Crie a sua loja agora e use por 14 dias, sem cartão. Se preferir só espiar antes, a demonstração já vem cheia de produtos e vendas de exemplo.</p>
+      <h2>Resolva a nota fiscal e volte a pensar no negócio.</h2>
+      <p class="lead" style="margin-inline:auto">Dez minutos de conversa e você sai sabendo o que precisa fazer — mesmo que a resposta seja que você ainda não precisa de sistema nenhum.</p>
       <div class="actions">
-        <a class="btn btn--primary" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=site" data-teste data-ms="teste" data-ms-origem="cta-final">Começar 14 dias grátis</a>
-        <a class="btn btn--ghost" href="#demo" data-demo data-ms="demo" data-ms-origem="cta-final">Ver a demonstração</a>
+        <a class="btn btn--primary" href="#falar" data-ms="cta" data-ms-origem="cta-final">Falar sobre o Fiscal</a>
+        <a class="btn btn--ghost" href="vende-mais.html" data-ms="cta" data-ms-origem="cta-final-moda">Preciso de mais que a nota</a>
       </div>
     </div>
   </section>
@@ -1048,10 +982,10 @@ h1 .hl{color:var(--green-bright)}
 
 <footer class="site-footer">
   <div class="wrap">
-    <div class="cols cols--5">
+    <div class="cols">
       <div>
         <img class="logo" src="img/vendemais-logo-branco.png" alt="Vende+" width="120" height="38">
-        <p>O sistema para loja de moda que não para no cupom: ele diz qual cliente chamar hoje, qual peça oferecer e por quê.</p>
+        <p>O sistema de gestão da Maker System. Na versão Fiscal ele faz uma coisa e faz bem: a nota sai, o XML fica guardado e o contador pega sozinho.</p>
       </div>
       <div>
         <h4>Vende+ para</h4>
@@ -1062,20 +996,12 @@ h1 .hl{color:var(--green-bright)}
         </ul>
       </div>
       <div>
-        <h4>Vende+</h4>
+        <h4>Nesta página</h4>
         <ul>
-          <li><a href="#gatilhos">Gatilhos de venda</a></li>
-          <li><a href="#recursos">Recursos</a></li>
-          <li><a href="#planos">Planos</a></li>
-          <li><a href="#duvidas">Dúvidas</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Começar</h4>
-        <ul>
-          <li><a href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=site" data-teste data-ms="teste" data-ms-origem="rodape">Criar minha loja</a></li>
-          <li><a href="https://vendemais.makersystem.com.br/">Entrar no sistema</a></li>
-          <li><a href="#demo">Ver a demonstração</a></li>
+          <li><a href="#para-quem">Para quem é</a></li>
+          <li><a href="#recursos">O que faz</a></li>
+          <li><a href="#contador">Portal do contador</a></li>
+          <li><a href="#preco">Preço</a></li>
         </ul>
       </div>
       <div>
@@ -1095,7 +1021,7 @@ h1 .hl{color:var(--green-bright)}
   </div>
 </footer>
 
-<a class="wa-float zap-fixo" href="https://wa.me/5563999333307?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20conhecer%20o%20Vende%2B." data-zap data-ms="whatsapp" data-ms-origem="flutuante" aria-label="Falar no WhatsApp">
+<a class="wa-float zap-fixo" href="https://wa.me/5563999333307?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20preciso%20emitir%20nota%20fiscal." data-zap data-ms="whatsapp" data-ms-origem="flutuante" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.41.09-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42l-.47-.01c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.65 4.21 3.72.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
 </a>
 
@@ -1137,7 +1063,7 @@ document.querySelectorAll('.faq details').forEach(function (d) {
   if(!form) return;
   var regras = {
     nome:     function(v){ return v.trim().length >= 2 ? '' : 'Escreva o seu nome.'; },
-    loja:     function(v){ return v.trim().length >= 2 ? '' : 'Escreva o nome da loja.'; },
+    loja:     function(v){ return v.trim().length >= 2 ? '' : 'Escreva o nome da empresa.'; },
     empresa:  function(){ return ''; },
     whatsapp: function(v){ return (v.replace(/\D/g,'').length >= 10) ? '' : 'Um WhatsApp com DDD, por favor.'; },
     email:    function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'Confira o e-mail — falta algo nele.'; }

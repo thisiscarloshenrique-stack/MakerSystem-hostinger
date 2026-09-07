@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Vende+ · O sistema para loja de moda que diz qual cliente chamar hoje</title>
-<meta name="description" content="O Vende+ aprende o gosto de cada cliente sozinho, cruza com o seu estoque e entrega todo dia quem chamar, qual peça oferecer e por quê. PDV, estoque com grade, condicional, financeiro e catálogo online. 14 dias grátis, sem cartão.">
+<title>Vende+ Restaurante · Comanda, cozinha e o cliente que sempre volta</title>
+<meta name="description" content="Comanda por mesa, ficha ou entrega, tela de pedidos na cozinha (KDS) e impressão direta em cada setor de produção. E o gatilho que avisa o dia em que o cliente costuma pedir. Módulo Cozinha em construção — vagas de restaurante piloto abertas.">
 <meta name="theme-color" content="#062B63">
-<link rel="canonical" href="https://makersystem.com.br/vende-mais.html">
+<link rel="canonical" href="https://makersystem.com.br/vende-mais-restaurante.html">
 <link rel="icon" href="img/vendemais-favicon-32.png" sizes="32x32">
 <link rel="icon" href="img/vendemais-favicon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="img/vendemais-favicon-180.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Vende+ · O sistema para loja de moda que diz qual cliente chamar hoje">
-<meta property="og:description" content="Todo dia de manhã, uma fila curta de clientes para chamar — com a peça certa e o motivo por escrito.">
-<meta property="og:url" content="https://makersystem.com.br/vende-mais.html">
+<meta property="og:title" content="Vende+ Restaurante · Comanda, cozinha e o cliente que sempre volta">
+<meta property="og:description" content="O garçom lança na mesa, a cozinha vê na tela e cada setor imprime só o que é dele. Vagas de restaurante piloto abertas.">
+<meta property="og:url" content="https://makersystem.com.br/vende-mais-restaurante.html">
 <meta property="og:site_name" content="Vende+">
 <meta property="og:image" content="https://makersystem.com.br/assets/img/og-vende-mais.png">
 <meta property="og:locale" content="pt_BR">
@@ -30,12 +30,13 @@
 <script src="assets/js/tracking.js?v=4"></script>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Vende+",
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Vende+ Restaurante",
 "applicationCategory":"BusinessApplication","operatingSystem":"Web",
-"description":"Sistema de gestão para lojas de moda com PDV, estoque com grade de tamanhos, catálogo online, emissão fiscal e gatilhos de venda.",
-"offers":{"@type":"Offer","priceCurrency":"BRL","availability":"https://schema.org/InStock"}}
+"description":"Sistema para restaurante com comanda por mesa, ficha e entrega, tela de pedidos na cozinha (KDS), impressão direta na produção e gatilhos de recompra.",
+"offers":{"@type":"Offer","priceCurrency":"BRL","availability":"https://schema.org/PreOrder"}}
 </script>
 <style>
+
 /* ==========================================================================
    VENDE+ — design tokens
    Paleta oficial: navy #062B63 · verde #18D64A · branco · preto
@@ -493,7 +494,17 @@ h1 .hl{color:var(--green-bright)}
 .lgpd a{color:var(--green-ink);text-decoration:underline}
 @media (min-width:760px){.lgpd{left:auto;right:20px;max-width:560px}}
 
-/* ---------- seletor de segmento (Moda / Restaurante / Fiscal) ---------- */
+/* ==========================================================================
+   VENDE+ RESTAURANTE — componentes desta página
+   Mesmos tokens da landing de moda; só o que é específico de cozinha entra aqui.
+   Contrastes conferidos (WCAG 2.1, fundo branco #FFF do cartão-mockup):
+     #087527 verde escuro ....... 5,16:1  AA
+     #8A5300 âmbar escuro ....... 5,42:1  AA
+     #A32B24 vermelho escuro .... 7,06:1  AAA
+   Cor nunca é o único sinal: todo estado tem também texto ("no prazo", "atrasado").
+   ========================================================================== */
+
+/* ---------- seletor de segmento ---------- */
 .seg{background:var(--navy-900);border-bottom:1px solid rgba(255,255,255,.10)}
 .seg .wrap{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;padding:.55rem 0}
 .seg .rot{font-size:var(--fs-xs);letter-spacing:.12em;text-transform:uppercase;color:#93A9C9;font-weight:800;margin-right:.35rem}
@@ -501,7 +512,89 @@ h1 .hl{color:var(--green-bright)}
   font-size:var(--fs-sm);font-weight:700;text-decoration:none;color:#C9D8EE;border:1px solid rgba(255,255,255,.22)}
 .seg a:hover{background:rgba(255,255,255,.10);color:#fff}
 .seg a[aria-current="page"]{background:var(--green);color:var(--navy);border-color:var(--green)}
-@media (min-width:861px){.site-footer .cols--5{grid-template-columns:1.35fr repeat(4,1fr)}}
+
+/* ---------- faixa de aviso honesto ---------- */
+.aviso{background:#FFF6E5;border-block:1px solid #F0DCB4;color:#4A3608}
+.aviso .wrap{display:flex;gap:1rem;align-items:flex-start;padding:1.15rem 0}
+.aviso .ic{flex:none;width:28px;height:28px;border-radius:50%;background:#8A5300;color:#fff;
+  display:grid;place-items:center;font-weight:900;font-size:.9rem}
+.aviso p{font-size:var(--fs-sm);max-width:78ch}
+.aviso b{font-weight:800}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .aviso{background:#2C220C;border-color:#5A4715;color:#FFE7B8}
+  :root:not([data-theme="light"]) .aviso .ic{background:#FFCE7A;color:#2C220C}
+}
+
+/* pílula do hero em modo "obra" */
+.pill--obra{background:rgba(255,190,80,.14);border-color:rgba(255,190,80,.42);color:#FFE3B0}
+.pill--obra .dot{background:#FFC15E}
+
+/* ---------- KDS: comandas na tela da cozinha ---------- */
+.kds{display:grid;gap:.7rem}
+.ticket{background:var(--mock-bg);color:var(--mock-ink);border-radius:16px;padding:.9rem 1rem;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);border-left:5px solid var(--mock-line)}
+.ticket--ok{border-left-color:#087527}
+.ticket--atencao{border-left-color:#8A5300}
+.ticket--atrasado{border-left-color:#A32B24}
+.tk-top{display:flex;align-items:baseline;gap:.55rem;flex-wrap:wrap}
+.tk-top b{font-family:var(--font-titulo);font-size:1.05rem;letter-spacing:-.01em;color:var(--mock-ink)}
+.tk-canal{font-size:var(--fs-xs);color:var(--mock-ink-3);font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.tk-time{margin-left:auto;font-size:.95rem;font-weight:800;font-variant-numeric:tabular-nums}
+.ticket--ok .tk-time{color:#087527}
+.ticket--atencao .tk-time{color:#8A5300}
+.ticket--atrasado .tk-time{color:#A32B24}
+.tk-itens{display:grid;gap:.45rem;margin-top:.75rem}
+.tk-itens li{display:flex;gap:.55rem;font-size:var(--fs-sm);color:var(--mock-ink)}
+.tk-itens .qtd{flex:none;min-width:1.7rem;font-weight:800}
+.tk-itens em{display:block;font-style:normal;font-size:var(--fs-xs);color:#8A5300;font-weight:700}
+.tk-foot{display:flex;gap:.55rem;align-items:center;flex-wrap:wrap;margin-top:.8rem;padding-top:.6rem;
+  border-top:1px solid var(--mock-line);font-size:var(--fs-xs);color:var(--mock-ink-3)}
+.tk-sit{font-weight:800;padding:.14rem .55rem;border-radius:var(--radius-pill);background:var(--mock-sunken)}
+.ticket--ok .tk-sit{color:#087527}
+.ticket--atencao .tk-sit{color:#8A5300}
+.ticket--atrasado .tk-sit{color:#A32B24}
+
+/* ---------- fluxo do pedido ---------- */
+.fluxo{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);margin-top:var(--s5)}
+@media (max-width:900px){.fluxo{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.fluxo{grid-template-columns:1fr}}
+.passo{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--s3)}
+.passo .et{font-size:var(--fs-xs);font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green-ink);margin-bottom:.45rem}
+.passo h3{font-size:1.05rem;font-weight:800;margin-bottom:.35rem}
+.passo p{font-size:var(--fs-sm);color:var(--ink-2)}
+
+/* ---------- tipos de casa ---------- */
+.tipos{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);margin-top:var(--s5)}
+@media (max-width:1000px){.tipos{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.tipos{grid-template-columns:1fr}}
+.tipo{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:var(--s3)}
+.tipo h3{font-size:1.02rem;font-weight:800;margin-bottom:.4rem}
+.tipo p{font-size:var(--fs-sm);color:var(--ink-2)}
+.tipo .marca{font-size:var(--fs-xs);font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green-ink);display:block;margin-bottom:.5rem}
+
+/* ---------- o que já roda × o que está em obra ---------- */
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);margin-top:var(--s4)}
+@media (max-width:820px){.duas{grid-template-columns:1fr}}
+.quadro{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:var(--s3)}
+.quadro--obra{border-style:dashed;border-color:var(--line-strong);background:var(--bg-soft)}
+.quadro h3{font-size:var(--fs-h3);font-weight:800;margin-bottom:.2rem}
+.quadro .sub{font-size:var(--fs-sm);color:var(--ink-3);margin-bottom:var(--s2)}
+.wip{display:grid;gap:.7rem}
+.wip li{display:flex;gap:.7rem;align-items:flex-start;font-size:var(--fs-sm);color:var(--ink-2)}
+.wip .hh{flex:none;width:22px;height:22px;border-radius:6px;background:rgba(138,83,0,.14);color:#8A5300;
+  display:grid;place-items:center;font-size:.72rem;font-weight:900;margin-top:.15rem}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .wip .hh{background:#3A2C0A;color:#FFCE7A}
+}
+
+/* ---------- nota dentro da faixa navy ---------- */
+.nota{display:flex;gap:1rem;align-items:flex-start;margin-top:var(--s4);padding:var(--s3);
+  border-radius:var(--radius);background:rgba(255,255,255,.07);border:1px solid var(--d-line)}
+.nota .ic{flex:none;width:30px;height:30px;border-radius:50%;background:var(--green);color:var(--navy);
+  display:grid;place-items:center;font-weight:900;font-size:.95rem}
+.nota p{font-size:var(--fs-sm);color:var(--d-ink-2);max-width:74ch}
+.nota b{color:#fff;font-weight:700}
+
 </style>
 </head>
 <body>
@@ -509,18 +602,18 @@ h1 .hl{color:var(--green-bright)}
 
 <header class="site-header">
   <div class="wrap bar">
-    <a class="brand" href="#topo" aria-label="Vende+ — sistema para loja de moda">
+    <a class="brand" href="#topo" aria-label="Vende+ — sistema para restaurante">
       <img src="img/vendemais-logo-branco.png" alt="Vende+" width="107" height="36">
-      <span class="sub">Sistema para loja de moda</span>
+      <span class="sub">Sistema para restaurante</span>
     </a>
     <nav class="nav" aria-label="Seções da página">
       <a href="#problema">Por que</a>
+      <a href="#cozinha">Cozinha</a>
       <a href="#gatilhos">Gatilhos</a>
-      <a href="#recursos">Recursos</a>
-      <a href="#planos">Planos</a>
+      <a href="#hoje">O que já roda</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
-    <a class="btn btn--primary btn--sm" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=site" data-teste data-ms="teste" data-ms-origem="topo">14 dias grátis</a>
+    <a class="btn btn--primary btn--sm" href="#piloto" data-ms="cta" data-ms-origem="topo">Quero ser piloto</a>
     <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="nav-mob" aria-label="Abrir menu">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -529,9 +622,9 @@ h1 .hl{color:var(--green-bright)}
     <div class="wrap">
       <ul>
         <li><a href="#problema">Por que</a></li>
+        <li><a href="#cozinha">Cozinha</a></li>
         <li><a href="#gatilhos">Gatilhos</a></li>
-        <li><a href="#recursos">Recursos</a></li>
-        <li><a href="#planos">Planos</a></li>
+        <li><a href="#hoje">O que já roda</a></li>
         <li><a href="#duvidas">Dúvidas</a></li>
       </ul>
     </div>
@@ -541,8 +634,8 @@ h1 .hl{color:var(--green-bright)}
 <div class="seg">
   <div class="wrap">
     <span class="rot">Vende+ para</span>
-    <a href="vende-mais.html" aria-current="page">Moda</a>
-    <a href="vende-mais-restaurante.html">Restaurante</a>
+    <a href="vende-mais.html">Moda</a>
+    <a href="vende-mais-restaurante.html" aria-current="page">Restaurante</a>
     <a href="vende-mais-fiscal.html">Só nota fiscal</a>
   </div>
 </div>
@@ -553,384 +646,284 @@ h1 .hl{color:var(--green-bright)}
   <section class="hero">
     <div class="wrap grid">
       <div>
-        <p class="pill"><span class="dot" aria-hidden="true"></span>14 dias grátis, sem cartão — feito para loja de roupa</p>
-        <h1>Sua cliente não sumiu.<br><span class="hl">Ela só não foi chamada.</span></h1>
-        <p class="lead">O Vende+ aprende o gosto de cada cliente sozinho, cruza com o que está pendurado na sua arara e te entrega, todo dia, <strong style="color:#fff">quem chamar, qual peça oferecer e por quê</strong>.</p>
+        <p class="pill pill--obra"><span class="dot" aria-hidden="true"></span>Em construção · vagas de restaurante piloto abertas</p>
+        <h1>Não foi a cozinha que errou.<br><span class="hl">O pedido chegou errado lá.</span></h1>
+        <p class="lead">O garçom lança na mesa, a cozinha vê na tela e <strong style="color:#fff">cada setor imprime só o que é dele</strong> — chapa, forno, bar, copa. Sem papel amassado, sem comanda perdida, sem “o que era mesmo dessa mesa?”.</p>
         <div class="actions">
-          <a class="btn btn--primary" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=site" data-teste data-ms="teste" data-ms-origem="hero">Começar 14 dias grátis</a>
-          <a class="btn btn--ghost" href="#demo" data-demo data-ms="demo" data-ms-origem="hero">Ver a demonstração</a>
+          <a class="btn btn--primary" href="#piloto" data-ms="cta" data-ms-origem="hero">Quero uma vaga de piloto</a>
+          <a class="btn btn--ghost" href="#cozinha" data-ms="cta" data-ms-origem="hero-secundario">Ver como vai funcionar</a>
         </div>
         <div class="trust">
-          <span><b>Você mesmo cria a loja</b> — em dois minutos</span>
+          <span><b>Sendo construído agora</b> — com restaurante de verdade dentro</span>
+          <span><b>Piloto sem licença</b> enquanto estiver em construção</span>
           <span><b>Sem instalar</b> — abre no navegador</span>
-          <span><b>Sem cartão</b> para testar</span>
         </div>
       </div>
 
-      <div class="mock" role="img" aria-label="Exemplo da tela de gatilhos do Vende+: Juliana Prado, 87% de chance, vestido midi floral tamanho M em estoque, com quatro motivos listados.">
-        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>Vende+ · gatilhos de hoje</span></div>
+      <div class="mock" role="img" aria-label="Exemplo da tela de cozinha do Vende+: três comandas em fila — mesa 7 atrasada há 12 minutos, entrega do Luiz no prazo e balcão 43 em atenção — cada uma com os itens, as observações e o tempo desde o envio.">
+        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>Vende+ · cozinha · 3 comandas na fila</span></div>
 
-        <div class="card-lead">
-          <div class="top">
-            <span class="avatar" aria-hidden="true">JP</span>
-            <span class="who"><b>Juliana Prado</b><span>última compra há 41 dias</span></span>
-            <span class="chance"><b>87%</b><span>CHANCE</span></span>
+        <div class="kds">
+          <div class="ticket ticket--atrasado">
+            <div class="tk-top"><b>Mesa 7</b><span class="tk-canal">Salão</span><span class="tk-time">12:04</span></div>
+            <ul class="tk-itens">
+              <li><span class="qtd">2×</span><span>Picanha na chapa<em>Uma ao ponto, uma bem passada</em></span></li>
+              <li><span class="qtd">1×</span><span>Porção de fritas</span></li>
+            </ul>
+            <div class="tk-foot"><span class="tk-sit">Atrasado</span><span>enviado 19:41 · garçom Léo</span></div>
           </div>
-          <div class="piece">
-            <span class="sw" aria-hidden="true"></span>
-            <span><b>Vestido midi floral</b><span>Tam. M · em estoque</span></span>
+
+          <div class="ticket ticket--ok">
+            <div class="tk-top"><b>Entrega #218</b><span class="tk-canal">Delivery</span><span class="tk-time">03:22</span></div>
+            <ul class="tk-itens">
+              <li><span class="qtd">1×</span><span>Pizza grande calabresa<em>Sem cebola — cliente Luiz</em></span></li>
+              <li><span class="qtd">1×</span><span>Coca 2 litros</span></li>
+            </ul>
+            <div class="tk-foot"><span class="tk-sit">No prazo</span><span>enviado 19:50 · forno</span></div>
           </div>
-          <ul class="why">
-            <li>Levou vestido nas 3 últimas compras</li>
-            <li>Estampa floral aparece em 4 das 6 peças dela</li>
-            <li>Costuma voltar a cada 34 dias — já passou de 41</li>
-            <li>Preço dentro do que ela costuma pagar por peça</li>
-          </ul>
-          <div class="row">
-            <span class="btn btn--primary">Chamar no WhatsApp</span>
-            <span class="btn btn--outline">Levar pro PDV</span>
+
+          <div class="ticket ticket--atencao">
+            <div class="tk-top"><b>Balcão 43</b><span class="tk-canal">Retirada</span><span class="tk-time">07:58</span></div>
+            <ul class="tk-itens">
+              <li><span class="qtd">3×</span><span>X-salada<em>Um sem tomate</em></span></li>
+            </ul>
+            <div class="tk-foot"><span class="tk-sit">Atenção</span><span>enviado 19:45 · chapa</span></div>
           </div>
         </div>
 
-        <div class="card-lead">
-          <div class="top">
-            <span class="avatar" aria-hidden="true">RC</span>
-            <span class="who"><b>Renata Castro</b><span>aniversário este mês</span></span>
-            <span class="chance"><b>74%</b><span>CHANCE</span></span>
-          </div>
-          <div class="piece">
-            <span class="sw" aria-hidden="true" style="background:linear-gradient(135deg,#EDEAE3,#CFC8BA)"></span>
-            <span><b>Blazer alfaiataria off-white</b><span>Tam. G · última peça</span></span>
-          </div>
-        </div>
-
-        <p class="foot">Recalculado a cada venda — nada de lista velha.</p>
+        <p class="foot">O relógio corre sozinho. Item pronto sai da tela e o salão vê na hora.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ PRINTS DO SISTEMA ============ -->
-  <section class="band band--soft" id="por-dentro">
+  <!-- ============ AVISO HONESTO ============ -->
+  <div class="aviso">
     <div class="wrap">
-      <p class="eyebrow">Por dentro</p>
-      <h2 class="section-title">É o sistema rodando, com uma loja de demonstração.</h2>
-      <p class="lead">No computador da loja, no tablet do provador e no celular da cliente — é o mesmo sistema, sem instalar nada.</p>
-
-      <div class="shots shots--par">
-        <figure class="shot" style="margin:0">
-          <img src="img/print-gatilhos.jpg" width="1240" height="636" loading="lazy" decoding="async"
-               alt="Tela Vende+ do sistema: 48 oportunidades abertas, R$ 7,4 mil de potencial na mesa e a fila de contato do dia, cada linha com a cliente, a peça sugerida e os motivos escritos.">
-          <figcaption>A fila de contatos do dia, no computador da loja.</figcaption>
-        </figure>
-        <figure class="shot" style="margin:0">
-          <img src="img/print-pdv.jpg" width="1240" height="636" loading="lazy" decoding="async"
-               alt="PDV do Vende+ com a grade de tamanhos aberta: vestido floral midi azul em PP, P, M, G e GG, com o estoque de cada tamanho.">
-          <figcaption>O PDV escolhendo o tamanho na grade, com o estoque de cada peça à vista.</figcaption>
-        </figure>
-      </div>
+      <span class="ic" aria-hidden="true">!</span>
+      <p><b>Antes de qualquer coisa, a verdade:</b> o módulo Cozinha do Vende+ está sendo construído agora — ele ainda não está no ar. O restante do sistema (PDV, estoque, financeiro, nota fiscal, catálogo) já roda todo dia em cliente de verdade. Esta página existe para escolher os primeiros restaurantes que vão usar e opinar enquanto a gente constrói. Se você procura algo pronto para instalar amanhã, é melhor a gente conversar antes — a lista honesta do que já existe e do que falta está <a href="#hoje">logo ali embaixo</a>.</p>
     </div>
-  </section>
+  </div>
 
   <!-- ============ O PROBLEMA ============ -->
   <section class="band" id="problema">
     <div class="wrap">
       <p class="eyebrow">O buraco de sempre</p>
-      <h2 class="section-title">O sistema que você tem hoje só sabe o que já aconteceu.</h2>
-      <p class="lead">Ele fecha o caixa, imprime o cupom e some. Quem decide para quem mandar mensagem continua sendo a sua memória — e a sua memória tem uns 40 nomes, não 800.</p>
+      <h2 class="section-title">O prejuízo da sua casa não está no cardápio. Está no caminho até a cozinha.</h2>
+      <p class="lead">Todo restaurante tem o mesmo gargalo: o pedido nasce na mesa e precisa chegar inteiro na produção. Enquanto esse caminho for papel, grito e memória, o erro é questão de tempo — e cada erro é comida jogada fora, cliente irritado e garçom apanhando por algo que não foi ele que fez.</p>
 
       <ul class="pains">
-        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>A cliente boa some por três meses e ninguém percebe.</p></li>
-        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>Você manda a mesma foto para a lista inteira — e a maioria não veste aquilo.</p></li>
-        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>A peça parada há 90 dias iria embora se tivesse sido oferecida para a pessoa certa.</p></li>
-        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>A vendedora nova não sabe o que cada cliente gosta. Esse conhecimento só existe na cabeça de quem já foi embora.</p></li>
-        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>Domingo à noite você olha a semana e não sabe dizer o que fazer na segunda.</p></li>
+        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>A comanda de papel some, molha ou volta rasurada — e ninguém sabe se aquele item saiu.</p></li>
+        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>A observação (“sem cebola”, “ao ponto”) se perde no caminho e o prato volta da mesa.</p></li>
+        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>Ninguém sabe há quantos minutos aquela mesa está esperando — até o cliente levantar e reclamar.</p></li>
+        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>Na hora de fechar a conta, falta item, sobra item, e a discussão acontece na frente da mesa cheia.</p></li>
+        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>O cliente que pede todo fim de semana não tem nome no sistema — quando ele para de vir, você só descobre meses depois.</p></li>
+        <li class="pain"><span class="x" aria-hidden="true">✕</span><p>No fim do mês você sabe quanto vendeu, mas não sabe qual prato dá lucro e qual só dá trabalho.</p></li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ============ MÓDULO COZINHA ============ -->
+  <section class="band band--soft" id="cozinha">
+    <div class="wrap">
+      <p class="eyebrow">O módulo Cozinha</p>
+      <h2 class="section-title">Um caminho só, do dedo do garçom até a boca do forno.</h2>
+      <p class="lead">Cozinha é o módulo novo do Vende+. Ele não muda o jeito de trabalhar da sua casa — ele tira o papel do meio e coloca cada pedido na tela de quem precisa fazer, com o tempo correndo à vista de todo mundo.</p>
+
+      <div class="grid-3">
+        <article class="card">
+          <span class="num" aria-hidden="true">1</span>
+          <h3>Comanda</h3>
+          <p>Abre por mesa, por ficha, por balcão ou por entrega. O garçom lança do celular ou do tablet, com observação por item, e a comanda fica aberta até o fechamento. Dá para transferir de mesa, juntar duas mesas e dividir a conta na hora de pagar.</p>
+        </article>
+        <article class="card">
+          <span class="num" aria-hidden="true">2</span>
+          <h3>KDS na cozinha</h3>
+          <p>Uma tela grande no lugar do espeto de papel. Cada comanda aparece com o relógio correndo desde o envio, muda de cor conforme demora e sai da tela quando o item fica pronto — e o salão vê na hora que pode buscar.</p>
+        </article>
+        <article class="card">
+          <span class="num" aria-hidden="true">3</span>
+          <h3>Impressão na produção</h3>
+          <p>Cada setor recebe só o que é dele: a pizza vai para a impressora do forno, a bebida para a do bar, a sobremesa para a copa. Sem uma pessoa carregando papel de um lado para o outro no meio do movimento.</p>
+        </article>
+      </div>
+
+      <div class="fluxo">
+        <article class="passo">
+          <p class="et">1 · Mesa</p>
+          <h3>O pedido nasce escrito</h3>
+          <p>Garçom lança no celular, item por item, com observação. Nada depende da letra dele nem da memória de ninguém.</p>
+        </article>
+        <article class="passo">
+          <p class="et">2 · Produção</p>
+          <h3>Cada um recebe o seu</h3>
+          <p>O sistema separa o pedido por setor e manda para a tela e para a impressora certa, no mesmo segundo.</p>
+        </article>
+        <article class="passo">
+          <p class="et">3 · Pronto</p>
+          <h3>O salão sabe sem perguntar</h3>
+          <p>A cozinha marca pronto, o garçom vê no celular. Acabou o vaivém para conferir se já saiu.</p>
+        </article>
+        <article class="passo">
+          <p class="et">4 · Conta</p>
+          <h3>Fecha batendo</h3>
+          <p>A conta da mesa é a soma do que foi lançado — com divisão por pessoa, taxa de serviço e o caixa fechando certo no fim da noite.</p>
+        </article>
+      </div>
     </div>
   </section>
 
   <!-- ============ GATILHOS ============ -->
   <section class="band band--navy" id="gatilhos">
-    <div class="wrap">
-      <p class="eyebrow">O coração do Vende+</p>
-      <h2 class="section-title">Uma fila de contatos, pronta, todo dia de manhã.</h2>
-      <p class="lead">Não é disparo em massa. É uma lista curta, ordenada por chance de fechar, em que cada linha vem com a peça certa e o motivo por escrito — para a vendedora abrir o WhatsApp já sabendo o que dizer.</p>
-
-      <div class="grid-3">
-        <article class="card">
-          <span class="num" aria-hidden="true">1</span>
-          <h3>Quem chamar</h3>
-          <p>O sistema olha o ritmo de compra de cada cliente. Quem já passou do tempo dela sobe na fila; quem comprou ontem não é incomodado.</p>
-        </article>
-        <article class="card">
-          <span class="num" aria-hidden="true">2</span>
-          <h3>O que oferecer</h3>
-          <p>Escolhe uma peça específica do seu estoque: tipo que ela leva, cor que ela usa, tamanho dela disponível na grade e preço na faixa que ela costuma pagar.</p>
-        </article>
-        <article class="card">
-          <span class="num" aria-hidden="true">3</span>
-          <h3>E por quê</h3>
-          <p>Cada sugestão vem com os motivos em português. Ninguém precisa confiar numa caixa-preta — dá para bater o olho e ver se faz sentido.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ MENSAGEM PRONTA ============ -->
-  <section class="band">
-    <div class="wrap grid-2">
+    <div class="wrap grid-2" style="align-items:start">
       <div>
-        <p class="eyebrow">Da fila para a conversa</p>
-        <h2 class="section-title">A mensagem sai pronta — com a foto da peça junto.</h2>
-        <p class="lead">Você clica em Enviar e o sistema escreve o texto com o nome da cliente, a peça, o tamanho e o preço. O WhatsApp abre com tudo pronto e a foto da peça vai junto. Dá para editar antes de mandar, claro.</p>
+        <p class="eyebrow">O que nenhum sistema de comanda faz</p>
+        <h2 class="section-title">O Luiz pede calabresa toda última sexta do mês.</h2>
+        <p class="lead">Você sabe disso de cabeça porque é o Luiz. Mas tem mais duzentos Luizes na sua base, e ninguém guarda duzentos. O Vende+ guarda: ele aprende o que cada cliente pede, de quanto em quanto tempo e em que dia — e coloca na sua tela, de manhã, a lista de quem provavelmente pede hoje e ainda não pediu.</p>
         <ul class="checks">
-          <li><span class="ck" aria-hidden="true">✓</span>Nada de copiar e colar de bloco de notas — nem de escrever a mesma coisa quarenta vezes.</li>
-          <li><span class="ck" aria-hidden="true">✓</span>Cada contato fica registrado: feito, com sucesso ou sem sucesso.</li>
-          <li><span class="ck" aria-hidden="true">✓</span>O que deu certo ensina o sistema a ordenar melhor a fila de amanhã.</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Não é disparo para a lista inteira: é uma fila curta, com nome, item e o motivo por escrito.</li>
+          <li><span class="ck" aria-hidden="true">✓</span>A mensagem sai pronta no WhatsApp, com o pedido de sempre já montado.</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Cliente que sumiu do ritmo dele sobe na fila antes de virar cliente perdido.</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Serve também para o contrário: parar de oferecer para quem acabou de pedir.</li>
         </ul>
-      </div>
-      <figure class="shot shot--linha" style="margin:0">
-        <img src="img/print-mensagem.jpg" width="1240" height="137" loading="lazy" decoding="async"
-             alt="Duas linhas da fila de contato: cliente, ritmo de compra, a peça sugerida com tamanho e preço, os motivos em português e o botão Enviar.">
-        <figcaption>Cada linha já vem com a peça, o motivo e o botão que abre a conversa.</figcaption>
-      </figure>
-    </div>
-  </section>
 
-  <!-- ============ PERFIL APRENDIDO ============ -->
-  <section class="band band--soft">
-    <div class="wrap grid-2">
-      <div>
-        <p class="eyebrow">Sem formulário, sem cadastro extra</p>
-        <h2 class="section-title">O gosto da cliente é aprendido na hora de vender.</h2>
-        <p class="lead">A vendedora só faz o que já faria: registra a venda. O sistema tira dali cor, tipo de peça, tamanho, faixa de preço, tecido, estilo e ocasião — e vai formando o perfil sozinho.</p>
-        <ul class="checks">
-          <li><span class="ck" aria-hidden="true">✓</span><span><strong>Presente não suja o perfil.</strong> Uma etiqueta no cupom diz “é presente” e para quem — o tamanho e a cor vão para quem vai vestir, não para quem pagou.</span></li>
-          <li><span class="ck" aria-hidden="true">✓</span><span><strong>O sistema é honesto sobre o que sabe.</strong> O perfil aparece como aprendendo, formando ou consolidado, conforme o número de peças.</span></li>
-          <li><span class="ck" aria-hidden="true">✓</span><span><strong>Venda cancelada desfaz o aprendizado</strong>, para não deixar gosto errado gravado.</span></li>
-        </ul>
-      </div>
-
-      <div class="profile">
-        <div class="head">
-          <span class="avatar" aria-hidden="true">MS</span>
-          <span>
-            <b style="display:block;font-size:1.05rem">Marina Souza</b>
-            <span class="tag">perfil consolidado · 14 peças</span>
-          </span>
+        <div class="nota">
+          <span class="ic" aria-hidden="true">i</span>
+          <p><b>Onde isso funciona de verdade:</b> o gatilho depende de o cliente ter nome no sistema. Em delivery, retirada e comanda com telefone, isso acontece sozinho — o pedido já nasce com o cadastro. No balcão anônimo, não: o sistema não vai inventar quem comeu o PF de terça. Se a sua casa é só balcão, o valor do Vende+ está na comanda, na cozinha e no caixa; o gatilho vem junto e vai acordando conforme você for identificando cliente.</p>
         </div>
-        <ul>
-          <li>Veste M em blusa, 38 em calça</li>
-          <li>Cores: preto, off-white, terracota</li>
-          <li>Leva vestido e blusa; quase nunca calça</li>
-          <li>Ticket médio por peça: R$ 189</li>
-          <li>Volta a cada 34 dias, quase sempre no sábado</li>
-          <li>Paga no cartão, quase sempre em 2×</li>
-        </ul>
+      </div>
+
+      <div class="mock" role="img" aria-label="Exemplo de gatilho do Vende+: Luiz Carvalho, 82% de chance de pedir hoje, sugestão de pizza grande de calabresa sem cebola com Coca 2 litros, e quatro motivos listados.">
+        <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>Vende+ · gatilhos de hoje</span></div>
+        <div class="card-lead">
+          <div class="top">
+            <span class="avatar" aria-hidden="true">LC</span>
+            <span class="who"><b>Luiz Carvalho</b><span>última sexta do mês · não pediu ainda</span></span>
+            <span class="chance"><b>82%</b><span>CHANCE</span></span>
+          </div>
+          <div class="piece">
+            <span class="sw" aria-hidden="true" style="background:linear-gradient(135deg,#E8B04B,#C2410C)"></span>
+            <span><b>Pizza grande de calabresa</b><span>Sem cebola · + Coca 2 L</span></span>
+          </div>
+          <ul class="why">
+            <li>Pediu nas 6 últimas sextas de fim de mês</li>
+            <li>Calabresa em 9 dos 11 pedidos dele</li>
+            <li>Sempre pede entre 19h e 20h30 — são 19h10</li>
+            <li>Ticket dele: R$ 78 · o pedido montado dá R$ 76</li>
+          </ul>
+          <div class="row">
+            <span class="btn btn--primary">Chamar no WhatsApp</span>
+            <span class="btn btn--outline">Montar pedido</span>
+          </div>
+        </div>
+        <p class="foot">Recalculado a cada pedido — nada de lista velha.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ COMO COMEÇA ============ -->
+  <!-- ============ TIPOS DE CASA ============ -->
   <section class="band">
     <div class="wrap">
-      <p class="eyebrow">Como começa</p>
-      <h2 class="section-title">Da criação da loja até a primeira fila de contatos.</h2>
+      <p class="eyebrow">Serve para a sua casa?</p>
+      <h2 class="section-title">O mesmo sistema, com peso diferente em cada tipo de operação.</h2>
+      <p class="lead">Não adianta prometer que serve igual para todo mundo. Serve para os quatro casos abaixo — mas o que resolve o seu problema muda conforme o formato da casa. Vale saber disso antes de assinar qualquer coisa.</p>
 
-      <div class="grid-3">
-        <article class="card">
-          <span class="num" aria-hidden="true">1</span>
-          <h3>Você cria a loja sozinho</h3>
-          <p>O cadastro não pede cartão: nome, cidade e pronto — 14 dias de teste. A loja nasce vazia, do jeito certo; se quiser ver o sistema cheio antes, um botão carrega a base de exemplo e outro zera.</p>
+      <div class="tipos">
+        <article class="tipo">
+          <span class="marca">Melhor encaixe</span>
+          <h3>Pizzaria e hamburgueria com entrega</h3>
+          <p>Pedido já nasce com nome e telefone. Ganha tudo: comanda, cozinha, impressão por setor <strong>e</strong> o gatilho de recompra funcionando no volume máximo.</p>
         </article>
-        <article class="card">
-          <span class="num" aria-hidden="true">2</span>
-          <h3>Vocês vendem normalmente</h3>
-          <p>PDV com busca de peça, leitura de código de barras, grade, desconto por item e condicional. Cada venda registrada alimenta o perfil das clientes sem ninguém digitar nada a mais.</p>
+        <article class="tipo">
+          <span class="marca">Forte</span>
+          <h3>Restaurante de mesa e comanda</h3>
+          <p>O ganho está na operação: comanda por mesa, divisão de conta, cozinha na tela e fechamento que bate. O gatilho entra depois, conforme você for identificando os clientes de sempre.</p>
         </article>
-        <article class="card">
-          <span class="num" aria-hidden="true">3</span>
-          <h3>A fila começa a aparecer</h3>
-          <p>Com as primeiras compras registradas, a aba Vende+ passa a mostrar quem chamar. Cada contato marcado como sucesso ou sem sucesso deixa o sistema mais afiado.</p>
+        <article class="tipo">
+          <span class="marca">Bom</span>
+          <h3>Lanchonete, self-service e balcão</h3>
+          <p>Aqui o que pesa é velocidade: lançar rápido, mandar para a chapa e fechar o caixa sem fila. Cliente costuma ser anônimo, então o gatilho quase não se aplica — e a gente prefere dizer isso agora.</p>
+        </article>
+        <article class="tipo">
+          <span class="marca">Bom</span>
+          <h3>Bar, açaiteria e delivery próprio</h3>
+          <p>Muita comanda aberta ao mesmo tempo, consumo que vai somando e conta que fecha por mesa. Com entrega própria, o cadastro aparece e o gatilho volta a valer.</p>
         </article>
       </div>
+    </div>
+  </section>
 
-      <div class="card first-day">
-        <div>
-          <h3 style="margin-bottom:var(--s2)">O que você já tem no primeiro dia</h3>
-          <ul class="checks two-col">
-            <li><span class="ck" aria-hidden="true">✓</span>PDV com grade de tamanhos, código de barras e desconto por peça</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Estoque por produto, cor e tamanho, com custo, markup e margem</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Etiquetas de preço com código de barras por tamanho</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Cadastro de clientes, fornecedores e vendedores</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Caixa, contas a pagar e a receber</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Condicional com romaneio e catálogo online</li>
+  <!-- ============ O QUE JÁ RODA HOJE ============ -->
+  <section class="band band--soft" id="hoje">
+    <div class="wrap">
+      <p class="eyebrow">Sem promessa de vitrine</p>
+      <h2 class="section-title">O que já está no ar e o que ainda está na bancada.</h2>
+      <p class="lead">O Vende+ não nasceu ontem: ele já roda em operação real, com PDV, estoque, financeiro e nota fiscal. O que é novo é a cozinha. Estas duas listas são a coisa mais importante desta página — leia antes de decidir.</p>
+
+      <div class="duas">
+        <div class="quadro">
+          <h3>Já está no ar</h3>
+          <p class="sub">Funciona hoje, em cliente pagante.</p>
+          <ul class="checks">
+            <li><span class="ck" aria-hidden="true">✓</span>PDV completo, com busca, código de barras e desconto</li>
+            <li><span class="ck" aria-hidden="true">✓</span>Cadastro de produtos, clientes, fornecedores e vendedores</li>
+            <li><span class="ck" aria-hidden="true">✓</span>Caixa, contas a pagar e contas a receber</li>
+            <li><span class="ck" aria-hidden="true">✓</span>NFC-e e NF-e, com o módulo fiscal podendo ficar desligado</li>
+            <li><span class="ck" aria-hidden="true">✓</span>Entrada de nota do fornecedor por XML</li>
+            <li><span class="ck" aria-hidden="true">✓</span>Portal do contador, com os XMLs do mês fechados sozinhos</li>
+            <li><span class="ck" aria-hidden="true">✓</span>Catálogo online e cobrança por Pix e cartão</li>
             <li><span class="ck" aria-hidden="true">✓</span>Ajuda dentro do sistema, 24 horas</li>
           </ul>
         </div>
-        <div class="first-day__cta">
-          <a class="btn btn--primary" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=site" data-teste data-ms="teste" data-ms-origem="primeiro-dia">Criar minha loja</a>
-          <p>Sem cartão. Se não servir, é só parar de usar.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============ NA PRÁTICA ============ -->
-  <section class="band band--navy" id="recursos">
-    <div class="wrap">
-      <p class="eyebrow">Na prática</p>
-      <h2 class="section-title">O que a sua loja resolve todo dia.</h2>
-      <p class="lead">É aqui que um sistema se prova: no que dá trabalho na segunda-feira, não no que fica bonito na apresentação.</p>
-
-      <div class="grid-2" style="margin-top:var(--s5)">
-        <div>
-          <p class="eyebrow">Da caixa para a arara</p>
-          <h3 style="font-size:var(--fs-h3);font-weight:800;margin-bottom:var(--s2)">A nota do fornecedor vira estoque — e sai etiquetada.</h3>
-          <p style="color:var(--d-ink-2);font-size:var(--fs-sm)">Chegou mercadoria: em vez de digitar 200 peças, você importa o XML da nota. O sistema lê as peças, sugere juntar as linhas do mesmo modelo numa grade só, e você confere antes de dar entrada.</p>
-          <ul class="checks">
-            <li><span class="ck" aria-hidden="true">✓</span>O XML é lido de verdade: peça, quantidade, custo e o código de barras que o fabricante já mandou.</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Sai na impressora que você tem: folha A4 adesiva (24 por folha) ou rolo térmico 60 × 40 mm.</li>
-            <li><span class="ck" aria-hidden="true">✓</span>A quantidade já vem certa: igual ao que tem em estoque de cada tamanho.</li>
-            <li><span class="ck" aria-hidden="true">✓</span>Reetiquetar é rotina: virada de coleção, preço novo, etiqueta que descolou — filtra, marca e imprime.</li>
+        <div class="quadro quadro--obra">
+          <h3>Em construção</h3>
+          <p class="sub">É isso que o restaurante piloto ajuda a definir.</p>
+          <ul class="wip">
+            <li><span class="hh" aria-hidden="true">⌁</span>Comanda por mesa, ficha, balcão e entrega</li>
+            <li><span class="hh" aria-hidden="true">⌁</span>Tela de cozinha (KDS) com tempo por comanda</li>
+            <li><span class="hh" aria-hidden="true">⌁</span>Impressão direta por setor de produção</li>
+            <li><span class="hh" aria-hidden="true">⌁</span>Divisão de conta e taxa de serviço</li>
+            <li><span class="hh" aria-hidden="true">⌁</span>Ficha técnica do prato e baixa de insumo</li>
+            <li><span class="hh" aria-hidden="true">⌁</span>Gatilho de recompra com o cardápio no lugar da arara</li>
+            <li><span class="hh" aria-hidden="true">⌁</span>Ligação com o app de entrega da Maker System</li>
           </ul>
         </div>
-        <figure class="shot" style="margin:0">
-          <img src="img/print-etiquetas.jpg" width="1240" height="636" loading="lazy" decoding="async"
-               alt="Tela de etiquetas de preço: cada peça aberta por cor e tamanho, com o código EAN-13, o preço e quantas etiquetas imprimir de cada tamanho.">
-          <figcaption>As etiquetas saindo do estoque, uma por cor e tamanho, com o código de barras.</figcaption>
-        </figure>
-      </div>
-
-      <div class="features">
-        <article class="card">
-          <h3>Condicional sem caderno</h3>
-          <p>Quem levou, o que levou, até quando e com qual vendedora. Romaneio impresso na saída, com as peças, os valores e a data de devolução — para os dois assinarem.</p>
-        </article>
-        <article class="card">
-          <h3>Crediário que fecha</h3>
-          <p>Parcelou, virou série: cada parcela com o seu vencimento, ligada à venda que a originou. Um clique abre a origem da dívida — qual compra, quais peças, que dia.</p>
-        </article>
-        <article class="card">
-          <h3>Cobrança em lote</h3>
-          <p>Vencimentos casados no mesmo dia do mês, cobrança de vencidos em lote com a mensagem pronta no WhatsApp de cada uma, e baixa com forma de pagamento caindo no caixa certo.</p>
-        </article>
-        <article class="card">
-          <h3>Catálogo online</h3>
-          <p>A vitrine é o seu estoque. A pessoa vê as peças e as fotos, mas o preço só aparece depois que ela deixa nome, WhatsApp e aniversário. Em vez de mais uma visualização, você ganha um contato.</p>
-        </article>
-        <article class="card">
-          <h3>Nota fiscal</h3>
-          <p>Emissão de NFC-e e NF-e nos planos com o módulo fiscal, e a importação do XML da nota de compra que dá entrada no estoque para você.</p>
-        </article>
-        <article class="card">
-          <h3>Metas e comissão</h3>
-          <p>Meta da loja e meta por vendedora, comissão calculada em cima do que foi vendido, e um painel que responde “como estamos hoje”.</p>
-        </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ PLANOS ============ -->
-  <section class="band" id="planos">
-    <div class="wrap">
-      <p class="eyebrow">Planos</p>
-      <h2 class="section-title">Você paga pelo que a sua loja usa.</h2>
-      <p class="lead">Qualquer plano começa com 14 dias grátis, sem cartão. São dois motores independentes: a loja de moda inteira e a parte fiscal — quem só quer emitir nota não paga pelo resto, e quem quer tudo tem tudo.</p>
-
-      <div class="plans">
-        <article class="plan">
-          <h3>Fiscal</h3>
-          <p class="desc">Para quem só precisa emitir documento fiscal e controlar o básico.</p>
-          <p class="price">Sob consulta</p>
-          <p class="terms">1 terminal</p>
-          <ul>
-            <li>NFC-e e NF-e</li>
-            <li>Importação de nota de compra</li>
-            <li>Estoque simples</li>
-            <li>PDV</li>
-            <li>Financeiro e caixa</li>
-          </ul>
-          <a class="btn btn--outline btn--sm" href="#demo" data-zap="Olá! Quero saber o valor do plano Fiscal do Vende+." data-ms="whatsapp" data-ms-origem="plano-fiscal">Pedir proposta</a>
-        </article>
-
-        <article class="plan">
-          <h3>Start</h3>
-          <p class="desc">A loja de moda funcionando: vender, controlar e cadastrar.</p>
-          <p class="price">Sob consulta</p>
-          <p class="terms">1 terminal</p>
-          <ul>
-            <li>PDV com grade de tamanhos</li>
-            <li>Estoque e ficha de moda</li>
-            <li>Clientes e fornecedores</li>
-            <li>Caixa</li>
-            <li>Catálogo online</li>
-          </ul>
-          <a class="btn btn--outline btn--sm" href="#demo" data-zap="Olá! Quero saber o valor do plano Start do Vende+." data-ms="whatsapp" data-ms-origem="plano-start">Pedir proposta</a>
-        </article>
-
-        <article class="plan plan--hot">
-          <span class="badge">Mais escolhido</span>
-          <h3>Pro</h3>
-          <p class="desc">Para a loja que já tem equipe, meta e contas para administrar.</p>
-          <p class="price">Sob consulta</p>
-          <p class="terms">até 3 terminais</p>
-          <ul>
-            <li>Tudo do Start</li>
-            <li>Gatilhos de venda</li>
-            <li>Condicional</li>
-            <li>Contas a pagar e receber</li>
-            <li>Comissões e metas</li>
-          </ul>
-          <a class="btn btn--primary btn--sm" href="#demo" data-zap="Olá! Quero saber o valor do plano Pro do Vende+." data-ms="whatsapp" data-ms-origem="plano-pro">Pedir proposta</a>
-        </article>
-
-        <article class="plan">
-          <h3>Max</h3>
-          <p class="desc">Mais de uma loja, nota fiscal e tudo ligado no mesmo lugar.</p>
-          <p class="price">Sob consulta</p>
-          <p class="terms">terminais à vontade</p>
-          <ul>
-            <li>Tudo do Pro</li>
-            <li>Módulo fiscal completo</li>
-            <li>Multi-loja</li>
-            <li>Metas e painéis</li>
-            <li>Suporte prioritário</li>
-          </ul>
-          <a class="btn btn--outline btn--sm" href="#demo" data-zap="Olá! Quero saber o valor do plano Max do Vende+." data-ms="whatsapp" data-ms-origem="plano-max">Pedir proposta</a>
-        </article>
-      </div>
-
-      <p style="text-align:center;margin-top:var(--s4);color:var(--ink-2);font-size:var(--fs-sm)">
-        Assinatura mensal por loja, sem fidelidade. Você testa 14 dias antes de decidir, e a gente ajuda a subir o seu cadastro atual.
-      </p>
-    </div>
-  </section>
-
-  <!-- ============ DEMONSTRAÇÃO ============ -->
-  <section class="band band--soft" id="demo">
+  <!-- ============ PILOTO ============ -->
+  <section class="band" id="piloto">
     <div class="wrap grid-2" style="align-items:start">
       <div>
-        <p class="eyebrow">Demonstração</p>
-        <h2 class="section-title">Quinze minutos e você vê a sua loja rodando.</h2>
-        <p class="lead">A gente abre o sistema com dados parecidos com os seus e mostra a fila de contatos do dia. Se não fizer sentido para a sua loja, a gente fala isso na hora.</p>
-        <ul class="checks">
-          <li><span class="ck" aria-hidden="true">✓</span>Sem compromisso e sem cartão</li>
-          <li><span class="ck" aria-hidden="true">✓</span>Resposta no mesmo dia útil</li>
-          <li><span class="ck" aria-hidden="true">✓</span>Atendimento por WhatsApp, com gente de verdade</li>
+        <p class="eyebrow">Restaurante piloto</p>
+        <h2 class="section-title">Poucas casas, construindo junto, sem pagar licença enquanto isso.</h2>
+        <p class="lead">Piloto não é desconto disfarçado. É um acordo: a sua casa usa o módulo antes de todo mundo e a gente conserta o que atrapalhar o seu serviço, na sua realidade — e não na nossa cabeça.</p>
+
+        <ul class="checks two-col">
+          <li><span class="ck" aria-hidden="true">✓</span>Sem custo de licença enquanto o módulo estiver em construção</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Implantação e migração de cadastro feitas pela gente</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Canal direto com quem programa, não com atendimento de fila</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Preço de piloto garantido quando virar produto</li>
+          <li><span class="ck" aria-hidden="true">✓</span>O que você pedir entra na fila de verdade</li>
+          <li><span class="ck" aria-hidden="true">✓</span>Pode sair quando quiser, levando os seus dados</li>
         </ul>
-        <a class="btn btn--wa" style="margin-top:var(--s3)" href="https://wa.me/5563999333307?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Vende%2B%20e%20quero%20uma%20demonstra%C3%A7%C3%A3o." data-zap="Olá! Vim pelo site do Vende+ e quero uma demonstração." data-ms="whatsapp" data-ms-origem="demo">Falar no WhatsApp</a>
+
+        <p class="lead" style="font-size:var(--fs-sm)"><strong>O que a gente pede em troca:</strong> que você use de verdade no movimento, aponte o que travou no mesmo dia e deixe a gente sentar na sua casa para ver o serviço acontecendo. É isso.</p>
+
+        <a class="btn btn--wa" style="margin-top:var(--s3)" href="https://wa.me/5563999333307?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Vende%2B%20Restaurante%20e%20quero%20uma%20vaga%20de%20piloto." data-zap="Olá! Vim pelo site do Vende+ Restaurante e quero uma vaga de piloto." data-ms="whatsapp" data-ms-origem="piloto">Falar no WhatsApp</a>
       </div>
 
       <div class="form-card form">
-      <form id="form-lead" data-msg="Quero uma demonstração do Vende+ para a minha loja." novalidate>
+      <form id="form-lead" data-msg="Quero uma vaga de restaurante piloto do Vende+." novalidate>
         <div class="field-row">
           <div class="field">
             <label for="nome">Seu nome <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
             <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como te chamam" required aria-required="true">
           </div>
           <div class="field">
-            <label for="loja">Nome da loja <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
-            <input id="loja" name="loja" type="text" autocomplete="organization" placeholder="Nome da loja" required aria-required="true">
+            <label for="loja">Nome da casa <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
+            <input id="loja" name="loja" type="text" autocomplete="organization" placeholder="Nome do restaurante" required aria-required="true">
           </div>
         </div>
         <div class="field-row">
@@ -940,7 +933,7 @@ h1 .hl{color:var(--green-bright)}
           </div>
           <div class="field">
             <label for="email">E-mail <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
-            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@sualoja.com.br" required aria-required="true">
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@suacasa.com.br" required aria-required="true">
           </div>
         </div>
         <div class="field-row">
@@ -949,27 +942,50 @@ h1 .hl{color:var(--green-bright)}
             <input id="cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Cidade / UF">
           </div>
           <div class="field">
-            <label for="equipe">Quantas pessoas vendem na loja?</label>
-            <select id="equipe" name="equipe">
+            <label for="tipo">Tipo de casa</label>
+            <select id="tipo" name="tipo">
               <option value="">Selecione</option>
-              <option>Só eu</option>
-              <option>2 a 3</option>
-              <option>4 a 8</option>
-              <option>Mais de 8</option>
+              <option>Pizzaria ou hamburgueria com entrega</option>
+              <option>Restaurante de mesa / comanda</option>
+              <option>Lanchonete, self-service ou balcão</option>
+              <option>Bar, açaiteria ou delivery próprio</option>
+              <option>Outro formato</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="mesas">Quantas mesas ou pedidos por dia?</label>
+            <select id="mesas" name="mesas">
+              <option value="">Selecione</option>
+              <option>Até 30 por dia</option>
+              <option>30 a 80 por dia</option>
+              <option>80 a 200 por dia</option>
+              <option>Mais de 200 por dia</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="hoje-uso">Como você anota o pedido hoje?</label>
+            <select id="hoje-uso" name="hoje">
+              <option value="">Selecione</option>
+              <option>Comanda de papel</option>
+              <option>Bloco e memória</option>
+              <option>Já uso um sistema</option>
+              <option>Aplicativo de entrega</option>
             </select>
           </div>
         </div>
         <div class="field">
           <label for="obs">Alguma coisa que a gente precisa saber?</label>
-          <textarea id="obs" name="observacao" placeholder="Ex.: hoje uso planilha, tenho crediário, trabalho com condicional…"></textarea>
+          <textarea id="obs" name="observacao" placeholder="Ex.: tenho impressora térmica no forno, trabalho com entrega própria, fecho conta por mesa…"></textarea>
         </div>
-        <!-- Consentimento separado do pedido de demonstração, e NUNCA pré-marcado:
+        <!-- Consentimento separado do pedido de piloto, e NUNCA pré-marcado:
              pela LGPD consentimento é um ato de quem preenche. -->
         <label class="aceite">
           <input type="checkbox" name="aceite" value="1">
-          <span>Quero receber por e-mail dicas de gestão para loja de moda e novidades do Vende+. Dá para sair quando quiser, num clique.</span>
+          <span>Quero receber por e-mail as novidades do módulo Cozinha e dicas de gestão para restaurante. Dá para sair quando quiser, num clique.</span>
         </label>
-        <button class="btn btn--primary" type="submit" style="width:100%" data-ms="form" data-ms-origem="demo">Quero ver a demonstração</button>
+        <button class="btn btn--primary" type="submit" style="width:100%" data-ms="form" data-ms-origem="piloto">Quero uma vaga de piloto</button>
         <p class="form__nota">Ao enviar, você abre uma conversa no WhatsApp com a gente. Seus dados seguem a nossa <a href="privacidade.html">política de privacidade</a>.</p>
       </form>
       <div class="form__ok">
@@ -982,51 +998,43 @@ h1 .hl{color:var(--green-bright)}
   </section>
 
   <!-- ============ DÚVIDAS ============ -->
-  <section class="band" id="duvidas">
+  <section class="band band--soft" id="duvidas">
     <div class="wrap">
       <p class="eyebrow">Dúvidas</p>
-      <h2 class="section-title">O que a gente mais ouve antes de assinar.</h2>
+      <h2 class="section-title">O que a gente já ouviu de dono de restaurante.</h2>
 
       <div class="faq">
         <details open>
-          <summary>Como funciona o teste de 14 dias?</summary>
-          <p class="answer">Você cria a sua loja em dois minutos, sem cartão e sem falar com vendedor. São 14 dias com o sistema inteiro liberado. Se não servir, é só parar de usar — não vira cobrança.</p>
+          <summary>Quando o módulo Cozinha fica pronto?</summary>
+          <p class="answer">Não vamos cravar data aqui, porque data de software prometida em site quase sempre é mentira. O que dá para dizer: a construção começou, o piloto entra por partes (primeiro a comanda, depois a tela da cozinha, depois a impressão por setor) e quem está no piloto acompanha cada pedaço entrando. Na conversa a gente fala o prazo real em que estamos trabalhando.</p>
         </details>
         <details>
-          <summary>Preciso instalar alguma coisa?</summary>
-          <p class="answer">Não. O Vende+ abre no navegador, no computador da loja, no tablet do provador e no celular. Nada de instalar programa em cada máquina nem de servidor dentro da loja.</p>
+          <summary>Preciso comprar tablet para cada garçom?</summary>
+          <p class="answer">Não. Funciona no celular que o garçom já tem, pelo navegador — sem instalar aplicativo. Tablet ajuda em casa com muita mesa, mas é conforto, não requisito. Para a cozinha, o ideal é uma tela só, grande, ligada o tempo todo: pode ser um monitor velho com um computador simples atrás.</p>
         </details>
         <details>
-          <summary>Preciso de leitor de código de barras?</summary>
-          <p class="answer">Ajuda muito, mas não é obrigatório. Dá para buscar a peça pelo nome ou pela referência. Se você já tem um leitor USB, ele funciona sem configuração — o sistema entende como se fosse teclado.</p>
+          <summary>Funciona com a impressora que eu já tenho?</summary>
+          <p class="answer">A ideia é atender impressora térmica de rolo, que é o que praticamente toda cozinha usa, tanto em USB quanto em rede. Na conversa do piloto a gente pede o modelo exato da sua e confirma antes de você contar com isso — prefiro conferir a prometer.</p>
         </details>
         <details>
-          <summary>Quanto tempo até o sistema começar a sugerir contatos?</summary>
-          <p class="answer">As primeiras sugestões aparecem com poucas vendas registradas, e o sistema avisa que o perfil ainda está “aprendendo”. Ele fica realmente afiado depois de algumas semanas de venda no PDV — porque é da venda que ele aprende.</p>
+          <summary>E se a internet cair no meio do movimento?</summary>
+          <p class="answer">É a pergunta certa para restaurante, e a resposta honesta é que essa parte ainda está sendo desenhada. A direção é a mesma do resto do Vende+: o que está em andamento não se perde e volta quando a conexão volta. Para casa com internet instável, a gente recomenda um 4G de reserva no roteador — custa pouco e resolve a maior parte dos sustos.</p>
         </details>
         <details>
-          <summary>Já uso outro sistema. Dá para trazer meus dados?</summary>
-          <p class="answer">Dá. A gente ajuda a subir clientes, produtos e saldo de estoque a partir de planilha ou exportação do sistema atual. Isso entra junto com a implantação, sem custo separado.</p>
+          <summary>Emite nota fiscal?</summary>
+          <p class="answer">Sim, NFC-e e NF-e, e essa parte já está no ar hoje. Se a sua casa é MEI e não precisa emitir, o módulo fiscal fica desligado e você não paga por ele.</p>
         </details>
         <details>
-          <summary>Emite nota fiscal mesmo?</summary>
-          <p class="answer">Sim, NFC-e e NF-e nos planos com o módulo fiscal. E se a sua loja é MEI e não precisa emitir, o módulo fiscal fica desligado e você não paga por ele.</p>
+          <summary>Integra com iFood e com aplicativo de entrega?</summary>
+          <p class="answer">Hoje, não. A primeira ligação prevista é com o Zé Entrega, o aplicativo de entrega da própria Maker System — por ser nosso, dá para fazer o pedido cair direto na cozinha. Integração com aplicativo de terceiro é assunto para depois do módulo em pé, e a gente não vai vender isso como se já existisse.</p>
         </details>
         <details>
-          <summary>E se a internet cair no meio da venda?</summary>
-          <p class="answer">A venda em andamento não se perde: ela fica guardada e você retoma quando a conexão volta. Para lojas com internet instável, a gente recomenda um 4G de reserva no roteador — custa pouco e resolve.</p>
+          <summary>Quanto vai custar?</summary>
+          <p class="answer">Enquanto o módulo estiver em construção, o piloto não paga licença. Quando virar produto, a assinatura é mensal por casa, com o preço de piloto garantido para quem entrou agora. Sem taxa de adesão escondida e sem fidelidade.</p>
         </details>
         <details>
-          <summary>Quanto custa?</summary>
-          <p class="answer">A assinatura é mensal por loja e varia com o plano e o número de terminais. Como cada loja usa um conjunto diferente de módulos, a gente passa o valor na conversa de quinze minutos — sem enrolação e sem taxa de adesão escondida.</p>
-        </details>
-        <details>
-          <summary>Meus dados ficam seguros? E se eu parar de pagar?</summary>
-          <p class="answer">Os dados são seus. A base fica em servidor com backup diário, e a qualquer momento você exporta clientes, produtos e vendas. Se parar de pagar, o acesso é bloqueado, mas os dados continuam disponíveis para exportação.</p>
-        </details>
-        <details>
-          <summary>E se a minha vendedora não souber usar?</summary>
-          <p class="answer">O PDV foi desenhado para quem atende de pé, com pressa: busca, grade, desconto e fechar. Além disso tem ajuda dentro do próprio sistema, 24 horas, que responde na tela em que a pessoa está — e o nosso WhatsApp continua ali.</p>
+          <summary>Não quero ser piloto. Posso esperar ficar pronto?</summary>
+          <p class="answer">Pode, e a gente avisa. Deixe seu contato no formulário e marque a caixinha do aviso por e-mail: quando o módulo abrir para todo mundo, você recebe o recado. Se a sua urgência hoje é PDV, estoque e nota fiscal, isso já funciona — dá para começar por aí e a cozinha entra depois, no mesmo sistema.</p>
         </details>
       </div>
     </div>
@@ -1035,11 +1043,11 @@ h1 .hl{color:var(--green-bright)}
   <!-- ============ CTA FINAL ============ -->
   <section class="band band--navy">
     <div class="wrap final">
-      <h2>Amanhã de manhã, você já sabe para quem mandar mensagem.</h2>
-      <p class="lead" style="margin-inline:auto">Crie a sua loja agora e use por 14 dias, sem cartão. Se preferir só espiar antes, a demonstração já vem cheia de produtos e vendas de exemplo.</p>
+      <h2>A sua casa pode ser uma das primeiras a rodar sem papel.</h2>
+      <p class="lead" style="margin-inline:auto">São poucas vagas de piloto, porque a gente quer conseguir sentar em cada uma. Se a sua casa entra, você não recebe um sistema pronto: você ajuda a decidir como ele fica.</p>
       <div class="actions">
-        <a class="btn btn--primary" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=site" data-teste data-ms="teste" data-ms-origem="cta-final">Começar 14 dias grátis</a>
-        <a class="btn btn--ghost" href="#demo" data-demo data-ms="demo" data-ms-origem="cta-final">Ver a demonstração</a>
+        <a class="btn btn--primary" href="#piloto" data-ms="cta" data-ms-origem="cta-final">Quero uma vaga de piloto</a>
+        <a class="btn btn--ghost" href="vende-mais.html" data-ms="cta" data-ms-origem="cta-final-moda">Sou loja de roupa, não restaurante</a>
       </div>
     </div>
   </section>
@@ -1048,10 +1056,10 @@ h1 .hl{color:var(--green-bright)}
 
 <footer class="site-footer">
   <div class="wrap">
-    <div class="cols cols--5">
+    <div class="cols">
       <div>
         <img class="logo" src="img/vendemais-logo-branco.png" alt="Vende+" width="120" height="38">
-        <p>O sistema para loja de moda que não para no cupom: ele diz qual cliente chamar hoje, qual peça oferecer e por quê.</p>
+        <p>O sistema de gestão da Maker System. Para restaurante: comanda, cozinha na tela, impressão na produção — e o cliente que sempre volta, com nome.</p>
       </div>
       <div>
         <h4>Vende+ para</h4>
@@ -1062,20 +1070,12 @@ h1 .hl{color:var(--green-bright)}
         </ul>
       </div>
       <div>
-        <h4>Vende+</h4>
+        <h4>Nesta página</h4>
         <ul>
-          <li><a href="#gatilhos">Gatilhos de venda</a></li>
-          <li><a href="#recursos">Recursos</a></li>
-          <li><a href="#planos">Planos</a></li>
+          <li><a href="#cozinha">Módulo Cozinha</a></li>
+          <li><a href="#gatilhos">Gatilhos</a></li>
+          <li><a href="#hoje">O que já roda</a></li>
           <li><a href="#duvidas">Dúvidas</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Começar</h4>
-        <ul>
-          <li><a href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=site" data-teste data-ms="teste" data-ms-origem="rodape">Criar minha loja</a></li>
-          <li><a href="https://vendemais.makersystem.com.br/">Entrar no sistema</a></li>
-          <li><a href="#demo">Ver a demonstração</a></li>
         </ul>
       </div>
       <div>
@@ -1090,12 +1090,12 @@ h1 .hl{color:var(--green-bright)}
     </div>
     <div class="legal">
       <span>© <span id="ano">2026</span> Maker System. Todos os direitos reservados.</span>
-      <span>Vende+ é um produto Maker System.</span>
+      <span>Módulo Cozinha em construção — esta página não vende sistema pronto.</span>
     </div>
   </div>
 </footer>
 
-<a class="wa-float zap-fixo" href="https://wa.me/5563999333307?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20conhecer%20o%20Vende%2B." data-zap data-ms="whatsapp" data-ms-origem="flutuante" aria-label="Falar no WhatsApp">
+<a class="wa-float zap-fixo" href="https://wa.me/5563999333307?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20falar%20sobre%20o%20Vende%2B%20para%20restaurante." data-zap data-ms="whatsapp" data-ms-origem="flutuante" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.41.09-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42l-.47-.01c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.74 2.65 4.21 3.72.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
 </a>
 
@@ -1137,7 +1137,7 @@ document.querySelectorAll('.faq details').forEach(function (d) {
   if(!form) return;
   var regras = {
     nome:     function(v){ return v.trim().length >= 2 ? '' : 'Escreva o seu nome.'; },
-    loja:     function(v){ return v.trim().length >= 2 ? '' : 'Escreva o nome da loja.'; },
+    loja:     function(v){ return v.trim().length >= 2 ? '' : 'Escreva o nome da casa.'; },
     empresa:  function(){ return ''; },
     whatsapp: function(v){ return (v.replace(/\D/g,'').length >= 10) ? '' : 'Um WhatsApp com DDD, por favor.'; },
     email:    function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'Confira o e-mail — falta algo nele.'; }
