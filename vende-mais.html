@@ -23,6 +23,9 @@
      servido: o robô da Meta lê o código-fonte cru e não executa JavaScript. -->
 <meta name="facebook-domain-verification" content="11botkgcba40pb3osep2qvar07lumc">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="assets/js/config.js?v=4"></script>
 <script src="assets/js/tracking.js?v=4"></script>
 
@@ -67,8 +70,8 @@
 
   /* texto (claro) */
   --ink:#0A1B33;
-  --ink-2:#525C6B;
-  --ink-3:#616A78;
+  --ink-2:#454E5D;
+  --ink-3:#454E5D;
   --on-brand:#FFFFFF;
 
   /* cores FIXAS do mockup de tela — o cartão é sempre branco (é a foto do
@@ -76,8 +79,8 @@
   --mock-bg:#FFFFFF;
   --mock-sunken:#EAF0F8;
   --mock-ink:#0A1B33;
-  --mock-ink-2:#525C6B;
-  --mock-ink-3:#616A78;
+  --mock-ink-2:#454E5D;
+  --mock-ink-3:#454E5D;
   --mock-green:#0A7F2C;
   --mock-line:#C6D3E4;
 
@@ -86,10 +89,11 @@
   --d-surface:#0A2A5E;
   --d-line:rgba(255,255,255,.14);
   --d-ink:#FFFFFF;
-  --d-ink-2:#BCCBE4;
+  --d-ink-2:#C4D2E8;
 
   /* tipografia */
-  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-titulo:"Sora","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
   --fs-display:clamp(2.4rem,1.4rem + 4.4vw,4.4rem);
   --fs-h2:clamp(1.75rem,1.2rem + 2.2vw,2.85rem);
   --fs-h3:clamp(1.15rem,1.02rem + .5vw,1.45rem);
@@ -109,7 +113,7 @@
   :root:not([data-theme="light"]){
     --bg:#061428; --bg-soft:#08203F; --bg-sunken:#04173A;
     --surface:#0B2A52; --line:rgba(255,255,255,.13); --line-strong:rgba(255,255,255,.22);
-    --ink:#FFFFFF; --ink-2:#BCCBE4; --ink-3:#93A5C2;
+    --ink:#FFFFFF; --ink-2:#BCCBE4; --ink-3:#AEBDD5;
     --green-ink:#2BE05C;
     --shadow-1:0 1px 2px rgba(0,0,0,.4); --shadow-2:0 18px 44px rgba(0,0,0,.5);
   }
@@ -131,7 +135,7 @@ body{
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
 img{max-width:100%;height:auto;display:block}
-h1,h2,h3,h4{line-height:1.12;letter-spacing:-.022em;margin:0;text-wrap:balance}
+h1,h2,h3,h4{font-family:var(--font-titulo);line-height:1.12;letter-spacing:-.022em;margin:0;text-wrap:balance}
 p{margin:0}
 a{color:inherit}
 ul{margin:0;padding:0;list-style:none}
@@ -154,7 +158,7 @@ ul{margin:0;padding:0;list-style:none}
 /* ---------- cabeçalho ---------- */
 .site-header{
   position:sticky;top:0;z-index:50;
-  background:rgba(4,23,58,.82);backdrop-filter:saturate(160%) blur(14px);
+  background:rgba(4,23,58,.90);backdrop-filter:saturate(160%) blur(14px);
   -webkit-backdrop-filter:saturate(160%) blur(14px);
   border-bottom:1px solid rgba(255,255,255,.10);
 }
@@ -246,7 +250,7 @@ h1 .hl{color:var(--green-bright)}
 .mock{background:#08203F;border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-lg);padding:.95rem;box-shadow:0 30px 70px rgba(0,0,0,.45)}
 .mock .chrome{display:flex;align-items:center;gap:.45rem;padding:.25rem .35rem .8rem}
 .mock .chrome i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.22)}
-.mock .chrome span{margin-left:.5rem;font-size:var(--fs-xs);color:#93A5C2;letter-spacing:.02em}
+.mock .chrome span{margin-left:.5rem;font-size:var(--fs-xs);color:#AEBDD5;letter-spacing:.02em}
 .card-lead{background:var(--mock-bg);color:var(--mock-ink);border-radius:16px;padding:1.1rem;margin-bottom:.7rem;box-shadow:0 8px 24px rgba(0,0,0,.18)}
 .card-lead + .card-lead{margin-bottom:0}
 .card-lead .top{display:flex;align-items:center;gap:.75rem}
@@ -267,7 +271,7 @@ h1 .hl{color:var(--green-bright)}
 .card-lead .row{display:flex;gap:.55rem;margin-top:.9rem}
 .card-lead .row .btn{flex:1;min-height:44px;font-size:var(--fs-sm);padding:.5rem .8rem}
 .card-lead .row .btn--outline{color:var(--mock-ink);border-color:var(--mock-line);background:transparent}
-.mock .foot{font-size:var(--fs-xs);color:#93A5C2;padding:.8rem .35rem 0}
+.mock .foot{font-size:var(--fs-xs);color:#AEBDD5;padding:.8rem .35rem 0}
 
 /* ---------- grids genéricos ---------- */
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);margin-top:var(--s5)}
@@ -326,10 +330,20 @@ h1 .hl{color:var(--green-bright)}
   aspect-ratio:16/10;display:grid;place-content:center;gap:.5rem;text-align:center;padding:var(--s3);
   color:var(--ink-3);font-size:var(--fs-sm);
 }
-.band--navy .shot .ph{color:#93A5C2}
+.band--navy .shot .ph{color:#AEBDD5}
 .shot figcaption{padding:.8rem 1rem;font-size:var(--fs-xs);color:var(--ink-3);border-top:1px solid var(--line);background:var(--surface)}
-.band--navy .shot figcaption{color:#93A5C2;border-color:var(--d-line);background:rgba(255,255,255,.05)}
+.band--navy .shot figcaption{color:#AEBDD5;border-color:var(--d-line);background:rgba(255,255,255,.05)}
+
+/* Guia de Design — Dark Mode: "Soften the color of white backgrounds. If you
+   display a content image that includes a white background, consider slightly
+   darkening the image to prevent the background from glowing." Os prints do
+   sistema sao telas claras; dentro da faixa navy e no modo escuro eles ofuscam. */
+.band--navy .shot img{filter:brightness(.94) contrast(1.02)}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .shot img{filter:brightness(.90) contrast(1.03)}
+}
 .shots{display:grid;grid-template-columns:1.35fr .65fr;gap:var(--s3);margin-top:var(--s5)}
+.shots--par{grid-template-columns:1fr 1fr}
 @media (max-width:900px){.shots{grid-template-columns:1fr}}
 
 /* perfil aprendido */
@@ -450,6 +464,21 @@ h1 .hl{color:var(--green-bright)}
 .form__nota{font-size:var(--fs-xs);color:var(--ink-3);margin-top:.8rem;text-align:center}
 .form__nota a{color:var(--green-ink);text-decoration:underline}
 
+/* Guia de Design — Entering Data: "make sure people understand that they must
+   provide the required data" e "Dynamically validate field values... provide
+   feedback as soon as you detect a problem". */
+.field label .obr{color:#B3261E;font-weight:800;margin-left:.15rem}
+.field .erro{display:none;font-size:var(--fs-xs);color:#B3261E;margin-top:.35rem;font-weight:600}
+.field .erro::before{content:"\26A0  ";}
+.field.invalido input,.field.invalido select{border-color:#B3261E;border-width:2px}
+.field.invalido .erro{display:block}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .field label .obr,
+  :root:not([data-theme="light"]) .field .erro{color:#FF9E96}
+  :root:not([data-theme="light"]) .field.invalido input,
+  :root:not([data-theme="light"]) .field.invalido select{border-color:#FF9E96}
+}
+
 .lgpd{
   display:none;position:fixed;left:14px;right:14px;bottom:14px;z-index:70;
   align-items:center;gap:14px;flex-wrap:wrap;
@@ -565,20 +594,20 @@ h1 .hl{color:var(--green-bright)}
       <h2 class="section-title">É o sistema rodando, com uma loja de demonstração.</h2>
       <p class="lead">No computador da loja, no tablet do provador e no celular da cliente — é o mesmo sistema, sem instalar nada.</p>
 
-      <div class="shots">
+      <div class="shots shots--par">
         <figure class="shot" style="margin:0">
-          <div class="ph" data-slot="print-gatilhos">
-            <strong>[ print: fila de gatilhos do dia ]</strong>
-            <span>Substituir por img/print-gatilhos.png</span>
+          <div class="ph" data-slot="print-pdv">
+            <strong>[ print: PDV com a grade de cor e tamanho ]</strong>
+            <span>entra depois que o sistema for recolorido</span>
           </div>
-          <figcaption>A fila de contatos do dia, no computador da loja.</figcaption>
+          <figcaption>O PDV escolhendo cor e tamanho na grade, com o estoque de cada peça à vista.</figcaption>
         </figure>
         <figure class="shot" style="margin:0">
-          <div class="ph" data-slot="print-pdv" style="aspect-ratio:3/4">
-            <strong>[ print: PDV / condicional ]</strong>
-            <span>Substituir por img/print-pdv.png</span>
+          <div class="ph" data-slot="print-estoque">
+            <strong>[ print: estoque com custo, venda e margem ]</strong>
+            <span>entra depois que o sistema for recolorido</span>
           </div>
-          <figcaption>A condicional no tablet do provador · o catálogo no celular da cliente.</figcaption>
+          <figcaption>O estoque com custo, venda, margem — e os contadores do que ainda falta preencher.</figcaption>
         </figure>
       </div>
     </div>
@@ -751,10 +780,10 @@ h1 .hl{color:var(--green-bright)}
         </div>
         <figure class="shot" style="margin:0">
           <div class="ph" data-slot="print-etiquetas">
-            <strong>[ print: entrada de XML / etiquetas ]</strong>
-            <span>Substituir por img/print-etiquetas.png</span>
+            <strong>[ print: etiquetas com o EAN-13 da nota ]</strong>
+            <span>entra depois que o sistema for recolorido</span>
           </div>
-          <figcaption>Importação do XML da nota e geração das etiquetas com código de barras.</figcaption>
+          <figcaption>As etiquetas saindo do estoque, com o EAN-13 que veio na nota do fornecedor.</figcaption>
         </figure>
       </div>
 
@@ -882,28 +911,28 @@ h1 .hl{color:var(--green-bright)}
       <form id="form-lead" data-msg="Quero uma demonstração do Vende+ para a minha loja." novalidate>
         <div class="field-row">
           <div class="field">
-            <label for="nome">Seu nome</label>
-            <input id="nome" name="nome" type="text" autocomplete="name" required>
+            <label for="nome">Seu nome <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
+            <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como te chamam" required aria-required="true">
           </div>
           <div class="field">
-            <label for="loja">Nome da loja</label>
-            <input id="loja" name="loja" type="text" autocomplete="organization" required>
+            <label for="loja">Nome da loja <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
+            <input id="loja" name="loja" type="text" autocomplete="organization" placeholder="Nome da loja" required aria-required="true">
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="zap">WhatsApp</label>
-            <input id="zap" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(63) 99999-0000" required>
+            <label for="zap">WhatsApp <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
+            <input id="zap" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(63) 99999-0000" required aria-required="true">
           </div>
           <div class="field">
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
+            <label for="email">E-mail <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@sualoja.com.br" required aria-required="true">
           </div>
         </div>
         <div class="field-row">
           <div class="field">
             <label for="cidade">Cidade</label>
-            <input id="cidade" name="cidade" type="text" autocomplete="address-level2">
+            <input id="cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Cidade / UF">
           </div>
           <div class="field">
             <label for="equipe">Quantas pessoas vendem na loja?</label>
@@ -1078,6 +1107,55 @@ document.querySelectorAll('.faq details').forEach(function (d) {
     document.querySelectorAll('.faq details[open]').forEach(function (o) { if (o !== d) o.open = false; });
   });
 });
+
+// Guia de Design — Entering Data / Feedback: valida no momento em que a pessoa
+// sai do campo e explica o que fazer, em vez de reclamar so depois de enviar.
+(function(){
+  var form = document.getElementById('form-lead');
+  if(!form) return;
+  var regras = {
+    nome:     function(v){ return v.trim().length >= 2 ? '' : 'Escreva o seu nome.'; },
+    loja:     function(v){ return v.trim().length >= 2 ? '' : 'Escreva o nome da loja.'; },
+    empresa:  function(){ return ''; },
+    whatsapp: function(v){ return (v.replace(/\D/g,'').length >= 10) ? '' : 'Um WhatsApp com DDD, por favor.'; },
+    email:    function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'Confira o e-mail — falta algo nele.'; }
+  };
+  function campoDe(el){ return el.closest('.field'); }
+  function valida(el, mostrar){
+    var r = regras[el.name]; if(!r) return true;
+    var msg = r(el.value);
+    var campo = campoDe(el); if(!campo) return !msg;
+    var alvo = campo.querySelector('.erro');
+    if(!alvo){
+      alvo = document.createElement('p');
+      alvo.className = 'erro'; alvo.id = (el.id || el.name) + '-erro';
+      alvo.setAttribute('role','status');
+      campo.appendChild(alvo);
+    }
+    if(msg && (mostrar || campo.classList.contains('invalido'))){
+      alvo.textContent = msg;
+      campo.classList.add('invalido');
+      el.setAttribute('aria-invalid','true');
+      el.setAttribute('aria-describedby', alvo.id);
+    } else {
+      campo.classList.remove('invalido');
+      el.removeAttribute('aria-invalid');
+      el.removeAttribute('aria-describedby');
+    }
+    return !msg;
+  }
+  form.querySelectorAll('input[required], input[type=email], input[type=tel]').forEach(function(el){
+    el.addEventListener('blur',  function(){ valida(el, true); });
+    el.addEventListener('input', function(){ valida(el, false); });
+  });
+  form.addEventListener('submit', function(e){
+    var primeiro = null;
+    form.querySelectorAll('input[required], input[type=email], input[type=tel]').forEach(function(el){
+      if(!valida(el, true) && !primeiro) primeiro = el;
+    });
+    if(primeiro){ e.preventDefault(); e.stopPropagation(); primeiro.focus(); }
+  }, true);
+})();
 </script>
 </body>
 </html>

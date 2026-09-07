@@ -26,6 +26,9 @@
 <meta name="google-site-verification" content="SEU-CODIGO">
 -->
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="assets/js/config.js?v=4"></script>
 <script src="assets/js/tracking.js?v=4"></script>
 
@@ -68,17 +71,18 @@
 
   --fg:#FFFFFF;
   --fg-2:#A8B3C4;
-  --fg-3:#8B95A6;
+  --fg-3:#A2ACBC;
 
   /* faixa clara */
   --light-bg:#F5F8FC;
   --light-surface:#FFFFFF;
   --light-line:#DDE5F0;
   --light-fg:#0B1220;
-  --light-fg-2:#525C6B;
-  --light-fg-3:#616A78;
+  --light-fg-2:#454E5D;
+  --light-fg-3:#454E5D;
 
-  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-titulo:"Sora","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
   --fs-display:clamp(2.4rem,1.4rem + 4.4vw,4.4rem);
   --fs-h2:clamp(1.75rem,1.2rem + 2.2vw,2.85rem);
   --fs-h3:clamp(1.1rem,1rem + .5vw,1.4rem);
@@ -104,7 +108,7 @@ body{
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
 img{max-width:100%;height:auto;display:block}
-h1,h2,h3,h4{line-height:1.12;letter-spacing:-.022em;margin:0;text-wrap:balance}
+h1,h2,h3,h4{font-family:var(--font-titulo);line-height:1.12;letter-spacing:-.022em;margin:0;text-wrap:balance}
 p{margin:0}
 a{color:inherit}
 ul{margin:0;padding:0;list-style:none}
@@ -114,6 +118,7 @@ ul{margin:0;padding:0;list-style:none}
 }
 .skip{position:absolute;left:-9999px;top:0;z-index:100;background:var(--blue);color:#04182B;font-weight:700;padding:.75rem 1.25rem;border-radius:0 0 var(--radius) 0}
 .skip:focus{left:0}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
 .wrap{width:min(100% - 2.5rem,var(--maxw));margin-inline:auto}
 @media (max-width:640px){.wrap{width:min(100% - 2rem,var(--maxw))}}
@@ -121,7 +126,7 @@ ul{margin:0;padding:0;list-style:none}
 /* ---------- cabeçalho ---------- */
 .site-header{
   position:sticky;top:0;z-index:50;
-  background:rgba(5,11,24,.82);backdrop-filter:saturate(160%) blur(14px);
+  background:rgba(5,11,24,.90);backdrop-filter:saturate(160%) blur(14px);
   -webkit-backdrop-filter:saturate(160%) blur(14px);
   border-bottom:1px solid var(--line);
 }
@@ -352,6 +357,16 @@ h1 .hl{color:var(--blue-bright)}
 .aceite input{width:24px;height:24px;min-height:0;flex:none;margin-top:.15rem;accent-color:var(--blue-ink)}
 .form__nota{font-size:var(--fs-xs);color:var(--light-fg-3);margin-top:.8rem;text-align:center}
 .form__nota a{color:var(--blue-ink);text-decoration:underline}
+
+/* Guia de Design — Entering Data: "make sure people understand that they must
+   provide the required data" e "Dynamically validate field values... provide
+   feedback as soon as you detect a problem". */
+.field label .obr{color:#B3261E;font-weight:800;margin-left:.15rem}
+.field .erro{display:none;font-size:var(--fs-xs);color:#B3261E;margin-top:.35rem;font-weight:600}
+.field .erro::before{content:"\26A0  ";}
+.field.invalido input,.field.invalido select{border-color:#B3261E;border-width:2px}
+.field.invalido .erro{display:block}
+/* o cartao do formulario aqui e sempre claro — sem variante escura */
 
 .lgpd{
   display:none;position:fixed;left:14px;right:14px;bottom:14px;z-index:70;
@@ -598,28 +613,28 @@ h1 .hl{color:var(--blue-bright)}
       <form id="form-lead" data-msg="Quero conversar sobre um projeto de software." novalidate>
         <div class="field-row">
           <div class="field">
-            <label for="nome">Seu nome</label>
-            <input id="nome" name="nome" type="text" autocomplete="name" required>
+            <label for="nome">Seu nome <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
+            <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como te chamam" required aria-required="true">
           </div>
           <div class="field">
             <label for="empresa">Empresa</label>
-            <input id="empresa" name="empresa" type="text" autocomplete="organization">
+            <input id="empresa" name="empresa" type="text" autocomplete="organization" placeholder="Nome da empresa">
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="zap">WhatsApp</label>
-            <input id="zap" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(63) 99999-0000" required>
+            <label for="zap">WhatsApp <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
+            <input id="zap" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(63) 99999-0000" required aria-required="true">
           </div>
           <div class="field">
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
+            <label for="email">E-mail <span class="obr" aria-hidden="true">*</span><span class="sr"> (obrigatório)</span></label>
+            <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@suaempresa.com.br" required aria-required="true">
           </div>
         </div>
         <div class="field-row">
           <div class="field">
             <label for="cidade">Cidade</label>
-            <input id="cidade" name="cidade" type="text" autocomplete="address-level2">
+            <input id="cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Cidade / UF">
           </div>
           <div class="field">
             <label for="assunto">O que você precisa</label>
@@ -723,6 +738,55 @@ h1 .hl{color:var(--blue-bright)}
     });
   }
   var ano=document.getElementById('ano'); if(ano) ano.textContent=new Date().getFullYear();
+})();
+
+// Guia de Design — Entering Data / Feedback: valida no momento em que a pessoa
+// sai do campo e explica o que fazer, em vez de reclamar so depois de enviar.
+(function(){
+  var form = document.getElementById('form-lead');
+  if(!form) return;
+  var regras = {
+    nome:     function(v){ return v.trim().length >= 2 ? '' : 'Escreva o seu nome.'; },
+    loja:     function(v){ return v.trim().length >= 2 ? '' : 'Escreva o nome da loja.'; },
+    empresa:  function(){ return ''; },
+    whatsapp: function(v){ return (v.replace(/\D/g,'').length >= 10) ? '' : 'Um WhatsApp com DDD, por favor.'; },
+    email:    function(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? '' : 'Confira o e-mail — falta algo nele.'; }
+  };
+  function campoDe(el){ return el.closest('.field'); }
+  function valida(el, mostrar){
+    var r = regras[el.name]; if(!r) return true;
+    var msg = r(el.value);
+    var campo = campoDe(el); if(!campo) return !msg;
+    var alvo = campo.querySelector('.erro');
+    if(!alvo){
+      alvo = document.createElement('p');
+      alvo.className = 'erro'; alvo.id = (el.id || el.name) + '-erro';
+      alvo.setAttribute('role','status');
+      campo.appendChild(alvo);
+    }
+    if(msg && (mostrar || campo.classList.contains('invalido'))){
+      alvo.textContent = msg;
+      campo.classList.add('invalido');
+      el.setAttribute('aria-invalid','true');
+      el.setAttribute('aria-describedby', alvo.id);
+    } else {
+      campo.classList.remove('invalido');
+      el.removeAttribute('aria-invalid');
+      el.removeAttribute('aria-describedby');
+    }
+    return !msg;
+  }
+  form.querySelectorAll('input[required], input[type=email], input[type=tel]').forEach(function(el){
+    el.addEventListener('blur',  function(){ valida(el, true); });
+    el.addEventListener('input', function(){ valida(el, false); });
+  });
+  form.addEventListener('submit', function(e){
+    var primeiro = null;
+    form.querySelectorAll('input[required], input[type=email], input[type=tel]').forEach(function(el){
+      if(!valida(el, true) && !primeiro) primeiro = el;
+    });
+    if(primeiro){ e.preventDefault(); e.stopPropagation(); primeiro.focus(); }
+  }, true);
 })();
 </script>
 </body>
