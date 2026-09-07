@@ -344,6 +344,9 @@ h1 .hl{color:var(--green-bright)}
 }
 .shots{display:grid;grid-template-columns:1.35fr .65fr;gap:var(--s3);margin-top:var(--s5)}
 .shots--par{grid-template-columns:1fr 1fr}
+.shot--linha{grid-column:1 / -1;margin-top:var(--s3)}
+.shot--linha img{width:100%}
+@media (max-width:900px){.shot--linha{overflow-x:auto}.shot--linha img{min-width:620px}}
 @media (max-width:900px){.shots{grid-template-columns:1fr}}
 
 /* perfil aprendido */
@@ -596,18 +599,14 @@ h1 .hl{color:var(--green-bright)}
 
       <div class="shots shots--par">
         <figure class="shot" style="margin:0">
-          <div class="ph" data-slot="print-pdv">
-            <strong>[ print: PDV com a grade de cor e tamanho ]</strong>
-            <span>entra depois que o sistema for recolorido</span>
-          </div>
-          <figcaption>O PDV escolhendo cor e tamanho na grade, com o estoque de cada peça à vista.</figcaption>
+          <img src="img/print-gatilhos.jpg" width="1240" height="636" loading="lazy" decoding="async"
+               alt="Tela Vende+ do sistema: 48 oportunidades abertas, R$ 7,4 mil de potencial na mesa e a fila de contato do dia, cada linha com a cliente, a peça sugerida e os motivos escritos.">
+          <figcaption>A fila de contatos do dia, no computador da loja.</figcaption>
         </figure>
         <figure class="shot" style="margin:0">
-          <div class="ph" data-slot="print-estoque">
-            <strong>[ print: estoque com custo, venda e margem ]</strong>
-            <span>entra depois que o sistema for recolorido</span>
-          </div>
-          <figcaption>O estoque com custo, venda, margem — e os contadores do que ainda falta preencher.</figcaption>
+          <img src="img/print-pdv.jpg" width="1240" height="636" loading="lazy" decoding="async"
+               alt="PDV do Vende+ com a grade de tamanhos aberta: vestido floral midi azul em PP, P, M, G e GG, com o estoque de cada tamanho.">
+          <figcaption>O PDV escolhendo o tamanho na grade, com o estoque de cada peça à vista.</figcaption>
         </figure>
       </div>
     </div>
@@ -670,12 +669,10 @@ h1 .hl{color:var(--green-bright)}
           <li><span class="ck" aria-hidden="true">✓</span>O que deu certo ensina o sistema a ordenar melhor a fila de amanhã.</li>
         </ul>
       </div>
-      <figure class="shot" style="margin:0">
-        <div class="ph" data-slot="print-mensagem">
-          <strong>[ print: mensagem pronta no WhatsApp ]</strong>
-          <span>Substituir por img/print-mensagem.png</span>
-        </div>
-        <figcaption>A mensagem já escrita, com a foto da peça anexada.</figcaption>
+      <figure class="shot shot--linha" style="margin:0">
+        <img src="img/print-mensagem.jpg" width="1240" height="137" loading="lazy" decoding="async"
+             alt="Duas linhas da fila de contato: cliente, ritmo de compra, a peça sugerida com tamanho e preço, os motivos em português e o botão Enviar.">
+        <figcaption>Cada linha já vem com a peça, o motivo e o botão que abre a conversa.</figcaption>
       </figure>
     </div>
   </section>
@@ -779,11 +776,9 @@ h1 .hl{color:var(--green-bright)}
           </ul>
         </div>
         <figure class="shot" style="margin:0">
-          <div class="ph" data-slot="print-etiquetas">
-            <strong>[ print: etiquetas com o EAN-13 da nota ]</strong>
-            <span>entra depois que o sistema for recolorido</span>
-          </div>
-          <figcaption>As etiquetas saindo do estoque, com o EAN-13 que veio na nota do fornecedor.</figcaption>
+          <img src="img/print-etiquetas.jpg" width="1240" height="636" loading="lazy" decoding="async"
+               alt="Tela de etiquetas de preço: cada peça aberta por cor e tamanho, com o código EAN-13, o preço e quantas etiquetas imprimir de cada tamanho.">
+          <figcaption>As etiquetas saindo do estoque, uma por cor e tamanho, com o código de barras.</figcaption>
         </figure>
       </div>
 
