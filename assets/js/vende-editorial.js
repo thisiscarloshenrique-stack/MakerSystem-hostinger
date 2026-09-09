@@ -1,34 +1,15 @@
 (() => {
- const reduced=matchMedia('(prefers-reduced-motion: reduce)'),story=document.querySelector('.v-story'),device=document.querySelector('.v-device');
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  const tabs=[...document.querySelectorAll('[data-v-slide]')],frames=[...document.querySelectorAll('[data-v-frame]')];
- const laptopBase=document.querySelector('.v-laptop-base'),phone=document.querySelector('.v-phone'),phoneStage=document.querySelector('.v-phone-stage'),note=document.querySelector('.v-order-note');
- const printStory=document.querySelector('.v-print-story'),feed=document.querySelector('.v-paper-feed'),close=document.querySelector('.v-label-close'),printStatus=document.querySelector('.v-print-status');
- const clamp=v=>Math.max(0,Math.min(1,v));
- const titles=['Tudo começa\ncom uma venda.','Cada item.\nCada detalhe.','A próxima venda\ncomeça no contato.'];
- const copies=['Escolha a peça, confira a cor e o tamanho. PDV e estoque acompanham o mesmo atendimento.','Cor, tamanho, preço e código de barras. Imprima as etiquetas dos itens que você precisa, direto do cadastro.','O histórico encontra o estoque. Você vê quem chamar, o que oferecer e o motivo para retomar a conversa.'];
- let current=-1,last=-1,queued=false;
- function show(i){if(i===current)return;current=i;tabs.forEach((t,n)=>t.setAttribute('aria-pressed',String(n===i)));frames.forEach((f,n)=>f.hidden=n!==i);document.getElementById('v-story-title').innerText=titles[i];document.getElementById('v-story-copy').textContent=copies[i];document.querySelector('.v-step').textContent=`0${i+1} / 03`;}
- tabs.forEach((t,i)=>t.addEventListener('click',()=>{show(i);if(!reduced.matches&&innerWidth>700){const top=story.getBoundingClientRect().top+scrollY;const range=story.offsetHeight-innerHeight+76;scrollTo({top:top-76+range*((i+.2)/3),behavior:'smooth'});}}));show(0);
- function update(){
-  queued=false;
-  if(reduced.matches){[device,laptopBase,phone,note,feed,close].forEach(el=>el?.style.removeProperty('transform'));close?.style.removeProperty('opacity');if(printStatus)printStatus.textContent='Etiqueta impressa · Visual ampliado';return;}
-  const heroProgress=clamp(scrollY/(innerHeight*.85));
-  const phoneRect=phoneStage?.getBoundingClientRect();
-  const phoneProgress=phoneRect?clamp((innerHeight-phoneRect.top)/(innerHeight+phoneRect.height)):0;
-  const printRect=printStory?.getBoundingClientRect();
-  const printProgress=printRect?clamp((innerHeight*.3-printRect.top)/(printStory.offsetHeight-innerHeight*.65)):0;
-  device.style.transform=`rotateX(${16-heroProgress*22}deg) rotateY(${-13+heroProgress*22}deg) rotateZ(${-2+heroProgress*3}deg) scale(${.93+heroProgress*.07})`;
-  if(laptopBase)laptopBase.style.transform=`perspective(1500px) rotateY(${-13+heroProgress*22}deg) rotateZ(${-2+heroProgress*3}deg) scale(${.93+heroProgress*.07})`;
-  if(phone)phone.style.transform=`rotateY(${-30+phoneProgress*58}deg) rotateX(${10-phoneProgress*18}deg) rotateZ(${-9+phoneProgress*17}deg) translateY(${25-phoneProgress*50}px)`;
-  if(note)note.style.transform=`translateY(${35-phoneProgress*60}px) rotate(${5-phoneProgress*7}deg)`;
-  if(feed)feed.style.transform=`translateY(${-103+clamp(printProgress/.65)*96}%)`;
-  const zoom=clamp((printProgress-.38)/.42);
-  if(close){close.style.opacity=String(zoom);close.style.transform=`translateY(${60-zoom*60}px) rotate(${-12+zoom*15}deg) scale(${.7+zoom*.3})`;}
-  if(printStatus)printStatus.textContent=printProgress<.08?'01 / Pronta para imprimir':printProgress<.65?'02 / Imprimindo sua etiqueta':'03 / Cada detalhe, de perto';
-  if(innerWidth>700){const p=clamp((76-story.getBoundingClientRect().top)/(story.offsetHeight-innerHeight+76));const i=Math.min(2,Math.floor(p*3));if(i!==last){show(i);last=i;}}
- }
+ tabs.forEach((t,i)=>t.addEventListener('click',()=>{tabs.forEach((b,n)=>b.setAttribute('aria-pressed',String(i===n)));frames.forEach((f,n)=>f.hidden=n!==i);}));
+ const hero=document.querySelector('.v-hero'),device=document.querySelector('.v-device'),phone=document.querySelector('.v-phone'),sticky=document.querySelector('.v-mobile-trial'),ending=document.querySelector('.v-end');
+ let queued=false;
+ function update(){queued=false;const r=hero.getBoundingClientRect();const end=ending.getBoundingClientRect();sticky.hidden=innerWidth>700||r.bottom>100||end.top<innerHeight;document.body.classList.toggle('has-mobile-trial',!sticky.hidden);if(reduced.matches){device.style.transform='none';if(phone)phone.style.transform='none';return;}const p=Math.min(1,Math.max(0,scrollY/(innerHeight*.8)));device.style.transform=`perspective(1500px) rotateX(${8-p*12}deg) rotateY(${-5+p*9}deg)`;if(phone){const pr=phone.getBoundingClientRect();const pp=Math.min(1,Math.max(0,(innerHeight-pr.top)/(innerHeight+pr.height)));phone.style.transform=`rotateY(${-12+pp*24}deg) rotateZ(${-3+pp*6}deg)`;}}
  addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(update);}},{passive:true});addEventListener('resize',update);reduced.addEventListener('change',update);update();
- if('IntersectionObserver' in window&&!reduced.matches){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');observer.unobserve(e.target);}}),{threshold:.08});document.querySelectorAll('.v-statement,.v-section-head,.v-segment-card,.v-proof-grid,.v-catalog-grid,.v-reconnect-bottom').forEach(el=>{el.classList.add('reveal');observer.observe(el);});}
- function openHash(){let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}const el=document.getElementById(id);if(el?.matches('.v-segment-details details'))el.open=true;}
- document.querySelectorAll('.v-segment-card').forEach(a=>a.addEventListener('click',()=>{const el=document.querySelector(a.getAttribute('href'));if(el)el.open=true;}));addEventListener('hashchange',openHash);openHash();
+ const scene=document.querySelector('.v-live-demo'),strip=document.querySelector('.v-label-strip'),laser=document.querySelector('.v-laser'),check=document.querySelector('.v-read-check'),status=document.querySelector('.v-live-status'),cursor=document.querySelector('.v-demo-cursor'),pages=[...document.querySelectorAll('[data-phone-page]')],dots=[...document.querySelectorAll('.v-phone-dots i')];
+ let motionQueued=false,currentPage=-1;const clamp=x=>Math.min(1,Math.max(0,x));
+ function animateScene(){motionQueued=false;const sr=scene.getBoundingClientRect();const p=reduced.matches?1:clamp((100-sr.top)/(scene.offsetHeight-innerHeight+150));const step=p<.42?0:p<.76?1:2;if(step!==currentPage){pages.forEach((e,i)=>e.hidden=i!==step);dots.forEach((d,i)=>d.classList.toggle('active',i===step));currentPage=step;}strip.style.transform='translateY('+(-105+clamp(p/.38)*95)+'%)';laser.style.opacity=String(!reduced.matches&&p>.29&&p<.65?Math.sin(clamp((p-.29)/.36)*Math.PI):0);check.style.opacity=p>.48?'1':'0';status.textContent=p<.35?'01 / Imprimindo a etiqueta':p<.6?'02 / Lendo o código de barras':p<.8?'03 / Produto no celular':'04 / Pronto para conversar';if(cursor&&!reduced.matches){const hp=clamp(scrollY/(innerHeight*.7));cursor.style.left=(35+hp*45)+'%';cursor.style.top=(48+Math.sin(hp*Math.PI)*13)+'%';cursor.classList.toggle('is-clicking',hp>.65&&hp<.9);}}
+ addEventListener('scroll',()=>{if(!motionQueued){motionQueued=true;requestAnimationFrame(animateScene);}},{passive:true});addEventListener('resize',animateScene);reduced.addEventListener('change',animateScene);animateScene();
+ const video=document.querySelector('[data-video-url]');const raw=video?.dataset.videoUrl?.trim();
+ if(raw){try{const url=new URL(raw,location.href);if(!['https:','http:'].includes(url.protocol))return;const button=document.createElement('button');button.type='button';button.className='v-video-play';button.textContent='▶ Assistir à demonstração';button.setAttribute('aria-label','Reproduzir vídeo demonstrativo do Vende+');button.dataset.ms='video';button.dataset.msOrigem='video-play';if(video.dataset.videoPoster)video.style.backgroundImage=`linear-gradient(#041126aa,#041126aa),url("${video.dataset.videoPoster}")`;video.replaceChildren(button);button.addEventListener('click',()=>{let embed='';if(['youtube.com','www.youtube.com','youtu.be','www.youtube-nocookie.com'].includes(url.hostname)){const id=url.hostname==='youtu.be'?url.pathname.slice(1):url.searchParams.get('v')||url.pathname.split('/').pop();if(/^[\w-]{11}$/.test(id))embed='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1';}else if(['vimeo.com','www.vimeo.com','player.vimeo.com'].includes(url.hostname)){const id=url.pathname.split('/').pop();if(/^\d+$/.test(id))embed='https://player.vimeo.com/video/'+id+'?autoplay=1';}if(embed){const f=document.createElement('iframe');f.src=embed;f.title='Demonstração do Vende+';f.allow='autoplay; fullscreen; picture-in-picture';f.allowFullscreen=true;video.replaceChildren(f);}else{const v=document.createElement('video');v.controls=true;v.playsInline=true;v.src=url.href;v.preload='metadata';video.replaceChildren(v);v.play().catch(()=>{});}});}catch{}}
 })();
