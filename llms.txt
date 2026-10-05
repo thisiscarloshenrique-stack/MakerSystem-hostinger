@@ -6,18 +6,23 @@
 
 - O que é: O VENDE+ by Maker System é um sistema de gestão e PDV para lojas, usado pelo navegador no computador, tablet ou celular. Ele junta frente de caixa, estoque, financeiro, nota fiscal e WhatsApp, e mostra quem chamar e o que oferecer para vender de novo.
 - Diferencial: gatilhos de venda mostram quem chamar, o que oferecer e por quê, a partir do histórico de compras de cada cliente e do estoque disponível.
-- Funções: Frente de caixa (PDV) com leitor de código de barras, também pela câmera do celular; Venda guardada para retomar depois, desconto, várias formas de pagamento, troco, troca e devolução; PIX e maquininha Mercado Pago Point integrados; Estoque com grade de tamanho e cor, produto a granel por quilo, inventário por contagem, fotos e etiquetas; Caixa do dia, contas a pagar e a receber, crediário, fluxo financeiro e DRE gerencial; Comissão e metas de vendedores; Emissão de NFC-e e NF-e, entrada de nota de compra pelo XML e Portal do Contador; Cadastro de clientes com busca de CNPJ, condicional e orçamentos; Gatilhos de venda: quem chamar, o que oferecer e por quê; Comprovante, orçamento e cobrança pelo WhatsApp da loja com PDF anexo; Catálogo e loja online com link próprio; Restaurante, lanchonete e açaiteria: mesas, comandas, garçom, cozinha, entregas, cardápio digital e pedido online; Importação de dados de outros sistemas de gestão.
+- Funções: Frente de caixa (PDV) com leitor de código de barras, também pela câmera do celular; Venda guardada para retomar depois, desconto, várias formas de pagamento, troco, troca e devolução; PIX e maquininha Mercado Pago Point integrados; Estoque com grade de tamanho e cor, produto a granel por quilo, inventário por contagem, fotos e etiquetas; Caixa do dia, contas a pagar e a receber, crediário, fluxo financeiro e DRE gerencial; Usuários com permissões por área, comissão e metas de vendedores; Emissão de NFC-e e NF-e, entrada de nota de compra pelo XML e Portal do Contador; Cadastro de clientes com busca de CNPJ, condicional e orçamentos; Gatilhos de venda: quem chamar, o que oferecer e por quê; Comprovante, orçamento e cobrança pelo WhatsApp da loja com PDF anexo; Catálogo online com link próprio e pedido pelo WhatsApp; Restaurante, lanchonete e açaiteria: mesas, comandas, garçom, cozinha, entregas, cardápio digital e pedido online; Pesagem automática para self-service por quilo; Importação de dados de outros sistemas de gestão.
 - Para quem: moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama, mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete, açaiteria.
 - Onde funciona: navegador (sem instalar), aplicativo Android e programas Windows (VENDE+ PDV, CG Tray, VENDE+ Pesagem).
-- Preço mensal por módulo: Entrada R$ 96,90 · Vende+ R$ 128,90 · Fiscal R$ 48,90 · Catálogo online R$ 48,90 · Restaurante R$ 96,90 · Pesagem automática R$ 60,00 · Atende+ R$ 64,90. A Entrada é obrigatória.
-- Planos indicados: Loja de roupas e varejo: Entrada + Vende+ = R$ 225,80/mês; Restaurante, lanchonete e açaiteria: Entrada + Restaurante = R$ 193,80/mês; Self-service por quilo: Entrada + Restaurante + Pesagem = R$ 253,80/mês.
-- Teste grátis: 14 dias, sem cartão e sem falar com vendedor.
+- Preço mensal por módulo: Entrada R$ 96,90 · Vende+ R$ 128,90 · Fiscal R$ 48,90 · Catálogo online R$ 48,90 · Restaurante R$ 96,90 · Pesagem automática R$ 60,00 · Atende+ R$ 64,90. A Entrada é obrigatória. Atende+ inclui 1 número de WhatsApp; cada número a mais custa R$ 32,90.
+- Planos indicados: Loja de roupas e varejo: Entrada + Vende+ = R$ 225,80/mês; Restaurante, lanchonete e açaiteria: Entrada + Restaurante = R$ 193,80/mês; Self-service por quilo: Entrada + Restaurante + Pesagem = R$ 253,80/mês. Quem precisa de nota fiscal soma o Fiscal (R$ 48,90).
+- Cobrança: preço por loja, sem cobrança por usuário, por computador ou por nota emitida. Até 20 usuários por loja e até 5 lojas por login. Mensalidade paga por PIX dentro do sistema, vencimento no dia 5.
+- Teste grátis: 14 dias, sem cartão e sem falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online.
 - Migração: importa clientes, produtos e saldo de estoque de outros sistemas; migração assistida sem custo separado.
+- Segurança: dados em servidor no Brasil, com cópia de segurança fora do servidor principal; senha por pessoa e permissões por área.
+- Suporte: Suporte Maker dentro do sistema, WhatsApp (61) 99903-2545 e manual de ajuda com mais de 300 funções.
 
 ## Páginas
 
 - [VENDE+ (página oficial)](https://makersystem.com.br/vende-mais/): o produto, funções, segmentos e perguntas
 - [Sistema para loja de roupas](https://makersystem.com.br/vende-mais/loja-de-roupas/): grade, condicional, etiquetas, crediário, NFC-e
+- [Sistema para restaurante](https://makersystem.com.br/vende-mais/restaurante/): mesas, comandas, cozinha, entregas, cardápio digital, self-service por quilo
+- [Emissor de NF-e e NFC-e](https://makersystem.com.br/vende-mais/nota-fiscal/): módulo Fiscal, MDE, Portal do Contador
 - [Preços](https://makersystem.com.br/vende-mais/precos/): tabela de módulos e planos por tipo de loja
 - [Trocar de sistema](https://makersystem.com.br/vende-mais/migrar/): como migrar os dados
 - [Perguntas frequentes](https://makersystem.com.br/vende-mais/perguntas/)
@@ -28,3 +33,4 @@
 ## Contato
 
 - E-mail: contato@makersystem.com.br
+- WhatsApp: (61) 99903-2545
