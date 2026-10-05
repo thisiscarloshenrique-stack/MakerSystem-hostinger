@@ -60,7 +60,7 @@ Para quem é
 
 ## Feito para o balcão de verdade.
 
-O VENDE+ atende hoje moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama, mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete e açaiteria.
+O VENDE+ atende hoje moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama, mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete, açaiteria, sorveteria e self-service por quilo.
 
 ### Loja de roupas e moda
 Grade de cor e tamanho, condicional, perfil de gosto, etiquetas e crediário.
@@ -120,7 +120,7 @@ Perguntas frequentes
 ## Sem dúvida no próximo passo.
 
 **Como faço para testar o VENDE+?**
-Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online.
+Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online. Para casa de comida, ao criar a loja escolha o segmento "Restaurante e lanchonete", "Açaiteria e sorveteria" ou "Self-service por quilo": o teste já vem com o módulo Restaurante, e o self-service também com a Pesagem automática.
 
 **Quanto custa o VENDE+?**
 Para loja de roupas e varejo, o plano indicado é Entrada (R$ 96,90) + Vende+ (R$ 128,90): R$ 225,80 por mês. Restaurante, lanchonete e açaiteria: Entrada + Restaurante, R$ 193,80 por mês. Quem precisa de nota fiscal soma o Fiscal (R$ 48,90). Catálogo online, Pesagem automática e Atende+ são opcionais com preço próprio.
@@ -147,7 +147,7 @@ Sim. Crediário com vencimento escolhido ou sem vencimento, limite por cliente, 
 Sim, sem custo extra. Comprovante, orçamento e cobrança saem pelo WhatsApp da loja com o PDF anexo, em folha A4 ou no formato do cupom.
 
 **Para que tipos de loja o VENDE+ serve?**
-Moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete, açaiteria e self-service por quilo.
+Moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete, açaiteria, sorveteria e self-service por quilo.
 
 **O VENDE+ serve para restaurante?**
 Sim. O módulo Restaurante (R$ 96,90 por mês, somado à Entrada) atende restaurante, lanchonete e açaiteria com mesas e comandas, tela do garçom, tela da cozinha, entregas com tela do entregador, cardápio digital com QR Code e pedido online pelo link. Para self-service por quilo há o módulo Pesagem automática.
@@ -298,7 +298,7 @@ O plano indicado é Entrada (R$ 96,90) + Vende+ (R$ 128,90): R$ 225,80 por mês.
 Sim. Trazemos clientes, produtos e saldo de estoque a partir de uma planilha ou da exportação do seu sistema atual. A migração assistida não tem custo separado.
 
 **Como faço para testar o VENDE+?**
-Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online.
+Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online. Para casa de comida, ao criar a loja escolha o segmento "Restaurante e lanchonete", "Açaiteria e sorveteria" ou "Self-service por quilo": o teste já vem com o módulo Restaurante, e o self-service também com a Pesagem automática.
 
 ## Sua loja de roupas organizada e vendendo de novo.
 Sem cartão, sem falar com vendedor, direto no navegador.
@@ -314,9 +314,9 @@ Sistema para restaurante
 # Sistema para restaurante, lanchonete e açaiteria
 O VENDE+ Restaurante junta mesas e comandas, tela do garçom no celular, tela da cozinha, entregas, cardápio digital e pedido online, no mesmo sistema do caixa, do estoque e da nota fiscal.
 
-Quero conhecer pelo WhatsApp
+Testar grátis por 14 dias
 
-Atendimento pelo WhatsApp (61) 99903-2545
+14 dias grátis · Sem cartão · Ao criar a loja, escolha o segmento de comida
 
 Mesas e comandas
 
@@ -377,7 +377,7 @@ Perguntas sobre sistema para restaurante
 **O VENDE+ serve para restaurante?**
 Sim. O módulo Restaurante (R$ 96,90 por mês, somado à Entrada) atende restaurante, lanchonete e açaiteria com mesas e comandas, tela do garçom, tela da cozinha, entregas com tela do entregador, cardápio digital com QR Code e pedido online pelo link. Para self-service por quilo há o módulo Pesagem automática.
 
-**Serve para açaiteria e lanchonete?**
+**Serve para açaiteria, sorveteria e lanchonete?**
 Sim. O cardápio aceita tamanhos, sabores e adicionais, como o copo de açaí com complementos ou o lanche com acréscimos, e cada item vai para o setor certo da cozinha.
 
 **O garçom lança o pedido pelo celular?**
@@ -399,12 +399,12 @@ Entrada (R$ 96,90) + Restaurante (R$ 96,90): R$ 193,80 por mês. Self-service po
 Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
 
 **Posso testar antes de contratar?**
-Sim. Chame no WhatsApp (61) 99903-2545 para conhecer o módulo Restaurante funcionando.
+Sim. São 14 dias grátis, sem cartão. Ao criar a loja, escolha o segmento "Restaurante e lanchonete", "Açaiteria e sorveteria" ou "Self-service por quilo": o teste já vem com o módulo Restaurante ligado (mesas, comandas, cozinha, entregas e cardápio digital), além de Fiscal, Catálogo online e Vende+. No self-service por quilo, também com a Pesagem automática.
 
-## Quer ver o VENDE+ no seu restaurante?
-Chame no WhatsApp (61) 99903-2545 e a gente mostra como fica na sua casa.
+## Teste o VENDE+ no seu restaurante por 14 dias.
+Sem cartão. Ao criar a loja, escolha "Restaurante e lanchonete", "Açaiteria e sorveteria" ou "Self-service por quilo" e o módulo Restaurante já vem ligado.
 
-Falar no WhatsApp
+Criar minha loja grátis
 
 
 ---
@@ -503,7 +503,7 @@ Sim. Há a opção "Só NFC-e", para a loja que emite cupom fiscal em toda venda
 O Fiscal custa R$ 48,90 por mês, somado à Entrada (R$ 96,90): R$ 145,80. Loja de roupas com nota: Entrada + Vende+ + Fiscal = R$ 274,70. Não há cobrança por nota emitida.
 
 **Como faço para testar o VENDE+?**
-Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online.
+Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online. Para casa de comida, ao criar a loja escolha o segmento "Restaurante e lanchonete", "Açaiteria e sorveteria" ou "Self-service por quilo": o teste já vem com o módulo Restaurante, e o self-service também com a Pesagem automática.
 
 ## Emita sua primeira nota no VENDE+.
 Sem cartão, sem falar com vendedor, direto no navegador.
@@ -570,7 +570,7 @@ Para loja de roupas e varejo, o plano indicado é Entrada (R$ 96,90) + Vende+ (R
 Não. O preço é por loja: não há cobrança por usuário, por computador nem por nota emitida. Cada loja pode ter até 20 usuários, e um mesmo login acessa até 5 lojas.
 
 **O teste grátis pede cartão?**
-Não. São 14 dias grátis sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online.
+Não. São 14 dias grátis sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online. Para casa de comida, ao criar a loja escolha o segmento "Restaurante e lanchonete", "Açaiteria e sorveteria" ou "Self-service por quilo": o teste já vem com o módulo Restaurante, e o self-service também com a Pesagem automática.
 
 **Preciso contratar todos os módulos?**
 Não. Só a Entrada é obrigatória. Os outros você soma conforme a sua loja.
@@ -672,7 +672,7 @@ O VENDE+ by Maker System é um sistema de gestão e PDV para lojas, usado pelo n
 São sugestões diárias de contato. O VENDE+ cruza o histórico de compras e o perfil de gosto de cada cliente com o estoque disponível e mostra quem chamar, o que oferecer e por quê. Você decide o contato e conduz a conversa; as sugestões não garantem venda.
 
 **Para que tipos de loja o VENDE+ serve?**
-Moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete, açaiteria e self-service por quilo.
+Moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete, açaiteria, sorveteria e self-service por quilo.
 
 **Quem faz o VENDE+?**
 A Maker System LTDA, CNPJ 68.949.287/0001-34, de Formoso do Araguaia (TO). Contato: contato@makersystem.com.br.
@@ -683,7 +683,7 @@ A Maker System LTDA, CNPJ 68.949.287/0001-34, de Formoso do Araguaia (TO). Conta
 Para loja de roupas e varejo, o plano indicado é Entrada (R$ 96,90) + Vende+ (R$ 128,90): R$ 225,80 por mês. Restaurante, lanchonete e açaiteria: Entrada + Restaurante, R$ 193,80 por mês. Quem precisa de nota fiscal soma o Fiscal (R$ 48,90). Catálogo online, Pesagem automática e Atende+ são opcionais com preço próprio.
 
 **Como faço para testar o VENDE+?**
-Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online.
+Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online. Para casa de comida, ao criar a loja escolha o segmento "Restaurante e lanchonete", "Açaiteria e sorveteria" ou "Self-service por quilo": o teste já vem com o módulo Restaurante, e o self-service também com a Pesagem automática.
 
 **O preço é por usuário ou por computador?**
 Não. O preço é por loja: não há cobrança por usuário, por computador nem por nota emitida. Cada loja pode ter até 20 usuários, e um mesmo login acessa até 5 lojas.
