@@ -1,0 +1,22 @@
+# makersystem.com.br — liberado para buscadores e robôs de IA
+
+User-agent: *
+Allow: /
+Disallow: /obrigado.html
+
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Bingbot
+User-agent: meta-externalagent
+Allow: /
+Disallow: /obrigado.html
+
+Sitemap: https://makersystem.com.br/sitemap.xml

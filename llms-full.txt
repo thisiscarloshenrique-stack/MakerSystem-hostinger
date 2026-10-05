@@ -1,0 +1,540 @@
+# VENDE+ by Maker System — texto completo das páginas
+
+
+---
+Fonte: https://makersystem.com.br/vende-mais/
+Maker System › VENDE+
+VENDE+ by Maker System
+
+# Sistema de gestão e PDV para lojas que querem vender de novo
+O VENDE+ by Maker System é um sistema de gestão e PDV para lojas, usado pelo navegador no computador, tablet ou celular. Ele junta frente de caixa, estoque, financeiro, nota fiscal e WhatsApp, e mostra quem chamar e o que oferecer para vender de novo.
+
+Testar grátis por 14 dias
+
+14 dias grátis · Sem cartão · Direto no navegador
+
+O que o VENDE+ faz
+
+## Tudo que passa pelo balcão, num sistema só.
+
+Do caixa à nota fiscal, do estoque ao WhatsApp. Você usa no navegador, sem instalar, e paga só pelos módulos que a sua loja precisa.
+
+### Frente de caixa (PDV)
+Leitor de código de barras (também pela câmera do celular), venda guardada para retomar depois, desconto, várias formas de pagamento, troco, troca e devolução. PIX e maquininha Mercado Pago Point integrados.
+
+### Estoque com grade
+Grade de tamanho e cor, produto a granel por quilo, inventário por contagem, fotos dos produtos e etiquetas. Entrada da nota de compra pelo XML.
+
+### Financeiro e crediário
+Caixa do dia, contas a pagar e a receber, crediário com ou sem vencimento, fluxo financeiro em extrato, DRE gerencial, comissão e metas de vendedores.
+
+### Nota fiscal
+Emissão de NFC-e e NF-e e Portal do Contador com o módulo Fiscal. Quem não emite nota usa o sistema sem ele.
+
+### WhatsApp da loja
+Comprovante, orçamento e cobrança enviados pelo WhatsApp da loja, com o PDF anexo em folha A4 ou cupom.
+
+### Clientes e condicional
+Cadastro com busca de CNPJ, condicional para o cliente provar em casa, orçamentos e histórico de cada compra.
+
+### Catálogo online
+Vitrine da loja com link próprio, sacola e pedido que chega pelo WhatsApp.
+
+### Restaurante e delivery
+Mesas e comandas, tela do garçom, tela da cozinha, entregas com tela do entregador, cardápio digital e pedido online pelo link.
+
+O diferencial
+
+## Gatilhos de venda: quem chamar, o que oferecer e por quê.
+
+Todo dia o VENDE+ cruza o histórico de compras de cada cliente com o estoque disponível e monta uma fila curta de contatos, com a peça sugerida e o motivo por escrito. Você escolhe quem chamar e conduz a conversa pelo WhatsApp.
+
+MárciaCompra peças douradas a cada 45 dias e está há 68 dias sem comprar. Chegaram novidades douradas.
+AnaComprou tamanho 2 para a filha em março. Talvez seja hora do tamanho 4.
+JoãoVeste calça 42 e prefere modelos casuais. Chegaram modelos 42.
+
+Exemplos ilustrativos. As sugestões não garantem venda.
+
+Para quem é
+
+## Feito para o balcão de verdade.
+
+O VENDE+ atende hoje moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama, mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete e açaiteria.
+
+### Loja de roupas e moda
+Grade de cor e tamanho, condicional, perfil de gosto, etiquetas e crediário.
+Ver o VENDE+ para loja de roupas →
+### Semijoias, calçados, infantil e lingerie
+Maletas e condicionais com reserva de estoque, numeração em grade e histórico para os próximos tamanhos.
+
+### Restaurante, lanchonete e açaiteria
+Mesas, comandas, cozinha, entregas, cardápio digital e balança para self-service por quilo.
+
+### Varejo geral e celulares
+PDV com leitor, troca e devolução, crediário e comprovante pelo WhatsApp.
+
+### Autopeças
+Orçamentos, cadastro de cliente com busca de CNPJ e nota fiscal.
+
+### Casa agropecuária e perfumaria
+Receituário, produto a granel por quilo, crediário e sugestões de recompra.
+
+Onde funciona
+
+## No navegador, no celular e no caixa.
+
+- Navegador do computador, tablet ou celular, sem instalar: vendemais.makersystem.com.br
+- Aplicativo Android
+- VENDE+ PDV: caixa em janela própria no Windows
+- CG Tray: impressão de cupom, etiqueta e A4 e gaveta
+- VENDE+ Pesagem: balança no Windows
+
+Baixar programas e aplicativo →
+
+Quanto custa
+
+## Preço claro, por módulo.
+A Entrada (R$ 96,90) traz PDV, estoque, financeiro e compras. Você soma o que precisa: Vende+, Fiscal, Catálogo online, Restaurante, Pesagem ou Atende+.
+Ver a tabela completa de preços →
+
+Loja de roupas e varejo
+R$ 225,80/mês
+Entrada R$ 96,90 + Vende+ R$ 128,90
+
+- PDV, estoque, compras e financeiro
+- Gatilhos de venda e perfil de gosto
+- Grade de cor e tamanho e condicional
+- Comissão e metas
+
+Testar grátis por 14 dias
+
+Trocar de sistema
+
+## Já usa outro sistema? A gente traz seus dados.
+Clientes, produtos e saldo de estoque, a partir de uma planilha ou da exportação do sistema atual. Migração assistida sem custo separado.
+Como funciona a migração →
+
+Perguntas frequentes
+
+## Sem dúvida no próximo passo.
+
+**Como faço para testar o VENDE+?**
+Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor.
+
+**Quanto custa o VENDE+?**
+Para loja de roupas e varejo, o plano indicado é Entrada (R$ 96,90) + Vende+ (R$ 128,90): R$ 225,80 por mês. Restaurante, lanchonete e açaiteria: Entrada + Restaurante, R$ 193,80 por mês. Fiscal, Catálogo online, Pesagem automática e Atende+ são módulos opcionais com preço próprio.
+
+**O que são os gatilhos de venda?**
+São sugestões diárias de contato. O VENDE+ cruza o histórico de compras de cada cliente com o estoque disponível e mostra quem chamar, o que oferecer e por quê. Você decide o contato e conduz a conversa; as sugestões não garantem venda.
+
+**Preciso instalar alguma coisa?**
+Não. O VENDE+ funciona direto no navegador do computador, tablet ou celular, com internet. Se quiser, há também o aplicativo Android e programas para Windows: o VENDE+ PDV (caixa em janela própria), o CG Tray (impressão de cupom, etiqueta e A4 e gaveta) e o VENDE+ Pesagem (balança).
+
+**O VENDE+ funciona no celular?**
+Sim. O sistema abre no navegador do celular e há aplicativo Android, instalado pelo link de download. O leitor de código de barras também funciona pela câmera do celular.
+
+**O VENDE+ emite NFC-e e NF-e?**
+Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e, NF-e, carta de correção, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
+
+**O VENDE+ tem crediário?**
+Sim. O crediário fica no financeiro, com ou sem vencimento, junto de contas a receber e da cobrança pelo WhatsApp.
+
+**O VENDE+ manda comprovante pelo WhatsApp?**
+Sim. Comprovante, orçamento e cobrança saem pelo WhatsApp da loja com o PDF anexo, em folha A4 ou cupom.
+
+**Para que tipos de loja o VENDE+ serve?**
+Moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete e açaiteria.
+
+**O VENDE+ serve para restaurante?**
+Sim. O módulo Restaurante atende restaurante, lanchonete e açaiteria com mesas e comandas, tela do garçom, tela da cozinha, entregas com tela do entregador, cardápio digital e pedido online pelo link. Para self-service por quilo há o módulo Pesagem automática.
+
+**Consigo trazer meus dados de outro sistema?**
+Sim. Trazemos clientes, produtos e saldo de estoque a partir de uma planilha ou da exportação do seu sistema atual. A migração assistida não tem custo separado.
+
+**Quem faz o VENDE+?**
+A Maker System LTDA, CNPJ 68.949.287/0001-34, de Formoso do Araguaia (TO). Contato: contato@makersystem.com.br.
+
+Ver todas as perguntas →
+
+## Teste o VENDE+ na sua loja por 14 dias.
+Sem cartão, sem falar com vendedor, direto no navegador.
+
+Criar minha loja grátis
+
+
+---
+Fonte: https://makersystem.com.br/vende-mais/loja-de-roupas/
+Maker System › VENDE+ › Loja de roupas
+Sistema para loja de roupas
+
+# Sistema para loja de roupas com PDV, condicional e NFC-e
+O VENDE+ é o sistema de gestão e PDV feito para a rotina da loja de roupas: grade de cor e tamanho, condicional para provar em casa, crediário, etiquetas, nota fiscal e WhatsApp. E todo dia ele mostra quais clientes chamar e qual peça oferecer.
+
+Testar grátis por 14 dias
+
+14 dias grátis · Sem cartão · Direto no navegador
+
+O que muda na sua loja
+
+## Menos planilha. Mais cliente voltando.
+
+### Antes: peça "perdida" no condicional
+Com o VENDE+, cada condicional tem cliente, vendedor, valor e data de devolução, e a peça fica reservada no estoque.
+
+### Antes: cliente que sumiu
+Os gatilhos de venda avisam quem está há mais tempo que o normal sem comprar e qual novidade combina com ele.
+
+### Antes: grade bagunçada
+Cor e tamanho num cadastro só, código de barras por peça e entrada da compra pelo XML da nota.
+
+Estoque e grade
+
+## Grade de cor e tamanho num cadastro só.
+Uma blusa em três cores e cinco tamanhos é um produto só, com a grade em cor x tamanho. Cada peça tem o próprio código de barras: o da nota, um gerado pelo sistema ou o lido com o leitor. A compra entra pelo XML da nota.
+
+Condicional
+
+## Condicional sem perder peça de vista.
+O cliente leva as peças para provar em casa e elas ficam reservadas no estoque. Na listagem você vê o que está na rua, com cliente, vendedor, valor e data prevista de devolução. O que volta retorna ao estoque; o que fica vira venda.
+
+Condicionais · exemplo
+
+- Cliente | Peças | Status |
+
+- Renata · vend. Júlia | 4 · R$ 486,60 | Aguardando |
+
+- Carla · vend. Bia | 2 · R$ 239,80 | Devolução vencida |
+
+- Paula · vend. Júlia | 3 · R$ 329,70 | Finalizada |
+Exemplo ilustrativo.
+
+Gatilhos de venda
+
+## Saiba quem chamar e o que oferecer.
+A cada compra o VENDE+ aprende o gosto do cliente: cores, tipos de peça e tamanhos. Quando chega novidade que combina, ou quando o cliente passa do tempo normal de voltar, ele entra na fila de contatos com a sugestão e o motivo.
+
+Etiquetas
+
+## Etiqueta pronta para a peça.
+Escolha um modelo, ajuste nome, cor, tamanho, preço, código de barras e logomarca e imprima em impressora térmica de rolo ou em folha A4 adesiva. No balcão, passou no leitor, entrou na venda.
+
+Crediário e cobrança
+
+## Crediário com cobrança pelo WhatsApp.
+Venda no crediário com ou sem vencimento, acompanhe o que venceu e quem pagou, e mande a cobrança pelo WhatsApp da loja com a parcela, a compra e o PDF.
+
+Um dia na loja
+
+## Como o VENDE+ entra na rotina.
+
+- AberturaVocê vê a fila de clientes para chamar hoje e manda as ofertas pelo WhatsApp.
+
+- BalcãoPassa as peças no leitor (ou na câmera do celular), recebe no PIX ou na maquininha e envia o comprovante.
+
+- TardeO condicional volta: o que ficou vira venda, o resto retorna ao estoque.
+
+- FechamentoCaixa do dia, contas a receber, comissão e metas dos vendedores conferidos.
+
+Preço para loja de roupas
+
+## R$ 225,80 por mês, com 14 dias grátis.
+
+Entrada (R$ 96,90) + Vende+ (R$ 128,90). Se precisar, some NFC-e e NF-e (R$ 48,90) ou catálogo online (R$ 48,90).
+Tabela completa de preços →
+
+Também atende semijoias, calçados, moda infantil, lingerie, cama mesa e banho e armarinho (venda por unidade).
+
+VENDE+ · Loja de roupas
+R$ 225,80/mês
+
+- PDV, estoque, compras e financeiro
+- Grade de cor e tamanho
+- Condicional com reserva de estoque
+- Gatilhos de venda e perfil de gosto
+- Etiquetas e crediário
+- Comissão e metas
+
+Testar grátis por 14 dias
+
+Perguntas sobre sistema para loja de roupas
+
+## Perguntas frequentes.
+
+**Qual o melhor sistema para loja de roupas?**
+O melhor é o que resolve a rotina da sua loja. Para loja de roupas, confira se o sistema tem grade de cor e tamanho num cadastro só, condicional com reserva de estoque, etiquetas com código de barras, crediário, NFC-e e envio pelo WhatsApp. O VENDE+ tem todos esses recursos e ainda mostra quais clientes chamar para comprar de novo.
+
+**O VENDE+ controla grade de cor e tamanho?**
+Sim. Uma peça em várias cores e tamanhos fica num cadastro só, com a grade em cor x tamanho, e cada item da grade pode ter o próprio código de barras.
+
+**O sistema tem condicional?**
+Sim. Você registra as peças que o cliente leva para provar em casa; elas ficam reservadas no estoque até voltarem ou virarem venda.
+
+**Consigo imprimir etiquetas das peças?**
+Sim. Há modelos prontos que você ajusta (campos, código de barras, logomarca) e imprime em impressora térmica de rolo ou em folha A4 adesiva.
+
+**O VENDE+ emite NFC-e e NF-e?**
+Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e, NF-e, carta de correção, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
+
+**O VENDE+ tem crediário?**
+Sim. O crediário fica no financeiro, com ou sem vencimento, junto de contas a receber e da cobrança pelo WhatsApp.
+
+**O VENDE+ manda comprovante pelo WhatsApp?**
+Sim. Comprovante, orçamento e cobrança saem pelo WhatsApp da loja com o PDF anexo, em folha A4 ou cupom.
+
+**O VENDE+ funciona no celular?**
+Sim. O sistema abre no navegador do celular e há aplicativo Android, instalado pelo link de download. O leitor de código de barras também funciona pela câmera do celular.
+
+**Quanto custa o sistema para loja de roupas?**
+O plano indicado é Entrada (R$ 96,90) + Vende+ (R$ 128,90): R$ 225,80 por mês. Nota fiscal (R$ 48,90) e catálogo online (R$ 48,90) são opcionais.
+
+**Consigo trazer meus dados de outro sistema?**
+Sim. Trazemos clientes, produtos e saldo de estoque a partir de uma planilha ou da exportação do seu sistema atual. A migração assistida não tem custo separado.
+
+**Como faço para testar o VENDE+?**
+Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor.
+
+## Sua loja de roupas organizada e vendendo de novo.
+Sem cartão, sem falar com vendedor, direto no navegador.
+
+Criar minha loja grátis
+
+
+---
+Fonte: https://makersystem.com.br/vende-mais/precos/
+Maker System › VENDE+ › Preços
+Preços
+
+# Quanto custa o VENDE+
+Preço mensal por módulo: a Entrada é obrigatória e você soma só o que a sua loja usa. Teste tudo por 14 dias grátis, sem cartão.
+
+Testar grátis por 14 dias
+
+14 dias grátis · Sem cartão · Direto no navegador
+
+Planos indicados
+
+## Por tipo de loja.
+Entrada + Vende+
+
+### Loja de roupas e varejo
+R$ 225,80/mês
+Moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária e perfumaria.
+
+Entrada + Restaurante
+
+### Restaurante, lanchonete e açaiteria
+R$ 193,80/mês
+Mesas e comandas, tela do garçom e da cozinha, entregas, cardápio digital e pedido online.
+
+Entrada + Restaurante + Pesagem
+
+### Self-service por quilo
+R$ 253,80/mês
+Tudo do restaurante, com a balança ligada ao sistema.
+
+Tabela de módulos
+
+## Some só o que a sua loja precisa.
+Preços mensais. A Entrada é obrigatória; os outros módulos você soma conforme a sua loja.
+- Módulo | Preço/mês | O que inclui |
+- Entrada | R$ 96,90 | Obrigatório. PDV no balcão, estoque, clientes e fornecedores, caixa e financeiro, contas a pagar e a receber, compras com importação de XML, vendedores, comissão e metas. |
+- Vende+ | R$ 128,90 | Gatilhos de venda, perfil de gosto do cliente, ficha de moda e grade de tamanhos, condicional. |
+- Fiscal | R$ 48,90 | NF-e e NFC-e, carta de correção, busca automática das notas emitidas contra o seu CNPJ (MDE) e manifestação, Portal do contador. |
+- Catálogo online | R$ 48,90 | Vitrine com link público, sacola e fila de carrinhos, foto do produto, pedido que chega pelo WhatsApp. |
+- Restaurante | R$ 96,90 | Cardápio com tamanhos, sabores e adicionais; mesas, comandas e delivery; conta dividida; comanda impressa por setor da cozinha. |
+- Pesagem automática | R$ 60,00 | Balança Toledo ligada no computador, tela grande para o cliente com peso e valor, comanda impressa na hora, também sem internet. |
+- Atende+ | R$ 64,90 | Conversas do WhatsApp num lugar só: assumir, transferir e resolver, respostas rápidas e etiquetas, cliente da conversa ligado ao cadastro. |
+
+Dúvidas sobre preço
+
+## Perguntas frequentes.
+
+**Quanto custa o VENDE+?**
+Para loja de roupas e varejo, o plano indicado é Entrada (R$ 96,90) + Vende+ (R$ 128,90): R$ 225,80 por mês. Restaurante, lanchonete e açaiteria: Entrada + Restaurante, R$ 193,80 por mês. Fiscal, Catálogo online, Pesagem automática e Atende+ são módulos opcionais com preço próprio.
+
+**O teste grátis pede cartão?**
+Não. São 14 dias grátis sem cartão e sem precisar falar com vendedor.
+
+**Preciso contratar todos os módulos?**
+Não. Só a Entrada é obrigatória. Os outros você soma conforme a sua loja.
+
+**A migração de outro sistema é cobrada?**
+Não. A migração assistida de clientes, produtos e saldo de estoque não tem custo separado.
+
+**O VENDE+ emite NFC-e e NF-e?**
+Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e, NF-e, carta de correção, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
+
+## Teste o VENDE+ na sua loja por 14 dias.
+Sem cartão, sem falar com vendedor, direto no navegador.
+
+Criar minha loja grátis
+
+
+---
+Fonte: https://makersystem.com.br/vende-mais/migrar/
+Maker System › VENDE+ › Trocar de sistema
+Trocar de sistema
+
+# Trocar de sistema sem recomeçar do zero
+Vai sair do sistema atual? O VENDE+ traz seus clientes, produtos e saldo de estoque a partir de uma planilha ou da exportação do sistema que você usa hoje. Migração assistida sem custo separado.
+
+Testar grátis por 14 dias
+
+14 dias grátis · Sem cartão · Direto no navegador
+
+Como funciona
+
+## Quatro passos.
+
+- Crie sua lojaCadastro grátis em vendemais.makersystem.com.br, sem cartão.
+
+- Exporte do sistema atualClientes, produtos e estoque em planilha ou no arquivo de exportação do seu sistema.
+
+- A gente importaConferimos e trazemos os dados para o VENDE+ com você.
+
+- Comece a venderConfira a grade, imprima as etiquetas e abra o caixa.
+
+O que vem junto
+
+## Seus dados, no lugar certo.
+
+- Clientes, com contato e CNPJ/CPF
+- Produtos, com grade de cor e tamanho
+- Saldo de estoque
+Migração assistida sem custo separado.
+
+Dúvidas sobre migração
+
+## Perguntas frequentes.
+
+**Consigo trazer meus dados de outro sistema?**
+Sim. Trazemos clientes, produtos e saldo de estoque a partir de uma planilha ou da exportação do seu sistema atual. A migração assistida não tem custo separado.
+
+**Quanto tempo leva a migração?**
+Depende do tamanho do cadastro. Você começa a testar no mesmo dia e os dados entram conforme a planilha ou a exportação fica pronta.
+
+**Perco o histórico do sistema antigo?**
+Trazemos clientes, produtos e saldo de estoque. Guarde a exportação completa do sistema antigo para consulta.
+
+**Posso testar antes de trocar?**
+Sim. Use os 14 dias grátis com a sua loja antes de decidir. Sem cartão.
+
+**Quanto custa o VENDE+?**
+Para loja de roupas e varejo, o plano indicado é Entrada (R$ 96,90) + Vende+ (R$ 128,90): R$ 225,80 por mês. Restaurante, lanchonete e açaiteria: Entrada + Restaurante, R$ 193,80 por mês. Fiscal, Catálogo online, Pesagem automática e Atende+ são módulos opcionais com preço próprio.
+
+## Comece o teste e traga seus dados.
+Sem cartão, sem falar com vendedor, direto no navegador.
+
+Criar minha loja grátis
+
+
+---
+Fonte: https://makersystem.com.br/vende-mais/perguntas/
+Maker System › VENDE+ › Perguntas frequentes
+Central de dúvidas
+
+# Perguntas frequentes sobre o VENDE+
+Respostas curtas sobre preço, teste grátis, nota fiscal, celular, crediário, WhatsApp e migração.
+
+Testar grátis por 14 dias
+
+14 dias grátis · Sem cartão · Direto no navegador
+
+## Sobre o VENDE+
+
+**O que é o VENDE+?**
+O VENDE+ by Maker System é um sistema de gestão e PDV para lojas, usado pelo navegador no computador, tablet ou celular. Ele junta frente de caixa, estoque, financeiro, nota fiscal e WhatsApp, e mostra quem chamar e o que oferecer para vender de novo.
+
+**O que são os gatilhos de venda?**
+São sugestões diárias de contato. O VENDE+ cruza o histórico de compras de cada cliente com o estoque disponível e mostra quem chamar, o que oferecer e por quê. Você decide o contato e conduz a conversa; as sugestões não garantem venda.
+
+**Para que tipos de loja o VENDE+ serve?**
+Moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete e açaiteria.
+
+**Quem faz o VENDE+?**
+A Maker System LTDA, CNPJ 68.949.287/0001-34, de Formoso do Araguaia (TO). Contato: contato@makersystem.com.br.
+
+## Preço e teste
+
+**Quanto custa o VENDE+?**
+Para loja de roupas e varejo, o plano indicado é Entrada (R$ 96,90) + Vende+ (R$ 128,90): R$ 225,80 por mês. Restaurante, lanchonete e açaiteria: Entrada + Restaurante, R$ 193,80 por mês. Fiscal, Catálogo online, Pesagem automática e Atende+ são módulos opcionais com preço próprio.
+
+**Como faço para testar o VENDE+?**
+Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor.
+
+**Preciso contratar todos os módulos?**
+Não. Só a Entrada é obrigatória. Os outros você soma conforme a sua loja.
+
+## Uso no dia a dia
+
+**Preciso instalar alguma coisa?**
+Não. O VENDE+ funciona direto no navegador do computador, tablet ou celular, com internet. Se quiser, há também o aplicativo Android e programas para Windows: o VENDE+ PDV (caixa em janela própria), o CG Tray (impressão de cupom, etiqueta e A4 e gaveta) e o VENDE+ Pesagem (balança).
+
+**O VENDE+ funciona no celular?**
+Sim. O sistema abre no navegador do celular e há aplicativo Android, instalado pelo link de download. O leitor de código de barras também funciona pela câmera do celular.
+
+**Preciso de leitor de código de barras?**
+Não. Você pode buscar produtos pelo nome ou referência, ou usar a câmera do celular como leitor. O leitor USB é uma facilidade para o balcão.
+
+**O VENDE+ tem crediário?**
+Sim. O crediário fica no financeiro, com ou sem vencimento, junto de contas a receber e da cobrança pelo WhatsApp.
+
+**O VENDE+ manda comprovante pelo WhatsApp?**
+Sim. Comprovante, orçamento e cobrança saem pelo WhatsApp da loja com o PDF anexo, em folha A4 ou cupom.
+
+**Meus dados ficam seguros?**
+O acesso ao sistema exige login. Consulte a política de privacidade e use uma senha exclusiva para sua conta.
+
+## Nota fiscal
+
+**O VENDE+ emite NFC-e e NF-e?**
+Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e, NF-e, carta de correção, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
+
+## Restaurante
+
+**O VENDE+ serve para restaurante?**
+Sim. O módulo Restaurante atende restaurante, lanchonete e açaiteria com mesas e comandas, tela do garçom, tela da cozinha, entregas com tela do entregador, cardápio digital e pedido online pelo link. Para self-service por quilo há o módulo Pesagem automática.
+
+## Trocar de sistema
+
+**Consigo trazer meus dados de outro sistema?**
+Sim. Trazemos clientes, produtos e saldo de estoque a partir de uma planilha ou da exportação do seu sistema atual. A migração assistida não tem custo separado.
+
+## Teste o VENDE+ na sua loja por 14 dias.
+Sem cartão, sem falar com vendedor, direto no navegador.
+
+Criar minha loja grátis
+
+
+---
+Fonte: https://makersystem.com.br/sobre/
+Maker System › Sobre
+Quem faz
+
+# Maker System: software feito de perto
+A Maker System LTDA desenvolve o VENDE+ e sistemas sob medida a partir de Formoso do Araguaia, no Tocantins.
+
+Testar grátis por 14 dias
+
+14 dias grátis · Sem cartão · Direto no navegador
+
+Nossa história
+
+## Do balcão das lojas para o sistema.
+
+Antes do VENDE+, nossa equipe já acompanhava a implantação e o suporte de sistemas de gestão em cerca de 140 lojas e empresas. Foi nesse dia a dia, ouvindo o que o lojista precisa no balcão, que nasceu o VENDE+: um sistema que organiza a loja e ajuda a chamar o cliente de volta.
+
+Também desenvolvemos sistemas, aplicativos e sites sob medida. Conheça esse trabalho →
+
+### Dados da empresa
+
+- Razão social: MAKER SYSTEM LTDA
+- CNPJ: 68.949.287/0001-34
+- Formoso do Araguaia, Tocantins, Brasil
+- E-mail: contato@makersystem.com.br
+- Produto: VENDE+ by Maker System
+
+## Teste o VENDE+ na sua loja por 14 dias.
+Sem cartão, sem falar com vendedor, direto no navegador.
+
+Criar minha loja grátis
