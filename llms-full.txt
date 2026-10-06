@@ -138,7 +138,7 @@ Não. O VENDE+ funciona direto no navegador do computador, tablet ou celular, co
 Sim. O sistema abre no navegador do celular e há aplicativo Android, instalado pelo link de download, com os ícones de cada função (PDV, inventário, fotos dos produtos, garçom, entregador, cozinha). O leitor de código de barras também funciona pela câmera do celular.
 
 **O VENDE+ emite NFC-e e NF-e?**
-Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
+Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, conferência da tributação dos produtos, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
 
 **O VENDE+ tem crediário?**
 Sim. Crediário com vencimento escolhido ou sem vencimento, limite por cliente, carnê, duplicata e cobrança pelo WhatsApp, junto de contas a receber.
@@ -280,7 +280,7 @@ Sim. Você registra as peças que o cliente leva para provar em casa; elas ficam
 Sim. Há modelos prontos que você ajusta (campos, código de barras, logomarca) e imprime em impressora térmica de rolo ou em folha A4 adesiva.
 
 **O VENDE+ emite NFC-e e NF-e?**
-Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
+Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, conferência da tributação dos produtos, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
 
 **O VENDE+ tem crediário?**
 Sim. Crediário com vencimento escolhido ou sem vencimento, limite por cliente, carnê, duplicata e cobrança pelo WhatsApp, junto de contas a receber.
@@ -396,7 +396,7 @@ Sim, com o módulo Pesagem automática (R$ 60,00): a balança ligada ao computad
 Entrada (R$ 96,90) + Restaurante (R$ 96,90): R$ 193,80 por mês. Self-service por quilo soma a Pesagem automática: R$ 253,80. Para emitir NFC-e, some o Fiscal (R$ 48,90).
 
 **O VENDE+ emite NFC-e e NF-e?**
-Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
+Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, conferência da tributação dos produtos, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
 
 **Posso testar antes de contratar?**
 Sim. São 14 dias grátis, sem cartão. Ao criar a loja, escolha o segmento "Restaurante e lanchonete", "Açaiteria e sorveteria" ou "Self-service por quilo": o teste já vem com o módulo Restaurante ligado (mesas, comandas, cozinha, entregas e cardápio digital), além de Fiscal, Catálogo online e Vende+. No self-service por quilo, também com a Pesagem automática.
@@ -413,7 +413,7 @@ Maker System › VENDE+ › Nota fiscal
 Emissor de nota fiscal
 
 # Emissor de NFC-e e NF-e ligado ao caixa da loja
-Com o módulo Fiscal do VENDE+, a nota sai na hora da venda, com o certificado da sua loja. O sistema confere a nota antes de enviar, explica em português o que corrigir e deixa tudo pronto para o contador.
+Com o módulo Fiscal do VENDE+, a nota sai na hora da venda, com o certificado da sua loja. O sistema confere a tributação dos produtos e a nota antes de enviar, explica em português o que corrigir e deixa tudo pronto para o contador.
 
 Testar grátis por 14 dias
 
@@ -440,9 +440,29 @@ Série 1 · venda no balcão · R$ 189,70 · PIX
 
 Exemplo ilustrativo.
 
+Conferência dos produtos
+
+## A tributação de cada produto, conferida.
+
+O VENDE+ confere o NCM, o CEST, o CSOSN/CST e o CFOP de cada produto, comparando com a nota de compra do fornecedor (XML), com a tabela oficial de NCM e com o Convênio ICMS 142 (CEST). Ele mostra o que está diferente, explica o porquê em português, informa a fonte e corrige o cadastro com um clique, guardando o histórico.
+
+- Divergência: tem prova e a correção pronta
+- Atenção: confira com o seu contador
+- Aparece também antes de emitir a NF-e (Conferência da nota) e depois de lançar uma nota de compra
+- A NFC-e do caixa não é interrompida
+
+A conferência sugere e explica; a responsabilidade pela tributação continua da loja e do contador.
+
+Conferência dos produtos · exemplo
+
+- Camiseta algodão DivergênciaNCM diferente do que veio na nota do fornecedor. Fonte: XML da compra. Correção pronta.
+- Perfume 100 ml AtençãoConfira o CEST com o seu contador. Fonte: Convênio ICMS 142.
+
+Exemplo ilustrativo.
+
 Menos rejeição
 
-## O sistema confere antes de enviar.
+## A nota é conferida antes de enviar.
 
 Antes de mandar a nota para a SEFAZ, o VENDE+ confere os dados e avisa, em português, o que precisa ser corrigido. Você resolve na hora, sem código de erro para decifrar.
 
@@ -470,7 +490,7 @@ R$ 48,90/mês
 Somado à Entrada (R$ 96,90)
 
 - NFC-e e NF-e
-- Conferência antes de enviar
+- Conferência dos produtos e da nota
 - Carta de correção e cancelamento
 - Busca de notas (MDE)
 - Portal do Contador
@@ -482,10 +502,16 @@ Perguntas sobre o emissor de nota
 ## Perguntas frequentes.
 
 **O VENDE+ emite NFC-e e NF-e?**
-Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
+Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, conferência da tributação dos produtos, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
 
 **Preciso de certificado digital?**
 Sim. A NF-e e a NFC-e saem com o certificado digital da própria loja, direto na SEFAZ.
+
+**O VENDE+ confere a tributação dos produtos?**
+Sim, com a Conferência dos produtos do módulo Fiscal. Ela compara o NCM, o CEST, o CSOSN/CST e o CFOP de cada produto com a nota de compra do fornecedor (XML), a tabela oficial de NCM e o Convênio ICMS 142 (CEST), mostra o que está diferente, explica o porquê, informa a fonte e corrige o cadastro com um clique. A conferência sugere e explica; a responsabilidade pela tributação continua da loja e do contador.
+
+**A conferência atrapalha a venda no caixa?**
+Não. A NFC-e do caixa não é interrompida. A conferência aparece no cadastro dos produtos, antes de emitir a NF-e (Conferência da nota) e depois de lançar uma nota de compra.
 
 **E se a nota for rejeitada?**
 O VENDE+ confere a nota antes de enviar e explica em português o que precisa ser corrigido, para evitar a rejeição. Se precisar, você faz carta de correção, cancelamento ou inutilização pelo sistema.
@@ -553,7 +579,7 @@ Preços mensais. A Entrada é obrigatória; os outros módulos você soma confor
 - Módulo | Preço/mês | O que inclui |
 - Entrada | R$ 96,90 | Obrigatório. PDV no balcão, estoque, clientes e fornecedores, caixa e financeiro, contas a pagar e a receber, crediário, compras com importação de XML, usuários com permissões, vendedores, comissão e metas. |
 - Vende+ | R$ 128,90 | Gatilhos de venda, perfil de gosto do cliente, ficha de moda e grade de tamanhos com código de barras por item, condicional. |
-- Fiscal | R$ 48,90 | NF-e e NFC-e com o certificado da loja, carta de correção, cancelamento, conferência da nota antes de enviar, busca automática das notas emitidas contra o seu CNPJ (MDE) e manifestação, Portal do Contador. |
+- Fiscal | R$ 48,90 | NF-e e NFC-e com o certificado da loja, carta de correção, cancelamento, conferência da tributação dos produtos (NCM, CEST, CSOSN/CST e CFOP) e da nota antes de enviar, busca automática das notas emitidas contra o seu CNPJ (MDE) e manifestação, Portal do Contador. |
 - Catálogo online | R$ 48,90 | Vitrine com link público, sacola e fila de carrinhos, foto do produto, pedido que chega pelo WhatsApp. |
 - Restaurante | R$ 96,90 | Cardápio com tamanhos, sabores e adicionais; mesas, comandas, tela do garçom e da cozinha; entregas; cardápio digital com QR Code e pedido online; conta dividida; comanda impressa por setor. |
 - Pesagem automática | R$ 60,00 | Balança ligada no computador, tela grande para o cliente com peso e valor, comanda impressa na hora, também sem internet. |
@@ -585,7 +611,7 @@ Até o dia 10 a loja continua operando. A partir do dia 11 o sistema para de gra
 Não. A migração assistida de clientes, produtos e saldo de estoque não tem custo separado.
 
 **O VENDE+ emite NFC-e e NF-e?**
-Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
+Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, conferência da tributação dos produtos, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
 
 ## Teste o VENDE+ na sua loja por 14 dias.
 Sem cartão, sem falar com vendedor, direto no navegador.
@@ -723,7 +749,7 @@ Pelo Suporte Maker, no menu do próprio sistema, e pelo WhatsApp. Há também um
 ## Nota fiscal
 
 **O VENDE+ emite NFC-e e NF-e?**
-Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
+Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, conferência da tributação dos produtos, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.
 
 ## Restaurante
 
