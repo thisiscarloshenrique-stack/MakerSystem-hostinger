@@ -6,25 +6,28 @@
 <link rel="stylesheet" href="fonts.css">
 <style>
   :root {
-    --ink: #202c3c;
-    --navy: #1d2a3c;
-    --navy-2: #233f61;
-    --blue: #2f537b;
-    --sky: #c4d5e9;
-    --accent: #8fb0d6;
-    --paper: #f3f5f8;
+    --ink: #3b2a20;      /* cacau: textos principais */
+    --nude: #c9a78e;     /* nude marrom claro */
+    --nude-hi: #dcc1ab;
+    --nude-lo: #a9856d;
+    --cocoa: #6b4a38;    /* rótulos sobre o nude */
+    --caramel: #9c7158;  /* destaque sobre o creme */
+    --sand: #e8d2bf;     /* rótulos sobre foto escura */
+    --cream: #f6efe9;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: #000; }
   body { display: grid; place-items: center; min-height: 100vh; }
   #stage {
     position: relative; width: 1080px; height: 1920px; overflow: hidden;
-    background: var(--navy); font-family: 'Manrope', sans-serif; color: #fff;
+    background: var(--nude); font-family: 'Manrope', sans-serif; color: var(--ink);
   }
   .scene { position: absolute; inset: 0; overflow: hidden; }
   .abs { position: absolute; }
   .fill { position: absolute; inset: 0; }
   .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; will-change: transform; }
+  /* aquece levemente as fotos (fundo de estúdio cinza) para casar com o nude */
+  .warm { position: absolute; inset: 0; background: #c9a78e; mix-blend-mode: soft-light; opacity: .45; pointer-events: none; }
   .label {
     font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 26px;
     letter-spacing: .34em; text-transform: uppercase;
@@ -35,65 +38,66 @@
   .center { left: 0; right: 0; text-align: center; }
 
   /* S1 — abertura */
-  #s1 { background: radial-gradient(120% 70% at 50% 45%, #2f537b 0%, #1d2a3c 55%, #141c28 100%); }
+  #s1 { background: radial-gradient(120% 70% at 50% 45%, var(--nude-hi) 0%, var(--nude) 55%, var(--nude-lo) 100%); }
   #s1 .mark { top: 840px; font-weight: 300; font-size: 148px; letter-spacing: -.045em; }
-  #s1 .rule { top: 1040px; left: 50%; width: 260px; height: 2px; margin-left: -130px; background: var(--sky); transform-origin: center; }
-  #s1 .sub { top: 1080px; color: var(--sky); }
-  #s1 .kicker { top: 760px; color: var(--accent); font-size: 22px; }
+  #s1 .rule { top: 1040px; left: 50%; width: 260px; height: 2px; margin-left: -130px; background: var(--cocoa); transform-origin: center; }
+  #s1 .sub { top: 1080px; color: var(--cocoa); }
+  #s1 .kicker { top: 760px; color: var(--cocoa); font-size: 22px; }
 
   /* S2 — "Além do sorriso" */
-  #s2 .shade { background: linear-gradient(180deg, rgba(20,28,40,0) 48%, rgba(20,28,40,.78) 70%, rgba(20,28,40,.96) 100%); }
-  #s2 .label { top: 1250px; left: 96px; color: var(--accent); }
+  #s2 { color: #fff; }
+  #s2 .shade { background: linear-gradient(180deg, rgba(38,26,19,0) 48%, rgba(38,26,19,.78) 70%, rgba(38,26,19,.96) 100%); }
+  #s2 .label { top: 1250px; left: 96px; color: var(--sand); }
   #s2 .head { top: 1305px; left: 90px; font-size: 104px; }
 
   /* S3 — "Um olhar por inteiro" */
-  #s3 { background: var(--paper); }
+  #s3 { background: var(--cream); }
   #s3 .arch {
     top: 250px; left: 110px; width: 860px; height: 1060px; overflow: hidden;
-    border-radius: 430px 430px 28px 28px; background: #d9dde2;
+    border-radius: 430px 430px 28px 28px; background: #e6d9ce;
   }
   #s3 .arch img { object-position: 50% 18%; }
-  #s3 .head { top: 1370px; font-size: 108px; color: var(--ink); }
-  #s3 .head .tint { color: var(--blue); }
+  #s3 .head { top: 1370px; font-size: 108px; }
+  #s3 .head .tint { color: var(--caramel); }
 
   /* S4 — áreas de atuação */
-  #s4 { background: radial-gradient(110% 60% at 80% 20%, #2a4a70 0%, #1d2a3c 60%, #141c28 100%); }
-  #s4 .label { top: 560px; left: 96px; color: var(--accent); }
+  #s4 { background: radial-gradient(110% 60% at 80% 20%, var(--nude-hi) 0%, var(--nude) 60%, var(--nude-lo) 100%); }
+  #s4 .label { top: 560px; left: 96px; color: var(--cocoa); }
   #s4 .row { left: 96px; right: 96px; height: 250px; }
-  #s4 .row .num { position: absolute; top: 46px; left: 0; font-family: 'DM Sans', sans-serif; font-size: 26px; font-weight: 500; color: var(--accent); letter-spacing: .1em; }
+  #s4 .row .num { position: absolute; top: 46px; left: 0; font-family: 'DM Sans', sans-serif; font-size: 26px; font-weight: 500; color: var(--cocoa); letter-spacing: .1em; }
   #s4 .row .title { position: absolute; top: 80px; left: 0; font-size: 92px; font-weight: 300; letter-spacing: -.035em; }
-  #s4 .row .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: rgba(196,213,233,.35); transform-origin: left center; }
+  #s4 .row .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: rgba(59,42,32,.28); transform-origin: left center; }
   #s4 .r1 { top: 680px; } #s4 .r2 { top: 930px; } #s4 .r3 { top: 1180px; }
 
   /* S5 — "Cuidar de você" */
-  #s5 { background: var(--paper); }
+  #s5 { background: var(--cream); }
   #s5 .photo { object-position: 50% 0%; }
-  #s5 .fade { background: linear-gradient(180deg, rgba(243,245,248,0) 50%, rgba(243,245,248,.92) 66%, #f3f5f8 76%); }
-  #s5 .head { top: 1330px; left: 90px; font-size: 104px; color: var(--ink); }
-  #s5 .head .tint { color: var(--blue); }
+  #s5 .fade { background: linear-gradient(180deg, rgba(246,239,233,0) 50%, rgba(246,239,233,.92) 66%, #f6efe9 76%); }
+  #s5 .head { top: 1330px; left: 90px; font-size: 104px; }
+  #s5 .head .tint { color: var(--caramel); }
 
   /* S6 — chamada final */
-  #s6 { background: radial-gradient(120% 70% at 50% 40%, #2f537b 0%, #1d2a3c 58%, #141c28 100%); }
+  #s6 { background: radial-gradient(120% 70% at 50% 40%, var(--nude-hi) 0%, var(--nude) 58%, var(--nude-lo) 100%); }
   #s6 .mark { top: 380px; font-weight: 300; font-size: 64px; letter-spacing: -.04em; }
-  #s6 .msub { top: 470px; color: var(--sky); font-size: 19px; }
+  #s6 .msub { top: 470px; color: var(--cocoa); font-size: 19px; }
   #s6 .head { top: 800px; font-size: 132px; }
   #s6 .pill {
     top: 1190px; left: 50%; width: 740px; margin-left: -370px; height: 124px; border-radius: 999px;
-    background: var(--paper); color: var(--ink); display: flex; align-items: center; justify-content: center; gap: 22px;
+    background: var(--ink); color: var(--cream); display: flex; align-items: center; justify-content: center; gap: 22px;
     font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 40px; letter-spacing: -.01em;
-    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+    box-shadow: 0 20px 50px rgba(59,42,32,.35);
   }
   #s6 .pill svg { width: 52px; height: 52px; }
   #s6 .ig {
-    top: 1360px; color: var(--sky); font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 36px;
+    top: 1360px; color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 36px;
     display: flex; align-items: center; justify-content: center; gap: 16px;
   }
   #s6 .ig svg { width: 40px; height: 40px; }
-  #s6 .cta-label { top: 730px; color: var(--accent); }
+  #s6 .cta-label { top: 730px; color: var(--cocoa); }
 
   /* acabamento */
   #grain { position: absolute; inset: 0; pointer-events: none; opacity: .07; mix-blend-mode: overlay; }
-  #vignette { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 80% at 50% 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,.28) 100%); }
+  #vignette { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 80% at 50% 50%, rgba(0,0,0,0) 60%, rgba(60,36,22,.22) 100%); }
 </style>
 </head>
 <body>
@@ -110,6 +114,7 @@
   <!-- S2 -->
   <section class="scene" id="s2">
     <img class="photo" src="photos/geovana-contato-1280.webp" alt="">
+    <div class="warm"></div>
     <div class="fill shade"></div>
     <div class="abs label">Dra. Geovana Paz</div>
     <div class="abs head">
@@ -120,7 +125,7 @@
 
   <!-- S3 -->
   <section class="scene" id="s3">
-    <div class="abs arch"><img class="photo" src="photos/geovana-retrato-1280.webp" alt=""></div>
+    <div class="abs arch"><img class="photo" src="photos/geovana-retrato-1280.webp" alt=""><div class="warm"></div></div>
     <div class="abs center head">
       <span class="line"><span>Um olhar</span></span>
       <span class="line"><span class="tint">por inteiro.</span></span>
@@ -130,14 +135,15 @@
   <!-- S4 -->
   <section class="scene" id="s4">
     <div class="abs label">Áreas de atuação</div>
-    <div class="abs row r1"><span class="num">01</span><span class="line title"><span>Odontologia</span></span><i class="bar"></i></div>
-    <div class="abs row r2"><span class="num">02</span><span class="line title"><span>Bucomaxilofacial</span></span><i class="bar"></i></div>
-    <div class="abs row r3"><span class="num">03</span><span class="line title"><span>Estética facial</span></span><i class="bar"></i></div>
+    <div class="abs row r1"><span class="num">01</span><span class="line title"><span>Reabilitação Oral</span></span><i class="bar"></i></div>
+    <div class="abs row r2"><span class="num">02</span><span class="line title"><span>Alívio da Dor</span></span><i class="bar"></i></div>
+    <div class="abs row r3"><span class="num">03</span><span class="line title"><span>Estética Facial</span></span><i class="bar"></i></div>
   </section>
 
   <!-- S5 -->
   <section class="scene" id="s5">
     <img class="photo" src="photos/geovana-perfil-1280.webp" alt="">
+    <div class="warm"></div>
     <div class="fill fade"></div>
     <div class="abs head">
       <span class="line"><span>Cuidar de você.</span></span>
@@ -307,8 +313,8 @@ function render(t) {
   ['s1', 's2', 's3', 's4', 's5', 's6'].forEach((id, i) => (document.getElementById(id).style.zIndex = i + 1));
   if (t > 22.9) {
     const k = (Math.sin((t - 22.9) * 3.2) + 1) / 2;
-    pill.style.boxShadow = `0 20px 60px rgba(0,0,0,.35), 0 0 0 ${6 + k * 14}px rgba(196,213,233,${.22 - k * .16})`;
-  } else pill.style.boxShadow = '0 20px 60px rgba(0,0,0,.35)';
+    pill.style.boxShadow = `0 20px 50px rgba(59,42,32,.35), 0 0 0 ${6 + k * 14}px rgba(59,42,32,${.22 - k * .16})`;
+  } else pill.style.boxShadow = '0 20px 50px rgba(59,42,32,.35)';
 }
 
 window.DURATION = DURATION; window.FPS = FPS; window.render = render;
