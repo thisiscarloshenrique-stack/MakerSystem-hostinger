@@ -1,9 +1,10 @@
 // Renderiza index.html quadro a quadro e gera o MP4 vertical (1080x1920) com ffmpeg.
 //   node render.mjs                 -> geovana-paz-stories.mp4
+//   (rode antes "python3 trilha.py" para gerar trilha.wav; sem ela o vídeo sai mudo)
 //   node render.mjs --stills 1,5,9  -> PNGs desses segundos em ./stills (pré-visualização)
 import { chromium } from 'playwright';
 import { spawn } from 'node:child_process';
-import { mkdirSync } from 'node:fs';
+import { existsSync, mkdirSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
 
@@ -37,8 +38,14 @@ if (stillsArg) {
   process.exit(0);
 }
 
+// Trilha (gerada por trilha.py), normalizada para -14 LUFS, padrão do Instagram.
+const trilha = path.join(dir, 'trilha.wav');
+const audio = existsSync(trilha)
+  ? ['-i', trilha, '-map', '0:v', '-map', '1:a', '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11',
+     '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-shortest']
+  : [];
 const ff = spawn('ffmpeg', [
-  '-y', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'png', '-i', '-',
+  '-y', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'png', '-i', '-', ...audio,
   '-c:v', 'libx264', '-preset', 'slow', '-crf', '18', '-pix_fmt', 'yuv420p',
   '-profile:v', 'high', '-movflags', '+faststart', out,
 ], { stdio: ['pipe', 'inherit', 'inherit'] });
