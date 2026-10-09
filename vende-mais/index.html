@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>VENDE+ by Maker System · Sistema de gestão e PDV para lojas</title>
-<meta name="description" content="Sistema de gestão e PDV para lojas, no navegador: caixa, estoque com grade, financeiro, NF-e e NFC-e, WhatsApp e gatilhos de venda. Teste 14 dias grátis.">
+<meta name="description" content="Sistema de gestão e PDV para lojas, no navegador e no celular: PDV com grade, condicional, gatilhos de venda, robô no WhatsApp, financeiro e NF-e. Teste 6 dias grátis.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://makersystem.com.br/vende-mais/">
 <meta name="theme-color" content="#04173A">
@@ -12,45 +12,507 @@
 <link rel="icon" href="/img/vendemais-favicon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="/img/vendemais-favicon-180.png">
 <meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="Maker System">
-<meta property="og:title" content="VENDE+ by Maker System · Sistema de gestão e PDV para lojas"><meta property="og:description" content="Sistema de gestão e PDV para lojas, no navegador: caixa, estoque com grade, financeiro, NF-e e NFC-e, WhatsApp e gatilhos de venda. Teste 14 dias grátis."><meta property="og:url" content="https://makersystem.com.br/vende-mais/"><meta property="og:image" content="https://makersystem.com.br/img/print-gatilhos.jpg">
+<meta property="og:title" content="VENDE+ by Maker System · Sistema de gestão e PDV para lojas"><meta property="og:description" content="Sistema de gestão e PDV para lojas, no navegador e no celular: PDV com grade, condicional, gatilhos de venda, robô no WhatsApp, financeiro e NF-e. Teste 6 dias grátis."><meta property="og:url" content="https://makersystem.com.br/vende-mais/"><meta property="og:image" content="https://makersystem.com.br/img/vende-mais/og-vende-mais.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="facebook-domain-verification" content="11botkgcba40pb3osep2qvar07lumc">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/vm2.css?v=20261005">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://makersystem.com.br/#org", "name": "Maker System", "legalName": "MAKER SYSTEM LTDA", "url": "https://makersystem.com.br/", "logo": "https://makersystem.com.br/img/maker-logo-escuro.png", "identifier": {"@type": "PropertyValue", "propertyID": "CNPJ", "value": "68.949.287/0001-34"}, "address": {"@type": "PostalAddress", "addressLocality": "Formoso do Araguaia", "addressRegion": "TO", "addressCountry": "BR"}, "email": "contato@makersystem.com.br"}, {"@type": "WebPage", "@id": "https://makersystem.com.br/vende-mais/#page", "url": "https://makersystem.com.br/vende-mais/", "name": "VENDE+ by Maker System · Sistema de gestão e PDV para lojas", "description": "Sistema de gestão e PDV para lojas, no navegador: caixa, estoque com grade, financeiro, NF-e e NFC-e, WhatsApp e gatilhos de venda. Teste 14 dias grátis.", "inLanguage": "pt-BR", "isPartOf": {"@type": "WebSite", "@id": "https://makersystem.com.br/#site", "url": "https://makersystem.com.br/", "name": "Maker System", "publisher": {"@id": "https://makersystem.com.br/#org"}}, "dateModified": "2026-10-05"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Maker System", "item": "https://makersystem.com.br/"}, {"@type": "ListItem", "position": 2, "name": "VENDE+"}]}, {"@type": "SoftwareApplication", "@id": "https://makersystem.com.br/vende-mais/#app", "name": "VENDE+", "alternateName": ["Vende Mais", "VENDE+ by Maker System"], "url": "https://makersystem.com.br/vende-mais/", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Android, Windows", "description": "O VENDE+ by Maker System é um sistema de gestão e PDV para lojas, usado pelo navegador no computador, tablet ou celular. Ele junta frente de caixa, estoque, financeiro, nota fiscal e WhatsApp, e mostra quem chamar e o que oferecer para vender de novo.", "featureList": ["Frente de caixa (PDV) com leitor de código de barras, também pela câmera do celular", "Venda guardada para retomar depois, desconto, várias formas de pagamento, troco, troca e devolução", "PIX e maquininha Mercado Pago Point integrados", "Estoque com grade de tamanho e cor, produto a granel por quilo, inventário por contagem, fotos e etiquetas", "Caixa do dia, contas a pagar e a receber, crediário, fluxo financeiro e DRE gerencial", "Usuários com permissões por área, comissão e metas de vendedores", "Emissão de NFC-e e NF-e, entrada de nota de compra pelo XML e Portal do Contador", "Conferência dos produtos no módulo Fiscal: confere NCM, CEST, CSOSN/CST e CFOP com a nota do fornecedor, a tabela oficial de NCM e o Convênio ICMS 142, explica e corrige com um clique (A conferência sugere e explica; a responsabilidade pela tributação continua da loja e do contador)", "Cadastro de clientes com busca de CNPJ, condicional e orçamentos", "Gatilhos de venda: quem chamar, o que oferecer e por quê", "Comprovante, orçamento e cobrança pelo WhatsApp da loja com PDF anexo", "Catálogo online com link próprio e pedido pelo WhatsApp", "Restaurante, lanchonete e açaiteria: mesas, comandas, garçom, cozinha, entregas, cardápio digital e pedido online", "Pesagem automática para self-service por quilo", "Importação de dados de outros sistemas de gestão"], "brand": {"@id": "https://makersystem.com.br/#org"}, "publisher": {"@id": "https://makersystem.com.br/#org"}, "offers": [{"@type": "Offer", "name": "Loja de roupas e varejo (Entrada + Vende+)", "price": "225.80", "priceCurrency": "BRL", "availability": "https://schema.org/InStock", "url": "https://makersystem.com.br/vende-mais/precos/"}, {"@type": "Offer", "name": "Restaurante, lanchonete e açaiteria (Entrada + Restaurante)", "price": "193.80", "priceCurrency": "BRL", "availability": "https://schema.org/InStock", "url": "https://makersystem.com.br/vende-mais/precos/"}, {"@type": "Offer", "name": "Self-service por quilo (Entrada + Restaurante + Pesagem)", "price": "253.80", "priceCurrency": "BRL", "availability": "https://schema.org/InStock", "url": "https://makersystem.com.br/vende-mais/precos/"}]}, {"@type": "FAQPage", "@id": "https://makersystem.com.br/vende-mais/#faq", "mainEntity": [{"@type": "Question", "name": "Como faço para testar o VENDE+?", "acceptedAnswer": {"@type": "Answer", "text": "Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online. Para casa de comida, ao criar a loja escolha o segmento \"Restaurante e lanchonete\", \"Açaiteria e sorveteria\" ou \"Self-service por quilo\": o teste já vem com o módulo Restaurante, e o self-service também com a Pesagem automática."}}, {"@type": "Question", "name": "Quanto custa o VENDE+?", "acceptedAnswer": {"@type": "Answer", "text": "Para loja de roupas e varejo, o plano indicado é Entrada (R$ 96,90) + Vende+ (R$ 128,90): R$ 225,80 por mês. Restaurante, lanchonete e açaiteria: Entrada + Restaurante, R$ 193,80 por mês. Quem precisa de nota fiscal soma o Fiscal (R$ 48,90). Catálogo online, Pesagem automática e Atende+ são opcionais com preço próprio."}}, {"@type": "Question", "name": "O preço é por usuário ou por computador?", "acceptedAnswer": {"@type": "Answer", "text": "Não. O preço é por loja: não há cobrança por usuário, por computador nem por nota emitida. Cada loja pode ter até 20 usuários, e um mesmo login acessa até 5 lojas."}}, {"@type": "Question", "name": "O que são os gatilhos de venda?", "acceptedAnswer": {"@type": "Answer", "text": "São sugestões diárias de contato. O VENDE+ cruza o histórico de compras e o perfil de gosto de cada cliente com o estoque disponível e mostra quem chamar, o que oferecer e por quê. Você decide o contato e conduz a conversa; as sugestões não garantem venda."}}, {"@type": "Question", "name": "Preciso instalar alguma coisa?", "acceptedAnswer": {"@type": "Answer", "text": "Não. O VENDE+ funciona direto no navegador do computador, tablet ou celular, com internet. Se quiser, há também o aplicativo Android e programas para Windows: o VENDE+ PDV (caixa em janela própria), o CG Tray (impressão de cupom, etiqueta e A4 e gaveta) e o VENDE+ Pesagem (balança). Os programas se atualizam sozinhos."}}, {"@type": "Question", "name": "O VENDE+ funciona no celular?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O sistema abre no navegador do celular e há aplicativo Android, instalado pelo link de download, com os ícones de cada função (PDV, inventário, fotos dos produtos, garçom, entregador, cozinha). O leitor de código de barras também funciona pela câmera do celular."}}, {"@type": "Question", "name": "O VENDE+ emite NFC-e e NF-e?", "acceptedAnswer": {"@type": "Answer", "text": "Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, conferência da tributação dos produtos, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo."}}, {"@type": "Question", "name": "O VENDE+ tem crediário?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Crediário com vencimento escolhido ou sem vencimento, limite por cliente, carnê, duplicata e cobrança pelo WhatsApp, junto de contas a receber."}}, {"@type": "Question", "name": "O VENDE+ manda comprovante pelo WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Sim, sem custo extra. Comprovante, orçamento e cobrança saem pelo WhatsApp da loja com o PDF anexo, em folha A4 ou no formato do cupom."}}, {"@type": "Question", "name": "Para que tipos de loja o VENDE+ serve?", "acceptedAnswer": {"@type": "Answer", "text": "Moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete, açaiteria, sorveteria e self-service por quilo."}}, {"@type": "Question", "name": "O VENDE+ serve para restaurante?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O módulo Restaurante (R$ 96,90 por mês, somado à Entrada) atende restaurante, lanchonete e açaiteria com mesas e comandas, tela do garçom, tela da cozinha, entregas com tela do entregador, cardápio digital com QR Code e pedido online pelo link. Para self-service por quilo há o módulo Pesagem automática."}}, {"@type": "Question", "name": "Consigo trazer meus dados de outro sistema?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Trazemos clientes, produtos e saldo de estoque a partir de uma planilha ou da exportação do seu sistema atual. A migração assistida não tem custo separado."}}, {"@type": "Question", "name": "Meus dados ficam seguros?", "acceptedAnswer": {"@type": "Answer", "text": "Os dados ficam em servidor no Brasil, com cópia de segurança fora do servidor principal. Cada pessoa entra com a própria senha, o dono decide quem vê o quê, e o sistema tem proteção contra tentativas de invasão."}}, {"@type": "Question", "name": "Quem faz o VENDE+?", "acceptedAnswer": {"@type": "Answer", "text": "A Maker System LTDA, CNPJ 68.949.287/0001-34, de Formoso do Araguaia (TO). Contato: contato@makersystem.com.br."}}]}]}</script>
+<link rel="stylesheet" href="/assets/css/vm-home.css?v=20261008">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://makersystem.com.br/#org", "name": "Maker System", "legalName": "MAKER SYSTEM LTDA", "url": "https://makersystem.com.br/", "logo": "https://makersystem.com.br/img/maker-logo-escuro.png", "identifier": {"@type": "PropertyValue", "propertyID": "CNPJ", "value": "68.949.287/0001-34"}, "address": {"@type": "PostalAddress", "addressLocality": "Formoso do Araguaia", "addressRegion": "TO", "addressCountry": "BR"}, "email": "contato@makersystem.com.br"}, {"@type": "WebPage", "@id": "https://makersystem.com.br/vende-mais/#page", "url": "https://makersystem.com.br/vende-mais/", "name": "VENDE+ by Maker System · Sistema de gestão e PDV para lojas", "description": "Sistema de gestão e PDV para lojas, no navegador e no celular: PDV com grade, condicional, gatilhos de venda, robô no WhatsApp, financeiro e NF-e. Teste 6 dias grátis.", "inLanguage": "pt-BR", "isPartOf": {"@type": "WebSite", "@id": "https://makersystem.com.br/#site", "url": "https://makersystem.com.br/", "name": "Maker System", "publisher": {"@id": "https://makersystem.com.br/#org"}}, "dateModified": "2026-10-08"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Maker System", "item": "https://makersystem.com.br/"}, {"@type": "ListItem", "position": 2, "name": "VENDE+"}]}, {"@type": "SoftwareApplication", "@id": "https://makersystem.com.br/vende-mais/#app", "name": "VENDE+", "alternateName": ["Vende Mais", "VENDE+ by Maker System"], "url": "https://makersystem.com.br/vende-mais/", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Android, Windows", "description": "O VENDE+ by Maker System é um sistema de gestão e PDV para lojas, usado pelo navegador no computador, tablet ou celular. Ele junta frente de caixa, estoque, financeiro, nota fiscal e WhatsApp, e mostra quem chamar e o que oferecer para vender de novo.", "featureList": ["Frente de caixa (PDV) com leitor de código de barras, também pela câmera do celular", "Venda guardada para retomar depois, desconto, várias formas de pagamento, troco, troca e devolução", "PIX e maquininha Mercado Pago Point integrados", "Estoque com grade de tamanho e cor, produto a granel por quilo, inventário por contagem, fotos e etiquetas", "Caixa do dia, contas a pagar e a receber, crediário, fluxo financeiro e DRE gerencial", "Usuários com permissões por área, comissão e metas de vendedores", "Emissão de NFC-e e NF-e, entrada de nota de compra pelo XML e Portal do Contador", "Conferência dos produtos no módulo Fiscal: confere NCM, CEST, CSOSN/CST e CFOP com a nota do fornecedor, a tabela oficial de NCM e o Convênio ICMS 142, explica e corrige com um clique (A conferência sugere e explica; a responsabilidade pela tributação continua da loja e do contador)", "Cadastro de clientes com busca de CNPJ, condicional e orçamentos", "Gatilhos de venda: quem chamar, o que oferecer e por quê", "Comprovante, orçamento e cobrança pelo WhatsApp da loja com PDF anexo", "Catálogo online com link próprio e pedido pelo WhatsApp", "Restaurante, lanchonete e açaiteria: mesas, comandas, garçom, cozinha, entregas, cardápio digital e pedido online", "Pesagem automática para self-service por quilo", "Importação de dados de outros sistemas de gestão", "Atalhos de teclado no PDV: F2 abre a venda de qualquer tela, F3 escolhe o cliente e F9 finaliza", "É presente? no PDV: separa quem usa de quem paga, sem misturar o gosto de quem ganhou no perfil de quem pagou", "Condicional com prazo, cobrança das vencidas e devolução das peças", "Perfil de gosto do cliente aprendido com as compras: tamanho, cores, faixa de preço, dia preferido e presentes", "Atende+: WhatsApp da loja dividido entre a equipe, com robô que responde pelo estoque sem inteligência artificial e chama a equipe no que não souber", "DRE gerencial com receita, lucro bruto, margem e ponto de equilíbrio", "Custo por média ponderada com frete, IPI e ICMS-ST rateados na entrada de mercadoria", "Autopeças e oficina: placa com Tabela FIPE e ordem de serviço com checklist, fotos de entrada e aprovação item a item", "Casa agropecuária: receituário agronômico, receita veterinária no PDV e controle de embalagens vazias", "Materiais de construção: produtos em m², m³, metro e milheiro e quantidade fracionada no PDV", "Celular e informática: usado na troca com avaliação pela tabela da loja e IMEI, que entra no estoque como seminovo"], "brand": {"@id": "https://makersystem.com.br/#org"}, "publisher": {"@id": "https://makersystem.com.br/#org"}, "offers": [{"@type": "Offer", "name": "Loja de roupas e varejo (Entrada + Vende+)", "price": "225.80", "priceCurrency": "BRL", "availability": "https://schema.org/InStock", "url": "https://makersystem.com.br/vende-mais/precos/"}, {"@type": "Offer", "name": "Restaurante, lanchonete e açaiteria (Entrada + Restaurante)", "price": "193.80", "priceCurrency": "BRL", "availability": "https://schema.org/InStock", "url": "https://makersystem.com.br/vende-mais/precos/"}, {"@type": "Offer", "name": "Self-service por quilo (Entrada + Restaurante + Pesagem)", "price": "253.80", "priceCurrency": "BRL", "availability": "https://schema.org/InStock", "url": "https://makersystem.com.br/vende-mais/precos/"}]}, {"@type": "FAQPage", "@id": "https://makersystem.com.br/vende-mais/#faq", "mainEntity": [{"@type": "Question", "name": "Como faço para testar o VENDE+?", "acceptedAnswer": {"@type": "Answer", "text": "Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 6 dias grátis, sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online. Para casa de comida, ao criar a loja escolha o segmento \"Restaurante e lanchonete\", \"Açaiteria e sorveteria\" ou \"Self-service por quilo\": o teste já vem com o módulo Restaurante, e o self-service também com a Pesagem automática."}}, {"@type": "Question", "name": "Quanto custa o VENDE+?", "acceptedAnswer": {"@type": "Answer", "text": "Para loja de roupas e varejo, o plano indicado é Entrada (R$ 96,90) + Vende+ (R$ 128,90): R$ 225,80 por mês. Restaurante, lanchonete e açaiteria: Entrada + Restaurante, R$ 193,80 por mês. Quem precisa de nota fiscal soma o Fiscal (R$ 48,90). Catálogo online, Pesagem automática e Atende+ são opcionais com preço próprio."}}, {"@type": "Question", "name": "O preço é por usuário ou por computador?", "acceptedAnswer": {"@type": "Answer", "text": "Não. O preço é por loja: não há cobrança por usuário, por computador nem por nota emitida. Cada loja pode ter até 20 usuários, e um mesmo login acessa até 5 lojas."}}, {"@type": "Question", "name": "O que são os gatilhos de venda?", "acceptedAnswer": {"@type": "Answer", "text": "São sugestões diárias de contato. O VENDE+ cruza o histórico de compras e o perfil de gosto de cada cliente com o estoque disponível e mostra quem chamar, o que oferecer e por quê. Você decide o contato e conduz a conversa; as sugestões não garantem venda."}}, {"@type": "Question", "name": "Preciso instalar alguma coisa?", "acceptedAnswer": {"@type": "Answer", "text": "Não. O VENDE+ funciona direto no navegador do computador, tablet ou celular, com internet. Se quiser, há também o aplicativo Android e programas para Windows: o VENDE+ PDV (caixa em janela própria), o CG Tray (impressão de cupom, etiqueta e A4 e gaveta) e o VENDE+ Pesagem (balança). Os programas se atualizam sozinhos."}}, {"@type": "Question", "name": "O VENDE+ funciona no celular?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O sistema abre no navegador do celular e há aplicativo Android, instalado pelo link de download, com os ícones de cada função (PDV, inventário, fotos dos produtos, garçom, entregador, cozinha). O leitor de código de barras também funciona pela câmera do celular."}}, {"@type": "Question", "name": "O VENDE+ emite NFC-e e NF-e?", "acceptedAnswer": {"@type": "Answer", "text": "Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, conferência da tributação dos produtos, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo."}}, {"@type": "Question", "name": "O VENDE+ tem crediário?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Crediário com vencimento escolhido ou sem vencimento, limite por cliente, carnê, duplicata e cobrança pelo WhatsApp, junto de contas a receber."}}, {"@type": "Question", "name": "O VENDE+ manda comprovante pelo WhatsApp?", "acceptedAnswer": {"@type": "Answer", "text": "Sim, sem custo extra. Comprovante, orçamento e cobrança saem pelo WhatsApp da loja com o PDF anexo, em folha A4 ou no formato do cupom."}}, {"@type": "Question", "name": "O que o robô do Atende+ faz?", "acceptedAnswer": {"@type": "Answer", "text": "O Atende+ coloca o WhatsApp da loja dentro do VENDE+, dividido entre a equipe. O robô responde sozinho com o estoque da loja, sem inteligência artificial: produto, preço, tamanho, cor e foto, além das respostas prontas da loja, como horário, endereço e pagamento. Em desconto, troca, defeito e encomenda, ou quando o cliente pede uma pessoa, ele chama alguém da equipe. O Atende+ custa R$ 64,90 por mês, com 1 número incluído."}}, {"@type": "Question", "name": "Para que tipos de loja o VENDE+ serve?", "acceptedAnswer": {"@type": "Answer", "text": "Moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama mesa e banho, varejo geral e variedades, celulares e informática, autopeças e oficina, materiais de construção, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete, açaiteria, sorveteria e self-service por quilo."}}, {"@type": "Question", "name": "O VENDE+ serve para restaurante?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. O módulo Restaurante (R$ 96,90 por mês, somado à Entrada) atende restaurante, lanchonete e açaiteria com mesas e comandas, tela do garçom, tela da cozinha, entregas com tela do entregador, cardápio digital com QR Code e pedido online pelo link. Para self-service por quilo há o módulo Pesagem automática."}}, {"@type": "Question", "name": "Consigo trazer meus dados de outro sistema?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. Trazemos clientes, produtos e saldo de estoque a partir de uma planilha ou da exportação do seu sistema atual. A migração assistida não tem custo separado."}}, {"@type": "Question", "name": "Meus dados ficam seguros?", "acceptedAnswer": {"@type": "Answer", "text": "Os dados ficam em servidor no Brasil, com cópia de segurança fora do servidor principal. Cada pessoa entra com a própria senha, o dono decide quem vê o quê, e o sistema tem proteção contra tentativas de invasão."}}, {"@type": "Question", "name": "Quem faz o VENDE+?", "acceptedAnswer": {"@type": "Answer", "text": "A Maker System LTDA, CNPJ 68.949.287/0001-34, de Formoso do Araguaia (TO). Contato: contato@makersystem.com.br."}}]}]}</script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
+<symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></symbol>
+<symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+<symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+<symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></symbol>
+<symbol id="i-swipe" viewBox="0 0 24 24"><path d="M18 8l4 4-4 4M6 8l-4 4 4 4M2 12h20"/></symbol>
+<symbol id="i-shirt" viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></symbol>
+<symbol id="i-car" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
+<symbol id="i-food" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></symbol>
+<symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+<symbol id="i-hammer" viewBox="0 0 24 24"><path d="m15 12-8.5 8.5a2.12 2.12 0 1 1-3-3L12 9M17.64 15 22 10.64M20.91 11.7l-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+<symbol id="i-store" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4M2 7h20M22 7v3a2 2 0 0 1-2 2 2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></symbol>
+</svg>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="hd"><div class="wrap">
 <a class="logo" href="/vende-mais/" aria-label="VENDE+ by Maker System — início"><img src="/img/vendemais-logo-branco.png" alt="VENDE+" width="120" height="38"></a>
 <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav id="nav" aria-label="Principal"><a href="/vende-mais/" aria-current="page">VENDE+</a><a href="/vende-mais/loja-de-roupas/">Loja de roupas</a><a href="/vende-mais/precos/">Preços</a><a href="/vende-mais/migrar/">Trocar de sistema</a><a href="/vende-mais/perguntas/">Dúvidas</a><a href="/sobre/">Sobre</a><a class="btn btn--sm" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=pilar-topo" data-ms="teste" data-ms-origem="pilar-topo">Testar 14 dias grátis</a></nav>
+<nav id="nav" aria-label="Principal"><a href="/vende-mais/" aria-current="page">VENDE+</a><a href="/vende-mais/loja-de-roupas/">Loja de roupas</a><a href="/vende-mais/precos/">Preços</a><a href="/vende-mais/migrar/">Trocar de sistema</a><a href="/vende-mais/perguntas/">Dúvidas</a><a href="/sobre/">Sobre</a><a class="btn btn--sm" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=pilar-topo" data-ms="teste" data-ms-origem="pilar-topo">Testar 6 dias grátis</a></nav>
 </div></header>
 <main id="conteudo">
-<section class="hero hero--center"><div class="wrap"><p class="crumbs"><a href="/">Maker System</a> › VENDE+</p><p class="eyebrow">VENDE+ by Maker System</p><h1>Sistema de gestão e PDV para lojas que querem vender de novo</h1><p class="lead">O VENDE+ by Maker System é um sistema de gestão e PDV para lojas, usado pelo navegador no computador, tablet ou celular. Ele junta frente de caixa, estoque, financeiro, nota fiscal e WhatsApp, e mostra quem chamar e o que oferecer para vender de novo.</p>
-<p><a class="btn" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=pilar-hero" data-ms="teste" data-ms-origem="pilar-hero">Testar grátis por 14 dias</a></p>
-<p class="fine">14 dias grátis · Sem cartão · Direto no navegador</p><div class="shot"><img src="/img/print-gatilhos.jpg" width="1440" height="900" alt="Tela de gatilhos de venda do VENDE+ com clientes e oportunidades na loja de demonstração" fetchpriority="high"></div></div></section><section class="sec"><div class="wrap"><p class="eyebrow">O que o VENDE+ faz</p><h2>Tudo que passa pelo balcão, num sistema só.</h2>
-<p class="intro">Do caixa à nota fiscal, do estoque ao WhatsApp. Você usa no navegador, sem instalar, e paga só pelos módulos que a sua loja precisa.</p><div class="grid"><div class="card"><h3>Frente de caixa (PDV)</h3><p>Leitor de código de barras (também pela câmera do celular), venda guardada para retomar depois, desconto, várias formas de pagamento, troco, troca e devolução. PIX e maquininha Mercado Pago Point integrados.</p></div><div class="card"><h3>Estoque com grade</h3><p>Grade de tamanho e cor, produto a granel por quilo, inventário por contagem, fotos dos produtos e etiquetas. Entrada da nota de compra pelo XML.</p></div><div class="card"><h3>Financeiro e crediário</h3><p>Caixa do dia, contas a pagar e a receber, crediário com ou sem vencimento, fluxo financeiro em extrato, DRE gerencial, comissão e metas de vendedores.</p></div><a class="card" style="text-decoration:none;color:inherit" href="/vende-mais/nota-fiscal/"><h3>Nota fiscal</h3><p>Emissão de NFC-e e NF-e e Portal do Contador com o módulo Fiscal. Quem não emite nota usa o sistema sem ele.</p><span class="more">Ver o emissor de nota →</span></a><div class="card"><h3>WhatsApp da loja</h3><p>Comprovante, orçamento e cobrança enviados pelo WhatsApp da loja, com o PDF anexo em folha A4 ou cupom.</p></div><div class="card"><h3>Clientes e condicional</h3><p>Cadastro com busca de CNPJ, condicional para o cliente provar em casa, orçamentos e histórico de cada compra.</p></div><div class="card"><h3>Catálogo online</h3><p>Vitrine da loja com link próprio, sacola e pedido que chega pelo WhatsApp.</p></div><a class="card" style="text-decoration:none;color:inherit" href="/vende-mais/restaurante/"><h3>Restaurante e delivery</h3><p>Mesas e comandas, tela do garçom, tela da cozinha, entregas com tela do entregador, cardápio digital e pedido online pelo link.</p><span class="more">Ver o VENDE+ para restaurante →</span></a></div></div></section>
-<section class="sec sec--soft" id="gatilhos"><div class="wrap split"><div><p class="eyebrow">O diferencial</p><h2>Gatilhos de venda: quem chamar, o que oferecer e por quê.</h2>
-<p>Todo dia o VENDE+ cruza o histórico de compras de cada cliente com o estoque disponível e monta uma fila curta de contatos, com a peça sugerida e o motivo por escrito. Você escolhe quem chamar e conduz a conversa pelo WhatsApp.</p>
-<div class="ex"><div><b>Márcia</b><span>Compra peças douradas a cada 45 dias e está há 68 dias sem comprar. Chegaram novidades douradas.</span></div><div><b>Ana</b><span>Comprou tamanho 2 para a filha em março. Talvez seja hora do tamanho 4.</span></div><div><b>João</b><span>Veste calça 42 e prefere modelos casuais. Chegaram modelos 42.</span></div></div>
-<p class="note" style="margin-top:14px">Exemplos ilustrativos. As sugestões não garantem venda.</p></div>
-<figure class="figure figure--phone"><img src="/img/vende-mais/celular-fila-contato.webp" width="530" height="1132" alt="Fila de contatos sugeridos pelo VENDE+ no celular" loading="lazy"></figure></div></section>
-<section class="sec" id="segmentos"><div class="wrap"><p class="eyebrow">Para quem é</p><h2>Feito para o balcão de verdade.</h2>
-<p class="intro">O VENDE+ atende hoje moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama, mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete, açaiteria, sorveteria e self-service por quilo.</p><div class="grid"><a class="card" style="text-decoration:none;color:inherit" href="/vende-mais/loja-de-roupas/"><h3>Loja de roupas e moda</h3><p>Grade de cor e tamanho, condicional, perfil de gosto, etiquetas e crediário.</p><span class="more">Ver o VENDE+ para loja de roupas →</span></a><a class="card" style="text-decoration:none;color:inherit" href="/vende-mais/restaurante/"><h3>Restaurante, lanchonete e açaiteria</h3><p>Mesas, comandas, cozinha, entregas, cardápio digital e balança para self-service por quilo.</p><span class="more">Ver o VENDE+ para restaurante →</span></a><div class="card"><h3>Semijoias, calçados, infantil e lingerie</h3><p>Maletas e condicionais com reserva de estoque, numeração em grade e histórico para os próximos tamanhos.</p></div><div class="card"><h3>Varejo geral e celulares</h3><p>PDV com leitor, troca e devolução, crediário e comprovante pelo WhatsApp.</p></div><div class="card"><h3>Autopeças</h3><p>Orçamentos, cadastro de cliente com busca de CNPJ e nota fiscal.</p></div><div class="card"><h3>Casa agropecuária e perfumaria</h3><p>Receituário, produto a granel por quilo, crediário e sugestões de recompra.</p></div></div></div></section>
-<section class="sec sec--soft" id="onde"><div class="wrap split split--rev"><div><p class="eyebrow">Onde funciona</p><h2>No navegador, no celular e no caixa.</h2>
-<ul class="check"><li>Navegador do computador, tablet ou celular, sem instalar: <a href="https://vendemais.makersystem.com.br/">vendemais.makersystem.com.br</a></li><li>Aplicativo Android</li><li>VENDE+ PDV: caixa em janela própria no Windows</li><li>CG Tray: impressão de cupom, etiqueta e A4 e gaveta</li><li>VENDE+ Pesagem: balança no Windows</li></ul>
-<p><a href="https://vendemais.makersystem.com.br/baixar">Baixar programas e aplicativo →</a></p></div>
-<figure class="figure"><img src="/img/vende-mais/pdv-carrinho.webp" width="1600" height="947" alt="Tela do PDV do VENDE+ com produtos no carrinho" loading="lazy"></figure></div></section>
-<section class="sec" id="preco"><div class="wrap split"><div><p class="eyebrow">Quanto custa</p><h2>Preço claro, por módulo.</h2><p>A Entrada (R$ 96,90) traz PDV, estoque, financeiro e compras. Você soma o que precisa: Vende+, Fiscal, Catálogo online, Restaurante, Pesagem ou Atende+.</p><p><a href="/vende-mais/precos/">Ver a tabela completa de preços →</a></p></div>
-<div class="price"><p class="eyebrow">Loja de roupas e varejo</p><p class="v">R$ 225,80<small>/mês</small></p><p class="note">Entrada R$ 96,90 + Vende+ R$ 128,90</p><ul class="check"><li>PDV, estoque, compras e financeiro</li><li>Gatilhos de venda e perfil de gosto</li><li>Grade de cor e tamanho e condicional</li><li>Comissão e metas</li></ul>
-<a class="btn" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=pilar-preco" data-ms="teste" data-ms-origem="pilar-preco">Testar grátis por 14 dias</a></div></div></section>
-<section class="sec sec--soft"><div class="wrap split split--rev"><div><p class="eyebrow">Trocar de sistema</p><h2>Já usa outro sistema? A gente traz seus dados.</h2><p>Clientes, produtos e saldo de estoque, a partir de uma planilha ou da exportação do sistema atual. Migração assistida sem custo separado.</p><p><a href="/vende-mais/migrar/">Como funciona a migração →</a></p></div>
-<figure class="figure"><img src="/img/vende-mais/etiquetas-modelos.webp" width="1600" height="925" alt="Modelos de etiqueta prontos no VENDE+" loading="lazy"></figure></div></section>
-<section class="sec" id="perguntas"><div class="wrap"><p class="eyebrow">Perguntas frequentes</p><h2>Sem dúvida no próximo passo.</h2><div class="faq"><details><summary>Como faço para testar o VENDE+?</summary><p>Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 14 dias grátis, sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online. Para casa de comida, ao criar a loja escolha o segmento &quot;Restaurante e lanchonete&quot;, &quot;Açaiteria e sorveteria&quot; ou &quot;Self-service por quilo&quot;: o teste já vem com o módulo Restaurante, e o self-service também com a Pesagem automática.</p></details><details><summary>Quanto custa o VENDE+?</summary><p>Para loja de roupas e varejo, o plano indicado é Entrada (R$ 96,90) + Vende+ (R$ 128,90): R$ 225,80 por mês. Restaurante, lanchonete e açaiteria: Entrada + Restaurante, R$ 193,80 por mês. Quem precisa de nota fiscal soma o Fiscal (R$ 48,90). Catálogo online, Pesagem automática e Atende+ são opcionais com preço próprio.</p></details><details><summary>O preço é por usuário ou por computador?</summary><p>Não. O preço é por loja: não há cobrança por usuário, por computador nem por nota emitida. Cada loja pode ter até 20 usuários, e um mesmo login acessa até 5 lojas.</p></details><details><summary>O que são os gatilhos de venda?</summary><p>São sugestões diárias de contato. O VENDE+ cruza o histórico de compras e o perfil de gosto de cada cliente com o estoque disponível e mostra quem chamar, o que oferecer e por quê. Você decide o contato e conduz a conversa; as sugestões não garantem venda.</p></details><details><summary>Preciso instalar alguma coisa?</summary><p>Não. O VENDE+ funciona direto no navegador do computador, tablet ou celular, com internet. Se quiser, há também o aplicativo Android e programas para Windows: o VENDE+ PDV (caixa em janela própria), o CG Tray (impressão de cupom, etiqueta e A4 e gaveta) e o VENDE+ Pesagem (balança). Os programas se atualizam sozinhos.</p></details><details><summary>O VENDE+ funciona no celular?</summary><p>Sim. O sistema abre no navegador do celular e há aplicativo Android, instalado pelo link de download, com os ícones de cada função (PDV, inventário, fotos dos produtos, garçom, entregador, cozinha). O leitor de código de barras também funciona pela câmera do celular.</p></details><details><summary>O VENDE+ emite NFC-e e NF-e?</summary><p>Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, conferência da tributação dos produtos, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.</p></details><details><summary>O VENDE+ tem crediário?</summary><p>Sim. Crediário com vencimento escolhido ou sem vencimento, limite por cliente, carnê, duplicata e cobrança pelo WhatsApp, junto de contas a receber.</p></details><details><summary>O VENDE+ manda comprovante pelo WhatsApp?</summary><p>Sim, sem custo extra. Comprovante, orçamento e cobrança saem pelo WhatsApp da loja com o PDF anexo, em folha A4 ou no formato do cupom.</p></details><details><summary>Para que tipos de loja o VENDE+ serve?</summary><p>Moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama mesa e banho, varejo geral, celulares e acessórios, autopeças, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete, açaiteria, sorveteria e self-service por quilo.</p></details><details><summary>O VENDE+ serve para restaurante?</summary><p>Sim. O módulo Restaurante (R$ 96,90 por mês, somado à Entrada) atende restaurante, lanchonete e açaiteria com mesas e comandas, tela do garçom, tela da cozinha, entregas com tela do entregador, cardápio digital com QR Code e pedido online pelo link. Para self-service por quilo há o módulo Pesagem automática.</p></details><details><summary>Consigo trazer meus dados de outro sistema?</summary><p>Sim. Trazemos clientes, produtos e saldo de estoque a partir de uma planilha ou da exportação do seu sistema atual. A migração assistida não tem custo separado.</p></details><details><summary>Meus dados ficam seguros?</summary><p>Os dados ficam em servidor no Brasil, com cópia de segurança fora do servidor principal. Cada pessoa entra com a própria senha, o dono decide quem vê o quê, e o sistema tem proteção contra tentativas de invasão.</p></details><details><summary>Quem faz o VENDE+?</summary><p>A Maker System LTDA, CNPJ 68.949.287/0001-34, de Formoso do Araguaia (TO). Contato: contato@makersystem.com.br.</p></details></div><p style="margin-top:20px"><a href="/vende-mais/perguntas/">Ver todas as perguntas →</a></p></div></section>
-<section class="cta"><div class="wrap"><h2>Teste o VENDE+ na sua loja por 14 dias.</h2><p>Sem cartão, sem falar com vendedor, direto no navegador.</p>
-<a class="btn" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=pilar-final" data-ms="teste" data-ms-origem="pilar-final">Criar minha loja grátis</a></div></section>
+
+<section class="vh-hero">
+<div class="wrap vh-hero__g">
+<div class="vh-hero__t">
+<p class="vh-crumbs" data-in><a href="/">Maker System</a> › VENDE+</p>
+<p class="vh-eyebrow" data-in style="--d:80ms">VENDE+ by Maker System</p>
+<h1 class="vh-h1"><span class="k" data-in style="--d:120ms">Sistema de gestão e PDV para lojas.</span>
+<span class="b"><span class="w" style="--i:1">A</span> <span class="w" style="--i:2">loja</span> <span class="w" style="--i:3">inteira</span> <span class="w" style="--i:4">na</span> <span class="w" style="--i:5">mão</span> <span class="w" style="--i:6">de</span> <span class="u"><span class="w" style="--i:7">quem</span> <span class="w" style="--i:8">vende.</span><svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M4 14C70 5 160 3 296 10"/></svg></span></span></h1>
+<p class="vh-lead" data-in style="--d:700ms">Venda no balcão, no WhatsApp e na condicional, com estoque, financeiro e nota fiscal no mesmo lugar. E todo dia o VENDE+ mostra <strong>quem chamar, o que oferecer e por quê</strong>.</p>
+<div class="vh-ctas" data-in style="--d:820ms"><a class="btn" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=pilar-hero" data-ms="teste" data-ms-origem="pilar-hero">Testar 6 dias grátis <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn--line" href="#por-dentro">Ver o sistema por dentro</a></div>
+<ul class="vh-fine" data-in style="--d:920ms"><li>Sem cartão</li><li>Sem instalar</li><li>No celular ou no notebook</li></ul>
+</div>
+<div class="vh-stage" data-in style="--d:300ms" role="img" aria-label="Painel do VENDE+ com alertas da loja: venda finalizada, títulos vencidos para cobrar, condicional atrasada e comissão calculada.">
+<ul class="vh-burst" aria-hidden="true"><li class="on">Venda</li><li>Cobrança</li><li>Condicional</li><li>Comissão</li></ul>
+<div class="ui ui--side" aria-hidden="true">
+<aside class="ui-side"><img class="ui-logo" src="/img/vendemais-logo-branco.png" alt="" width="120" height="38"><div class="ui-store"><i>D</i><span>DEMO · Moda e Vestuário<small>Completo + Atende+</small></span></div><div class="ui-nav"><span>Vende+</span><span>Atende+</span><span class="on">Dashboard</span><span>Atendimento</span><span>Estoque</span><span>Fiscal</span><span>Financeiro</span><span>Funcionários</span></div></aside>
+<div class="ui-main">
+<div class="ui-top"><div><b>Dashboard</b><small>Visão geral da loja</small></div><span class="ui-btn"><svg class="ico"><use href="#i-cart"/></svg>Vender <kbd>F2</kbd></span></div>
+<div class="ui-kpis ui-kpis--4"><div class="ui-k"><small>Vendas de hoje</small><b>R$ 3.092,42</b><i>8 vendas no dia</i></div><div class="ui-k"><small>Ticket médio</small><b>R$ 383,27</b><i>2,1 peças/venda</i></div><div class="ui-k"><small>Em condicional</small><b>R$ 5.441,70</b><i>6 sacolas na rua</i></div><div class="ui-k"><small>A receber</small><b>R$ 25,6 mil</b><i class="r">R$ 3,8 mil vencido</i></div></div>
+<div class="ui-dash-g">
+<div class="ui-card"><header><b>Movimento dos últimos 14 dias</b><span class="ui-pill">R$ 23,0 mil</span></header><div class="ui-bars"><i style="--h:75%;--k:0"></i><i style="--h:62%;--k:1"></i><i style="--h:30%;--k:2"></i><i style="--h:3%;--k:3"></i><i style="--h:23%;--k:4"></i><i style="--h:16%;--k:5"></i><i style="--h:26%;--k:6"></i><i style="--h:22%;--k:7"></i><i style="--h:35%;--k:8"></i><i style="--h:23%;--k:9"></i><i style="--h:3%;--k:10"></i><i style="--h:95%;--k:11"></i><i style="--h:57%;--k:12"></i><i style="--h:72%;--k:13"></i></div></div>
+<div class="ui-card"><header><b>Meta da loja</b><small>35,6%</small></header><div class="ui-meta" style="--w:35.6%"><i></i></div><p style="font-size:10px;color:#64748B;margin-top:6px">R$ 14,9 mil de R$ 42,0 mil</p>
+<div class="ui-att" style="margin-top:10px"><div><span>Condicional #504 · 11 dias de atraso</span><span class="bd bd-red">atrasada</span></div><div><span>7 contas vencidas</span><span class="bd bd-amb">pagar</span></div><div><span>4 produtos com estoque baixo</span><span class="bd bd-sky">repor</span></div></div></div>
+</div>
+</div>
+</div>
+<div class="vh-notes" aria-hidden="true">
+<div class="nt nt--venda" data-p="0"><span class="ic"><svg class="ico"><use href="#i-cart"/></svg></span><div><b>Venda finalizada · R$ 415,36</b><span>Venda #2558 · 3 peças</span></div><em>PIX</em></div>
+<div class="nt nt--cob" data-p="3"><span class="ic"><svg class="ico"><use href="#i-alert"/></svg></span><div><b>R$ 8.374,27 já é seu e não entrou.</b><span>46 títulos vencidos de 16 clientes</span></div><em>Cobrar</em></div>
+<div class="nt nt--cond" data-p="2"><span class="ic"><svg class="ico"><use href="#i-bag"/></svg></span><div><b>Condicional #509 · 9 peças</b><span>Entrega vencida · 20 dias de atraso</span></div><em>Atrasada</em></div>
+<div class="nt nt--com" data-p="1"><span class="ic"><svg class="ico"><use href="#i-percent"/></svg></span><div><b>Comissão de R$ 10,38</b><span>2,5% sobre a venda #2558</span></div><em>Calculada</em></div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="vh-marq"><div class="vh-marq__t">
+<ul><li>Moda e vestuário</li><li>Autopeças e oficina</li><li>Restaurante e delivery</li><li>Casa agropecuária</li><li>Materiais de construção</li><li>Celular e informática</li><li>Variedades e bazar</li><li>Semijoias</li><li>Calçados</li><li>Açaiteria e sorveteria</li><li>Self-service por quilo</li><li>Perfumaria</li></ul>
+<ul aria-hidden="true"><li>Moda e vestuário</li><li>Autopeças e oficina</li><li>Restaurante e delivery</li><li>Casa agropecuária</li><li>Materiais de construção</li><li>Celular e informática</li><li>Variedades e bazar</li><li>Semijoias</li><li>Calçados</li><li>Açaiteria e sorveteria</li><li>Self-service por quilo</li><li>Perfumaria</li></ul>
+</div></div>
+
+<section class="vh-por" id="por-dentro" aria-labelledby="por-dentro-t">
+<div class="vh-sec" style="padding-bottom:28px"><div class="wrap">
+<p class="vh-kick" data-r>Por dentro do sistema</p>
+<h2 class="vh-h2" id="por-dentro-t" data-r>Do balcão ao lucro do mês, numa tela só.</h2>
+<p class="vh-p" data-r>Estas são as telas do VENDE+ como estão hoje, redesenhadas com os dados da loja de demonstração. Role e veja cada parte funcionando.</p>
+</div></div>
+<nav class="vh-chnav" aria-label="Partes do sistema"><div class="vh-chnav__in"><a href="#vender"><b>01</b> Vender</a><a href="#nao-perder"><b>02</b> Não perder a venda</a><a href="#vender-mais"><b>03</b> Vender mais</a><a href="#whatsapp"><b>04</b> WhatsApp</a><a href="#dinheiro"><b>05</b> Seu dinheiro</a><a href="#estoque"><b>06</b> Estoque e nota</a><a href="#qualquer-lugar"><b>07</b> De qualquer lugar</a></div><div class="vh-chnav__bar"></div></nav>
+<div class="vh-chs">
+
+<article class="vh-ch" id="vender" aria-labelledby="ch1">
+<div class="wrap vh-ch__g">
+<div class="vh-ch__t">
+<p class="vh-tag" data-r><b>01</b> Vender</p>
+<h2 id="ch1" data-r>Aperte F2 e venda de qualquer tela.</h2>
+<p data-r>O PDV abre de onde você estiver no sistema. A busca acha a peça por nome, referência, código de barras ou cor, e a grade de tamanho e cor já vem na linha da venda.</p>
+<ul class="vh-list" data-r>
+<li>Leitor de código de barras, também pela câmera do celular.</li>
+<li><strong>É presente?</strong> Um toque separa quem usa de quem paga, e o gosto de quem ganhou não entra no perfil de quem pagou.</li>
+<li>Desconto, várias formas de pagamento, troco, troca e devolução. PIX e maquininha Mercado Pago Point integrados.</li>
+<li>Atalhos de teclado no caixa: F3 escolhe o cliente e F9 finaliza a venda.</li>
+</ul>
+</div>
+<div class="vh-scr" data-r data-scene="pdv" role="img" aria-label="Tela do PDV do VENDE+: busca por camisa jeans, leitura do código de barras de uma calça, peças com cor e tamanho, venda marcada como presente e total de R$ 429,80.">
+<div class="vh-key" aria-hidden="true">F2</div>
+<div class="ui ui--side" aria-hidden="true">
+<aside class="ui-side"><img class="ui-logo" src="/img/vendemais-logo-branco.png" alt="" width="120" height="38" loading="lazy"><div class="ui-store"><i>D</i><span>DEMO · Moda e Vestuário<small>Completo + Atende+</small></span></div><div class="ui-nav"><span>Vende+</span><span>Atende+</span><span>Dashboard</span><span>Atendimento</span><span class="sub on">PDV — Frente de venda</span><span class="sub">Carrinhos</span><span class="sub">Condicionais</span><span class="sub">Orçamentos</span><span>Estoque</span></div></aside>
+<div class="ui-main">
+<div class="ui-top"><div><b>PDV — Frente de venda</b><small>Caixa aberto desde 08:55</small></div><div class="ui-acts"><span class="ui-btn ui-btn--w">Guardadas <kbd>3</kbd></span></div></div>
+<div class="pdv-row1"><div class="ui-field"><svg class="ico"><use href="#i-user"/></svg><div><small>Cliente · F3</small><b>Sérgio Cardoso</b></div></div><div class="ui-field"><div><small>Vendedor</small><b>Mariana Duarte</b></div></div></div>
+<div class="ui-search"><div class="ui-field"><svg class="ico"><use href="#i-search"/></svg><span class="ui-type" data-type="camisa jeans" data-ph="Nome, referência, código de barras ou cor da peça...">camisa jeans</span></div>
+<div class="ui-drop"><div><b>Camisa Jeans</b><small>REF1028 · Terracota · M · 3 em estoque</small><em>R$ 214,90</em></div><div><b>Camisa Jeans</b><small>REF1028 · Terracota · G · 2 em estoque</small><em>R$ 214,90</em></div><div><b>Camisa Oxford Slim</b><small>REF9002 · Branco · M · 4 em estoque</small><em>R$ 179,90</em></div></div></div>
+<div class="ui-tbl"><header><span>Itens da venda</span><span class="ui-pill" data-s="5">2 peças</span></header>
+<div class="ui-tr" data-s="3"><div class="p"><b>Camisa Jeans</b><small><span><i class="sw" style="background:#C2603E"></i>Terracota</span><span class="tam">M</span><span class="gift x6">é presente?</span><span class="gift on" data-s="6"><svg class="ico"><use href="#i-gift"/></svg>Presente · usa: Ana Martins</span></small></div><div class="v">R$ 214,90<small>1 un.</small></div></div>
+<div class="ui-tr" data-s="5"><div class="p"><b>Calça Mom</b><small><span><i class="sw" style="background:#9DBEDF"></i>Jeans Claro</span><span class="tam">42</span><span class="gift">é presente?</span></small></div><div class="v">R$ 214,90<small>1 un.</small></div></div>
+</div>
+<div class="pdv-bot"><div class="pdv-tip"><strong>F9</strong> finaliza · <strong>F2</strong> volta pra cá · clique em <strong>é presente?</strong> para separar quem usa de quem paga.</div>
+<div class="pdv-tot"><div><span>Subtotal</span><span data-tot>R$ 429,80</span></div><div class="t"><span>Total</span><b data-tot>R$ 429,80</b></div><div class="pdv-go"><svg class="ico"><use href="#i-check"/></svg>Finalizar venda <kbd>F9</kbd></div></div></div>
+</div>
+</div>
+<div class="vh-beep" aria-hidden="true"><i></i>7891234567890 · bipe</div>
+<p class="vh-scr__cap" aria-hidden="true">Exemplo com dados da loja de demonstração.</p>
+</div>
+</div>
+</article>
+
+<article class="vh-ch vh-ch--rev" id="nao-perder" aria-labelledby="ch2">
+<div class="wrap vh-ch__g">
+<div class="vh-ch__t">
+<p class="vh-tag" data-r><b>02</b> Não perder a venda</p>
+<h2 id="ch2" data-r>A venda que ficou para depois volta para a sua mão.</h2>
+<p data-r>Cliente foi buscar o cartão? Guarde a venda e retome quando ela voltar. Vai provar em casa? Mande em condicional, com prazo, cobrança e devolução.</p>
+<ul class="vh-list" data-r>
+<li>Venda guardada no PDV e orçamento com observação, como “Vai voltar depois do almoço”, prontos para virar venda.</li>
+<li><strong>Condicional:</strong> a sacola que a cliente leva para provar em casa e acerta depois. O prazo padrão é você quem define.</li>
+<li>As vencidas aparecem para cobrar e, na volta, você recebe as peças e o que ficou com a cliente vira venda.</li>
+<li>Carrinhos do catálogo online mostram o que a cliente montou e ainda não comprou, com o aviso “responda antes que esfrie”.</li>
+</ul>
+</div>
+<div class="vh-scr" data-r data-scene="cond" role="img" aria-label="Tela de Condicionais do VENDE+: 9 em aberto, R$ 5.441,70 em poder de clientes, condicional 509 com 20 dias de atraso e botões para receber as peças e cobrar.">
+<div class="ui ui--side" aria-hidden="true">
+<aside class="ui-side"><img class="ui-logo" src="/img/vendemais-logo-branco.png" alt="" width="120" height="38" loading="lazy"><div class="ui-store"><i>D</i><span>DEMO · Moda e Vestuário<small>Completo + Atende+</small></span></div><div class="ui-nav"><span>Vende+</span><span>Atende+</span><span>Dashboard</span><span>Atendimento</span><span class="sub">PDV — Frente de venda</span><span class="sub">Carrinhos</span><span class="sub on">Condicionais</span><span class="sub">Orçamentos</span><span>Estoque</span></div></aside>
+<div class="ui-main">
+<div class="ui-top"><div><b>Condicionais</b><small>9 em aberto · R$ 5.441,70 em poder de clientes.</small></div><div class="ui-acts"><span class="ui-btn">+ Nova condicional <kbd>F4</kbd></span><span class="ui-btn ui-btn--w hl">Cobrar vencidas</span></div></div>
+<div class="ui-kpis ui-kpis--4" data-s="1"><div class="ui-k"><small>Aguardando retirada</small><b>3</b><i>R$ 1.714,00</i></div><div class="ui-k"><small>Com o cliente</small><b>0</b><i>R$ 0,00</i></div><div class="ui-k"><small>Entrega vencida</small><b class="r">6</b><i>R$ 3.727,70</i></div><div class="ui-k"><small>Finalizadas</small><b class="g">6</b><i>R$ 2.778,70</i></div></div>
+<div class="ui-tbl">
+<div class="ui-tr cond-tr" data-s="2"><span class="cond-n">#509</span><div class="p"><b>Carolina F. Carvalho</b><small>9 peças · Rafael</small></div><div class="v">R$ 1.234,10<small><span class="bd bd-red">Entrega vencida</span></small></div></div>
+<div class="ui-tr cond-tr" data-s="3"><span class="cond-n">#504</span><div class="p"><b>Beatriz S. Rodrigues</b><small>1 peça · Juliana</small></div><div class="v">R$ 259,90<small><span class="bd bd-red">Entrega vencida</span></small></div></div>
+<div class="ui-tr cond-tr" data-s="3"><span class="cond-n">#501</span><div class="p"><b>Olivia M. Martins</b><small>3 peças · Juliana</small></div><div class="v">R$ 469,70<small><span class="bd bd-sky">Aguardando retirada</span></small></div></div>
+<div class="ui-tr cond-tr" data-s="3"><span class="cond-n">#510</span><div class="p"><b>Camila N. Oliveira</b><small>2 peças · vendeu R$ 529,80</small></div><div class="v">R$ 529,80<small><span class="bd bd-grn">Finalizada</span></small></div></div>
+</div>
+</div>
+</div>
+<div class="ui-float" data-s="4" aria-hidden="true"><header><b>Condicional #509</b><span class="bd bd-red">20 dias de atraso</span></header>
+<p style="font-size:10.5px;color:#64748B;margin:0 0 8px">Valor em poder do cliente <b style="color:#0F172A">R$ 1.234,10</b> · 9 peças</p>
+<ul class="tl"><li><span>Condicional criada</span></li><li><span>Peças retiradas pelo cliente</span></li><li class="late"><span>Previsão de entrega<small>passou do prazo</small></span></li></ul>
+<div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap"><span class="ui-btn">Receber peças <kbd>F4</kbd></span><span class="ui-btn ui-btn--w hl">Cobrar <kbd>ALT+W</kbd></span></div></div>
+<p class="vh-scr__cap" aria-hidden="true">Exemplo com dados da loja de demonstração.</p>
+</div>
+</div>
+</article>
+
+<article class="vh-ch" id="vender-mais" aria-labelledby="ch3">
+<div class="wrap vh-ch__g">
+<div class="vh-ch__t">
+<p class="vh-tag" data-r><b>03</b> Vender mais</p>
+<h2 id="ch3" data-r>Todo dia, quem chamar, o que oferecer e por quê.</h2>
+<p data-r>O VENDE+ cruza o ritmo de compra e o perfil de gosto de cada cliente com o seu estoque, e monta a fila de contato pela chance de virar venda. Cada linha traz a peça sugerida e o motivo por escrito.</p>
+<ul class="vh-list" data-r>
+<li>Quem sumiu, quem passou da hora de voltar e quem faz aniversário este mês.</li>
+<li><strong>Perfil de gosto</strong> aprendido com as compras: tamanho que veste, cores, faixa de preço, dia preferido e quem costuma presentear.</li>
+<li>Características que precisam combinar: o sistema não sugere capinha de Samsung para quem tem iPhone.</li>
+<li>Quem se cadastra no catálogo online para ver o preço vira cliente e passa a receber sugestão também.</li>
+</ul>
+<p class="vh-note" data-r>As sugestões não garantem venda: você escolhe quem chamar e conduz a conversa.</p>
+</div>
+<div class="vh-scr" data-r data-scene="gat" role="img" aria-label="Tela Vende+ com a fila de contato: Paulo com 92% de chance para a Calça Mom 42, Fábio com 91% e Sérgio com 89%, cada um com os motivos, e o perfil de gosto de uma cliente.">
+<div class="ui ui--side" aria-hidden="true">
+<aside class="ui-side"><img class="ui-logo" src="/img/vendemais-logo-branco.png" alt="" width="120" height="38" loading="lazy"><div class="ui-store"><i>D</i><span>DEMO · Moda e Vestuário<small>Completo + Atende+</small></span></div><div class="ui-nav"><span class="on">Vende+</span><span>Atende+</span><span>Dashboard</span><span>Atendimento</span><span>Estoque</span><span>Clientes</span><span>Financeiro</span></div></aside>
+<div class="ui-main">
+<div class="ui-top"><div><b>Vende+</b><small>O que oferecer, para quem e por quê — ordenado por chance de virar venda.</small></div><div class="ui-acts"><span class="ui-btn"><svg class="ico"><use href="#i-cart"/></svg>Vender agora <kbd>F2</kbd></span></div></div>
+<div class="ui-ban" data-s="1"><svg class="ico"><use href="#i-alert"/></svg><div><b>R$ 8.374,27 já é seu e não entrou.</b><small>46 títulos vencidos de 16 clientes · o mais antigo há 147 dias.</small></div><span class="ui-btn">Cobrar</span></div>
+<div class="ui-kpis" data-s="1"><div class="ui-k"><small>Oportunidades abertas</small><b>52</b><i>clientes para contatar</i></div><div class="ui-k"><small>Potencial na mesa</small><b>R$ 8.744,80</b><i>se todas fecharem</i></div></div>
+<div class="ui-tbl"><header><span>Fila de contato</span><span class="ui-tabs"><span class="on">Todos 52</span><span>Contato feito 0</span></span></header>
+<div class="gat-row" data-s="2"><div class="gat-ch"><b data-chance="92">92%</b><small>CHANCE</small></div><div class="gat-main"><div class="gat-who"><span class="ui-av" style="background:#6366F1">PR</span><div><b>Paulo Ribeiro Nascimento</b><small>há 17 dias · ritmo 16d</small></div></div><div class="gat-prod"><span class="bx"><svg class="ico"><use href="#i-bag"/></svg></span><span><b>Calça Mom</b> · Jeans Claro · tam 42 · R$ 214,90</span></div></div><div class="gat-why"><span class="chp">compra a cada 16 dias e já faz 17</span><span class="chp">é o tipo de peça que mais leva</span><span class="chp">jeans claro é a cor preferida</span></div><div class="gat-act"><span class="bd bd-sky">Aguardando contato</span><span class="ui-btn hl"><svg class="ico"><use href="#i-msg"/></svg>Enviar</span></div></div>
+<div class="gat-row" data-s="3"><div class="gat-ch"><b data-chance="91">91%</b><small>CHANCE</small></div><div class="gat-main"><div class="gat-who"><span class="ui-av" style="background:#0EA5E9">FS</span><div><b>Fábio Souza Gomes</b><small>há 24 dias · ritmo 16d</small></div></div><div class="gat-prod"><span class="bx"><svg class="ico"><use href="#i-bag"/></svg></span><span><b>Tênis Chunky</b> · Cinza Mescla · tam 37 · R$ 204,90</span></div></div><div class="gat-why"><span class="chp">passou da hora: costuma vir a cada 16 dias, já faz 24</span><span class="chp">cinza mescla é a cor preferida</span></div><div class="gat-act"><span class="bd bd-sky">Aguardando contato</span><span class="ui-btn"><svg class="ico"><use href="#i-msg"/></svg>Enviar</span></div></div>
+<div class="gat-row gat-row--x" data-s="3"><div class="gat-ch"><b data-chance="89">89%</b><small>CHANCE</small></div><div class="gat-main"><div class="gat-who"><span class="ui-av" style="background:#F59E0B">SC</span><div><b>Sérgio Carvalho Cardoso</b><small>há 32 dias · ritmo 19d</small></div></div><div class="gat-prod"><span class="bx"><svg class="ico"><use href="#i-bag"/></svg></span><span><b>Camisa Jeans</b> · Terracota · tam M · R$ 214,90</span></div></div><div class="gat-why"><span class="chp">passou da hora: costuma vir a cada 19 dias, já faz 32</span><span class="chp">terracota é a cor preferida</span></div><div class="gat-act"><span class="bd bd-sky">Aguardando contato</span><span class="ui-btn"><svg class="ico"><use href="#i-msg"/></svg>Enviar</span></div></div>
+</div>
+</div>
+</div>
+<div class="ui-float" data-s="5" aria-hidden="true"><header><b>Perfil de gosto</b><span class="bd bd-grn">Consolidado</span></header>
+<p style="font-size:10px;color:#64748B;margin:0 0 6px">Aprendido com 51 peças</p>
+<div class="prof-row"><span>Tamanho</span><b>costuma vestir 38</b></div>
+<div class="prof-row"><span>Cores que mais leva</span><span class="prof-sw"><i style="background:#F3EEE3"></i><i style="background:#DDB592"></i><i style="background:#1F2937"></i></span></div>
+<div class="prof-row"><span>Faixa por peça</span><b>R$ 135,98 média</b></div>
+<div class="prof-row"><span>Como compra</span><b>sexta · PIX</b></div>
+<div class="prof-row"><span>Costuma presentear</span><b>irmão / irmã</b></div></div>
+<p class="vh-scr__cap" aria-hidden="true">Exemplo com dados da loja de demonstração.</p>
+</div>
+</div>
+</article>
+
+<article class="vh-ch vh-ch--rev" id="whatsapp" aria-labelledby="ch4">
+<div class="wrap vh-ch__g">
+<div class="vh-ch__t">
+<p class="vh-tag" data-r><b>04</b> WhatsApp com Atende+</p>
+<h2 id="ch4" data-r>No WhatsApp, o robô responde pelo estoque.</h2>
+<p data-r>Com o Atende+, o WhatsApp da loja fica dentro do VENDE+ e é dividido entre a equipe. O robô responde sozinho com o estoque da loja, sem inteligência artificial, e chama alguém da equipe no que não souber.</p>
+<ul class="vh-list" data-r>
+<li>Produto, preço, tamanho e cor, com a foto do produto e o preço na legenda.</li>
+<li>Respostas prontas com o texto da loja: horário, endereço, pagamento e garantia.</li>
+<li>Desconto, troca, defeito, encomenda ou cliente pedindo uma pessoa: ele chama a equipe, e quem assume a conversa cala o robô nela.</li>
+<li>Fora do horário, avisa que a loja está fechada. E nada entra no robô sem o seu Sim.</li>
+<li>Assumir, transferir e resolver, respostas rápidas, etiquetas e o cliente da conversa ligado ao cadastro.</li>
+</ul>
+<p class="vh-note" data-r>Atende+ é um módulo opcional: R$ 64,90 por mês, com 1 número incluído.</p>
+</div>
+<div class="vh-scr" data-r data-scene="chat" role="img" aria-label="Conversa no Atende+: o cliente pede camisa M, o robô consulta o estoque e responde com as camisas e preços; o cliente pergunta se tem azul e o robô chama a equipe.">
+<div class="ui ui--side" aria-hidden="true">
+<aside class="ui-side"><img class="ui-logo" src="/img/vendemais-logo-branco.png" alt="" width="120" height="38" loading="lazy"><div class="ui-store"><i>D</i><span>DEMO · Moda e Vestuário<small>Completo + Atende+</small></span></div><div class="ui-nav"><span>Vende+</span><span class="on">Atende+</span><span>Dashboard</span><span>Atendimento</span><span>Estoque</span><span>Clientes</span></div></aside>
+<div class="ui-main">
+<div class="ui-top"><div><b>Atende+</b><small>WhatsApp da loja num lugar só</small></div><div class="ui-acts"><span class="ui-btn ui-btn--w">Respostas rápidas</span></div></div>
+<div class="chat">
+<div class="chat-list"><span class="ui-tabs"><span class="on">Todas</span><span>Sem dono</span><span>Minhas</span></span><div class="chat-it on"><b>Carlos</b><small>Quero camisa m</small><span class="bd bd-sky">Com o robô</span></div><div class="chat-it"><b>Yasmin</b><small>Separa a saia 38 pra mim?</small><span class="bd bd-grn">Minhas</span></div></div>
+<div class="chat-box">
+<div class="chat-h"><span class="ui-av" style="background:#6366F1">C</span><b>Carlos</b><span class="bd bd-sky">WhatsApp</span></div>
+<div class="chat-b">
+<div class="msg in" data-s="1">Quero camisa m<small>20:43</small></div>
+<span class="typing t1"><i></i><i></i><i></i></span>
+<div class="msg out" data-s="3">Encontrei aqui no estoque:<ul><li>Camisa Jeans — R$ 214,90 · tamanho M · cor Terracota</li><li>Camisa Linho — R$ 64,90 · tamanho M · cor Rosé</li></ul>Quer que alguém da loja separe pra você?<small>Robô · consultou o estoque · 20:43</small></div>
+<div class="msg in" data-s="4">Tem azul?<small>20:43</small></div>
+<span class="typing t2"><i></i><i></i><i></i></span>
+<div class="msg out" data-s="6">Vou chamar alguém da loja para te ajudar. Já já te respondem por aqui!<small>O robô chamou a equipe · 20:43</small></div>
+</div>
+<div class="chat-bar" data-s="7"><svg class="ico" style="width:14px;height:14px"><use href="#i-alert"/></svg>Ninguém assumiu esta conversa<span class="ui-btn hl">Assumir conversa</span></div>
+</div>
+</div>
+</div>
+</div>
+<p class="vh-scr__cap" aria-hidden="true">Mensagens do robô como aparecem no sistema, na loja de demonstração.</p>
+</div>
+</div>
+</article>
+
+<article class="vh-ch" id="dinheiro" aria-labelledby="ch5">
+<div class="wrap vh-ch__g">
+<div class="vh-ch__t">
+<p class="vh-tag" data-r><b>05</b> Seu dinheiro</p>
+<h2 id="ch5" data-r>O dinheiro que é seu aparece com o botão de cobrar.</h2>
+<p data-r>Contas a receber, crediário, caixa e comissão no mesmo lugar. E o DRE gerencial mostra quanto a loja lucrou de verdade no mês, sem planilha.</p>
+<ul class="vh-list" data-r>
+<li>Os títulos vencidos aparecem somados, com o botão Cobrar.</li>
+<li>Crediário com ou sem vencimento, limite por cliente, carnê e duplicata, e cobrança pelo WhatsApp com o PDF.</li>
+<li>Caixa do dia, contas a pagar e a receber e fluxo financeiro com saldo por conta e projeção do mês.</li>
+<li>DRE gerencial com receita, lucro bruto, margem e ponto de equilíbrio.</li>
+<li>Comissão e metas por vendedor, calculadas a cada venda.</li>
+</ul>
+</div>
+<div class="vh-scr" data-r data-scene="din" role="img" aria-label="Telas financeiras do VENDE+: DRE de setembro com receita líquida de R$ 30.538,67, lucro bruto de R$ 17.994,67 e margem de 58,9%; parcelas de crediário vencidas com o botão Cobrar vencidos; meta da loja em 35,6%.">
+<div class="ui ui--side" aria-hidden="true">
+<aside class="ui-side"><img class="ui-logo" src="/img/vendemais-logo-branco.png" alt="" width="120" height="38" loading="lazy"><div class="ui-store"><i>D</i><span>DEMO · Moda e Vestuário<small>Completo + Atende+</small></span></div><div class="ui-nav"><span>Vende+</span><span>Dashboard</span><span>Financeiro</span><span class="sub">Caixa</span><span class="sub">Fluxo financeiro</span><span class="sub on">DRE gerencial</span><span class="sub">Contas a receber</span><span>Funcionários</span></div></aside>
+<div class="ui-main">
+<div class="ui-top"><div><b>Financeiro</b><small>DRE gerencial, contas a receber e metas</small></div></div>
+<div class="din">
+<div class="ui-card" data-s="1"><header><b>DRE gerencial · Setembro de 2026</b></header>
+<div class="dre-g"><div><div class="dre-row"><span>Receita líquida <small style="color:#64748B">(83 vendas)</small></span><b data-money="30538.67">R$ 30.538,67</b></div><div class="dre-row"><span>(−) Custo das peças</span><b data-money="12544">R$ 12.544,00</b></div><div class="dre-row tot"><span>Lucro bruto</span><b class="g" data-money="17994.67">R$ 17.994,67</b></div></div>
+<div class="ring" data-ring="58.9"><span><b>58,9%</b><small>margem</small></span></div></div></div>
+<div class="ui-card" data-s="2"><header><b>Contas a receber</b><span class="ui-btn hl">Cobrar vencidos</span></header>
+<div class="par"><span>Crediário venda #2432 · parcela 1/3</span><small>venceu há 127 dias</small><span class="v">R$ 94,93<br><span class="bd bd-red">Vencido</span></span></div>
+<div class="par"><span>Crediário venda #2469 · parcela 1/3</span><small>05/05/2026</small><span class="v">R$ 92,27<br><span class="bd bd-grn">Pago</span></span></div></div>
+<div class="ui-card wide" data-s="3"><header><b>Meta da loja</b><small>35,6% · R$ 14,9 mil de R$ 42,0 mil</small></header><div class="ui-meta" style="--w:35.6%"><i></i></div>
+<p style="font-size:10.5px;color:#64748B;margin-top:8px">Comissão da venda #2558: <b style="color:#0F172A">R$ 10,38</b> (2,5%)</p></div>
+</div>
+</div>
+</div>
+<p class="vh-scr__cap" aria-hidden="true">Exemplo com dados da loja de demonstração.</p>
+</div>
+</div>
+</article>
+
+<article class="vh-ch vh-ch--rev" id="estoque" aria-labelledby="ch6">
+<div class="wrap vh-ch__g">
+<div class="vh-ch__t">
+<p class="vh-tag" data-r><b>06</b> Estoque e nota</p>
+<h2 id="ch6" data-r>Grade, custo e nota sem digitar duas vezes.</h2>
+<p data-r>Cada peça com grade de tamanho e cor e código de barras por tamanho. A nota de compra entra pelo XML e atualiza estoque e custo. Com o módulo Fiscal, NFC-e e NF-e saem no caixa, com a tributação conferida.</p>
+<ul class="vh-list" data-r>
+<li>Grade por tamanho, com aviso quando um tamanho está sem código de barras, para o leitor do PDV saber o que vendeu.</li>
+<li>O custo vem da entrada de mercadoria, por média ponderada, já com frete, IPI e ICMS-ST rateados.</li>
+<li>Descrição do produto escrita pelo VENDE+ a partir das características da peça.</li>
+<li>Etiquetas de preço com modelos prontos, inventário por contagem e curva ABC.</li>
+<li><strong>Conferência dos produtos:</strong> NCM, CEST, CSOSN/CST e CFOP comparados com a nota do fornecedor, explicados em português e corrigidos com um clique.</li>
+</ul>
+<a class="vh-more" data-r href="/vende-mais/nota-fiscal/">Ver o emissor de nota fiscal <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+</div>
+<div class="vh-scr" data-r data-scene="est" role="img" aria-label="Ficha do produto Vestido Floral Midi: 23 peças, preço R$ 219,90, margem 64,5%, grade PP 2, P 5, M 9, G 5 e GG 2, aviso de tamanho sem código de barras e a conferência fiscal dos produtos.">
+<div class="ui ui--side" aria-hidden="true">
+<aside class="ui-side"><img class="ui-logo" src="/img/vendemais-logo-branco.png" alt="" width="120" height="38" loading="lazy"><div class="ui-store"><i>D</i><span>DEMO · Moda e Vestuário<small>Completo + Atende+</small></span></div><div class="ui-nav"><span>Vende+</span><span>Atendimento</span><span>Estoque</span><span class="sub on">Produtos</span><span class="sub">Etiquetas de preço</span><span class="sub">Curva ABC</span><span>Fiscal</span><span class="sub">Conferência</span></div></aside>
+<div class="ui-main">
+<div class="ui-top"><div><b>Vestido Floral Midi</b><small>REF9001 · Azul · Luce · Vestido</small></div><div class="ui-acts"><span class="ui-btn ui-btn--w">Imprimir etiquetas <kbd>F9</kbd></span></div></div>
+<div class="ui-kpis ui-kpis--4" data-s="1"><div class="ui-k"><small>Em estoque</small><b>23 peças</b><i>mínimo 4</i></div><div class="ui-k"><small>Preço de venda</small><b>R$ 219,90</b><i>custo R$ 78,00</i></div><div class="ui-k"><small>Margem</small><b class="g">64,5%</b><i>R$ 141,90 por peça</i></div><div class="ui-k"><small>Já vendido</small><b>6 peças</b><i>R$ 1.262,22 em receita</i></div></div>
+<div class="ui-card"><header><b>Grade de tamanhos</b><small>clique para ajustar</small></header>
+<div class="grade"><div class="nc" data-s="2" style="--i:0"><b>PP</b><small>2 un</small><em>sem código</em></div><div data-s="2" style="--i:1"><b>P</b><small>5 un</small><em>sem código</em></div><div data-s="2" style="--i:2"><b>M</b><small>9 un</small><em>sem código</em></div><div data-s="2" style="--i:3"><b>G</b><small>5 un</small><em>sem código</em></div><div class="nc" data-s="2" style="--i:4"><b>GG</b><small>2 un</small><em>sem código</em></div></div>
+<div class="ui-info" data-s="3"><svg class="ico"><use href="#i-info"/></svg><span>Há grade sem código de barras. Sem ele o leitor do PDV não sabe o tamanho. <b class="hl" style="color:#0067C0;border-radius:6px;padding:0 3px">Gerar códigos</b></span></div></div>
+<div class="ui-card" data-s="4"><header><b>Conferência dos produtos</b><small>Fiscal</small></header>
+<div class="conf"><b>Camiseta algodão</b><span class="bd bd-red">Divergência</span><small>NCM diferente do que veio na nota do fornecedor. Fonte: XML da compra. Correção pronta.</small></div>
+<div class="conf"><b>Perfume 100 ml</b><span class="bd bd-amb">Atenção</span><small>Confira o CEST com o seu contador. Fonte: Convênio ICMS 142.</small></div></div>
+</div>
+</div>
+<p class="vh-scr__cap" aria-hidden="true">Exemplo com dados da loja de demonstração. A conferência sugere e explica; a responsabilidade pela tributação continua da loja e do contador.</p>
+</div>
+</div>
+</article>
+
+<article class="vh-ch vh-ch--full" id="qualquer-lugar" aria-labelledby="ch7">
+<div class="wrap vh-ch__g">
+<div class="vh-ch__t">
+<p class="vh-tag" data-r><b>07</b> De qualquer lugar</p>
+<h2 id="ch7" data-r>No celular ou no notebook, de qualquer lugar.</h2>
+<p data-r>O VENDE+ roda no navegador do computador, do tablet ou do celular, sem instalar nada. Se quiser, tem aplicativo Android e programas para Windows.</p>
+<a class="vh-more" data-r href="https://vendemais.makersystem.com.br/baixar">Baixar programas e aplicativo <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+<ul class="vh-list" data-r>
+<li>Aplicativo Android com PDV, inventário, fotos dos produtos, garçom, entregador e cozinha.</li>
+<li>VENDE+ PDV: o caixa em janela própria no Windows.</li>
+<li>CG Tray: impressão de cupom, etiqueta e A4, e a gaveta do caixa.</li>
+<li>VENDE+ Pesagem: a balança ligada ao computador.</li>
+<li>Até 20 usuários por loja, cada um com a sua senha, e um mesmo login acessa até 5 lojas.</li>
+</ul>
+</div>
+<div class="vh-scr" data-r>
+<div class="vh-phones">
+<figure class="vh-ph"><div><img src="/img/vende-mais/celular-dashboard.webp" width="526" height="1118" alt="Dashboard do VENDE+ no celular com vendas do dia, ticket médio e condicional" loading="lazy"></div><figcaption>Dashboard no celular</figcaption></figure>
+<figure class="vh-ph"><div><img src="/img/vende-mais/celular-fila-contato.webp" width="530" height="1132" alt="Fila de contato do Vende+ no celular com a chance de cada cliente comprar" loading="lazy"></div><figcaption>Fila de contato</figcaption></figure>
+<figure class="vh-ph"><div><img src="/img/vende-mais/celular-whatsapp-oferta.webp" width="610" height="1356" alt="Mensagem no WhatsApp oferecendo uma peça no tamanho da cliente" loading="lazy"></div><figcaption>Oferta pelo WhatsApp da loja</figcaption></figure>
+<figure class="vh-ph"><div><img src="/img/vende-mais/celular-contas-receber.webp" width="525" height="1115" alt="Contas a receber no celular com parcelas pagas e vencidas" loading="lazy"></div><figcaption>Contas a receber</figcaption></figure>
+<figure class="vh-ph"><div><img src="/img/vende-mais/celular-whatsapp-cobranca.webp" width="610" height="1356" alt="Cobrança de parcela pelo WhatsApp com as peças da compra" loading="lazy"></div><figcaption>Cobrança com as peças da compra</figcaption></figure>
+</div>
+<p class="vh-swipe" aria-hidden="true"><svg class="ico"><use href="#i-swipe"/></svg>Arraste para ver as telas</p>
+</div>
+</div>
+</article>
+
+</div>
+</section>
+
+<section class="vh-sec vh-sec--soft" id="segmentos" aria-labelledby="seg-t">
+<div class="wrap">
+<p class="vh-kick" data-r>Para cada tipo de loja</p>
+<h2 class="vh-h2" id="seg-t" data-r>Um sistema que muda de cara com o seu balcão.</h2>
+<p class="vh-p" data-r>Ao criar a loja, você escolhe o tipo. O cadastro, as características dos produtos e as telas seguem o seu ramo, e os recursos de cada balcão ficam à mão.</p>
+<div class="seg-tabs" role="tablist" aria-label="Tipos de loja">
+<button type="button" role="tab" id="t-moda" aria-controls="p-moda" aria-selected="true"><svg class="ico" aria-hidden="true"><use href="#i-shirt"/></svg>Moda</button>
+<button type="button" role="tab" id="t-auto" aria-controls="p-auto" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-car"/></svg>Autopeças</button>
+<button type="button" role="tab" id="t-rest" aria-controls="p-rest" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-food"/></svg>Restaurante</button>
+<button type="button" role="tab" id="t-agro" aria-controls="p-agro" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-sprout"/></svg>Agropecuária</button>
+<button type="button" role="tab" id="t-mat" aria-controls="p-mat" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-hammer"/></svg>Materiais</button>
+<button type="button" role="tab" id="t-cel" aria-controls="p-cel" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Celular</button>
+<button type="button" role="tab" id="t-var" aria-controls="p-var" aria-selected="false" tabindex="-1"><svg class="ico" aria-hidden="true"><use href="#i-store"/></svg>Variedades</button>
+</div>
+<div class="seg-panels">
+
+<div class="seg-p on" role="tabpanel" id="p-moda" aria-labelledby="t-moda">
+<div><h3><svg class="ico" aria-hidden="true"><use href="#i-shirt"/></svg>Moda e vestuário</h3><p class="vh-p">Para loja de roupas, calçados, semijoias, moda infantil e lingerie.</p>
+<ul class="vh-list"><li>Grade de tamanho e cor, com código de barras por tamanho.</li><li>Condicional com prazo, cobrança e devolução.</li><li>Perfil de gosto de cada cliente e o “é presente?” no PDV.</li><li>Gatilhos com a peça certa no tamanho que a cliente veste.</li></ul>
+<a class="vh-more" href="/vende-mais/loja-de-roupas/">Ver o VENDE+ para loja de roupas <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+<div class="vh-scr" aria-hidden="true"><div class="ui"><div class="ui-main">
+<div class="ui-top"><div><b>Vestido Floral Midi</b><small>Grade de tamanhos · 23 peças</small></div><span class="ui-btn ui-btn--w">Etiquetas <kbd>F9</kbd></span></div>
+<div class="grade"><div class="nc"><b>PP</b><small>2 un</small></div><div><b>P</b><small>5 un</small></div><div><b>M</b><small>9 un</small></div><div><b>G</b><small>5 un</small></div><div class="nc"><b>GG</b><small>2 un</small></div></div>
+<div class="ui-card"><header><b>Sacola do catálogo · Beatriz</b><span class="bd bd-amb">Separando</span></header><span class="chp">veste 38 · off white e nude · ~R$ 135,98</span></div>
+<div class="ui-tr cond-tr ui-card" style="padding:8px 10px"><span class="cond-n">#509</span><div class="p"><b>Condicional · 9 peças</b><small>R$ 1.234,10 com a cliente</small></div><span class="bd bd-red">Cobrar</span></div>
+</div></div></div>
+</div>
+
+<div class="seg-p" role="tabpanel" id="p-auto" aria-labelledby="t-auto">
+<div><h3><svg class="ico" aria-hidden="true"><use href="#i-car"/></svg>Autopeças e oficina</h3><p class="vh-p">Para autopeças, com ou sem oficina.</p>
+<ul class="vh-list"><li>Digite a placa: placa já conhecida preenche o veículo sozinha, e placa nova abre a Tabela FIPE.</li><li>Orçamento com serviço vira ordem de serviço, com as trilhas Comercial, Execução e Fiscal.</li><li>Checklist e até 8 fotos de entrada. No celular, o botão abre a câmera.</li><li>Aprovação registrada item a item, garantia dos serviços e comissão dos técnicos separada da de venda.</li></ul></div>
+<div class="vh-scr" aria-hidden="true"><div class="ui"><div class="ui-main">
+<div class="ui-top"><div><b>Ordem de serviço</b><small>Autopeças / oficina</small></div><span class="bd bd-sky">Pronto p/ retirar</span></div>
+<div class="ui-card" style="display:flex;gap:12px;align-items:center"><span class="plate"><small>BRASIL</small><span>ABC1D23</span></span><div><b style="font-size:12px">Veículo pela Tabela FIPE</b><p style="font-size:10.5px;color:#64748B">Placa nova abre a FIPE · placa conhecida preenche sozinha</p></div></div>
+<div class="trilhas"><div><span>Comercial · o cliente aceitou?</span><span class="bd bd-grn">Aprovado</span></div><div><span>Execução · andamento</span><span class="bd bd-sky">Pronto p/ retirar</span></div><div><span>Fiscal · o que foi faturado</span><span class="bd bd-amb">Não faturado</span></div></div>
+<div class="ui-card"><header><b>Checklist e fotos de entrada</b><small>até 8 fotos</small></header><div class="ck"><span>Arranhões e amassados</span><span>Nível de combustível</span><span>Estepe e macaco</span></div></div>
+</div></div></div>
+</div>
+
+<div class="seg-p" role="tabpanel" id="p-rest" aria-labelledby="t-rest">
+<div><h3><svg class="ico" aria-hidden="true"><use href="#i-food"/></svg>Restaurante e delivery</h3><p class="vh-p">Para restaurante, lanchonete, açaiteria, sorveteria e self-service por quilo.</p>
+<ul class="vh-list"><li>Mesas, comandas e delivery num painel só.</li><li>Tela da cozinha por setor, como Chapa, Forno e Bar, e tela do garçom no celular.</li><li>O pedido continua guardado no aparelho se a internet cair.</li><li>Cardápio digital com link e QR Code das mesas, e chamar entregador direto no celular dele.</li><li>Self-service por quilo com a Pesagem automática.</li></ul>
+<a class="vh-more" href="/vende-mais/restaurante/">Ver o VENDE+ para restaurante <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+<div class="vh-scr" aria-hidden="true"><div class="ui"><div class="ui-main">
+<div class="ui-top"><div><b>Atendimento</b><small>Restaurante / Mesas, comandas e delivery</small></div><span class="ui-btn">Novo atendimento <kbd>F2</kbd></span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="ui-tabs"><span class="on">Mesas 3</span><span>Comandas 1</span><span>Delivery 1</span></span><small style="font-size:10px;color:#64748B">47 livres · 3 ocupadas</small></div>
+<div class="mesas"><div class="oc"><b>01</b>2 pessoas<em>R$ 54,00</em></div><div><b>02</b>livre</div><div class="oc"><b>03</b>1 item<em>R$ 45,00</em></div><div class="oc"><b>04</b>4 pessoas<em>R$ 74,00</em></div><div><b>05</b>livre</div><div><b>06</b>livre</div></div>
+</div></div></div>
+</div>
+
+<div class="seg-p" role="tabpanel" id="p-agro" aria-labelledby="t-agro">
+<div><h3><svg class="ico" aria-hidden="true"><use href="#i-sprout"/></svg>Casa agropecuária</h3><p class="vh-p">Para casa agropecuária e loja de produtos veterinários.</p>
+<ul class="vh-list"><li>Receituário agronômico com agrônomo e CREA, cultura e praga, dose, carência e o saldo que falta retirar.</li><li>Venda pela receita, e receita veterinária anotada no PDV.</li><li>Embalagens vazias a devolver por produtor, com o prazo de um ano.</li><li>Perfil do produtor pela cultura: soja, milho, pasto.</li></ul></div>
+<div class="vh-scr" aria-hidden="true"><div class="ui"><div class="ui-main">
+<div class="ui-top"><div><b>Receita agronômica</b><small>Receituário agronômico</small></div><span class="bd bd-sky">Aberta</span></div>
+<div class="ui-card"><div class="prof-row"><span>Cultura</span><b>Soja · 24 ha</b></div><div class="prof-row"><span>Diagnóstico</span><b>Buva (Conyza bonariensis)</b></div><div class="prof-row"><span>Produto</span><b>Herbicida glifosato 480</b></div><div class="prof-row"><span>Dose</span><b>2,5 L/ha · carência 30 dias</b></div><div class="prof-row"><span>Saldo a retirar</span><b>5/5 GL</b></div></div>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span class="ui-btn">Vender por esta receita</span><span class="bd bd-amb">71 embalagens a devolver</span></div>
+</div></div></div>
+</div>
+
+<div class="seg-p" role="tabpanel" id="p-mat" aria-labelledby="t-mat">
+<div><h3><svg class="ico" aria-hidden="true"><use href="#i-hammer"/></svg>Materiais de construção</h3><p class="vh-p">Para material de construção, elétrica e hidráulica.</p>
+<ul class="vh-list"><li>Produtos em m², m³, metro e milheiro.</li><li>Quantidade fracionada no PDV: 1,5 metro, 2,5 caixas.</li><li>Orçamento de obra com observação, pronto para virar venda.</li><li>Características como a voltagem precisam combinar com o que o cliente já leva.</li></ul></div>
+<div class="vh-scr" aria-hidden="true"><div class="ui"><div class="ui-main">
+<div class="ui-top"><div><b>Orçamento de obra</b><small>Pedreiro vai conferir a lista</small></div><span class="ui-btn">Vender</span></div>
+<div class="ui-tbl"><div class="ui-tr"><div class="p"><b>PORCELANATO 60X60 ACETINADO (M²)</b><small>Piso e revestimento</small></div><div class="v">12,5 m²</div></div><div class="ui-tr"><div class="p"><b>AREIA MÉDIA (M³)</b><small>Material básico</small></div><div class="v">2 m³</div></div><div class="ui-tr"><div class="p"><b>TIJOLO CERÂMICO 8 FUROS (MILHEIRO)</b><small>Material básico</small></div><div class="v">1,5 milheiro</div></div><div class="ui-tr"><div class="p"><b>FIO FLEXÍVEL 2,5MM</b><small>Elétrica · vendido por metro</small></div><div class="v">1,5 m</div></div></div>
+</div></div></div>
+</div>
+
+<div class="seg-p" role="tabpanel" id="p-cel" aria-labelledby="t-cel">
+<div><h3><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Celular e informática</h3><p class="vh-p">Para loja de celulares, acessórios e informática.</p>
+<ul class="vh-list"><li>Usado na troca no PDV: tela, bateria, carcaça, caixa e Face ID dão o valor pela tabela da loja, com o IMEI do aparelho.</li><li>O valor abate da venda, e o aparelho entra no estoque como seminovo.</li><li>“Quanto vale o seu usado?” no catálogo online.</li><li>Garantia dos aparelhos com lembrete nos últimos 15 dias, e o aviso “Avise quando chegar”.</li></ul></div>
+<div class="vh-scr" aria-hidden="true"><div class="ui"><div class="ui-main">
+<div class="ui-top"><div><b>Adicionar usado na troca</b><small>Avaliar pela tabela da loja</small></div></div>
+<div class="ui-card"><div class="prof-row"><span>Tela</span><b>Sem trinco</b></div><div class="prof-row"><span>Bateria</span><b>Acima de 80%</b></div><div class="prof-row"><span>Carcaça</span><b>Sem arranhão</b></div><div class="prof-row"><span>Face ID, digital, câmeras</span><b>Funcionam</b></div><div class="prof-row"><span>IMEI</span><b>35 •••••• •••• 41</b></div></div>
+<div class="ui-card" style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span style="font-size:10.5px;color:#64748B">Valor da troca (abate da venda)<br><b style="font-size:15px;color:#0F172A">R$ 3.000,00</b></span><span class="bd bd-grn">entra como seminovo</span></div>
+</div></div></div>
+</div>
+
+<div class="seg-p" role="tabpanel" id="p-var" aria-labelledby="t-var">
+<div><h3><svg class="ico" aria-hidden="true"><use href="#i-store"/></svg>Variedades e bazar</h3><p class="vh-p">Para variedades, bazar, papelaria e utilidades.</p>
+<ul class="vh-list"><li>Gatilhos de quem sumiu, de quem passou da hora e de quem faz aniversário.</li><li>Perfil de cada cliente por tipo de produto.</li><li>Catálogo online com link de cada produto para mandar no privado, e quem se cadastra vira cliente.</li><li>Carrinhos do catálogo com o aviso “responda antes que esfrie”.</li></ul></div>
+<div class="vh-scr" aria-hidden="true"><div class="ui"><div class="ui-main">
+<div class="ui-top"><div><b>Vende+</b><small>Fila de contato</small></div><span class="ui-pill">40 oportunidades</span></div>
+<div class="ui-tbl"><div class="gat-row"><div class="gat-ch"><b>60%</b><small>CHANCE</small></div><div class="gat-main"><div class="gat-who"><span class="ui-av" style="background:#EC4899">PR</span><div><b>Patrícia Rodrigues Lima</b><small>há 38 dias · ritmo 14d</small></div></div><div class="gat-prod"><span class="bx"><svg class="ico"><use href="#i-box"/></svg></span><span><b>Pilha AA (cartela 4)</b> · R$ 24,90</span></div></div><div class="gat-why"><span class="chp">sumiu — comprava a cada 14 dias e faz 38</span><span class="chp">faz aniversário este mês (25/10)</span></div></div></div>
+<div class="ui-card" style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><span style="font-size:10.5px"><b>Carrinho do catálogo</b><br><span style="color:#64748B">esperando há 13 dias — responda antes que esfrie</span></span><span class="ui-btn">Fechar venda</span></div>
+</div></div></div>
+</div>
+
+</div>
+<p class="vh-also" data-r>Também atende cama, mesa e banho, perfumaria e outros varejos. Quer saber se serve para a sua loja? <a href="https://wa.me/5561999032545" data-zap="Olá! Quero saber se o VENDE+ serve para a minha loja." data-ms="whatsapp" data-ms-origem="pilar-segmentos">Pergunte no WhatsApp</a>.</p>
+</div>
+</section>
+
+<section class="vh-sec" id="preco" aria-labelledby="preco-t">
+<div class="wrap">
+<p class="vh-kick" data-r>Quanto custa</p>
+<h2 class="vh-h2" id="preco-t" data-r>Preço por loja, montado por módulo.</h2>
+<p class="vh-p" data-r>A Entrada (R$ 96,90) traz PDV, estoque, clientes, compras e financeiro. Você soma só o que a sua loja usa.</p>
+<div class="vh-facts">
+<div class="vh-fact" data-r><b><span data-num="6">6</span> <small>dias</small></b> <span>grátis para testar, sem cartão</span></div>
+<div class="vh-fact" data-r style="--d:.08s"><b data-num="20">20</b> <span>usuários por loja, sem cobrança por usuário</span></div>
+<div class="vh-fact" data-r style="--d:.16s"><b data-num="5">5</b> <span>lojas no mesmo login</span></div>
+<div class="vh-fact" data-r style="--d:.24s"><b>R$ 0</b> <span>por nota emitida ou por computador</span></div>
+</div>
+<div class="vh-plans">
+<article class="vh-plan vh-plan--hi" data-r><span class="tg">Plano indicado</span><h3>Loja de roupas e varejo</h3><p class="who">Moda, calçados, semijoias, celulares, autopeças, agropecuária, materiais e variedades.</p><p class="v">R$ 225,80<small>/mês</small></p><p class="sum">Entrada R$ 96,90 + Vende+ R$ 128,90</p>
+<ul class="vh-list"><li>PDV, estoque, compras e financeiro</li><li>Gatilhos de venda e perfil de gosto</li><li>Grade de cor e tamanho e condicional</li><li>Comissão e metas</li></ul>
+<a class="btn" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=pilar-preco" data-ms="teste" data-ms-origem="pilar-preco">Testar 6 dias grátis</a></article>
+<article class="vh-plan" data-r style="--d:.08s"><h3>Restaurante, lanchonete e açaiteria</h3><p class="who">Mesas, comandas, cozinha, entregas, cardápio digital e pedido online.</p><p class="v">R$ 193,80<small>/mês</small></p><p class="sum">Entrada R$ 96,90 + Restaurante R$ 96,90</p>
+<ul class="vh-list"><li>Tela do garçom e da cozinha</li><li>Cardápio digital com QR Code e pedido online</li><li>Entregas com tela do entregador</li><li>Conta dividida e comanda por setor</li></ul>
+<a class="btn btn--ghost" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=pilar-preco-restaurante" data-ms="teste" data-ms-origem="pilar-preco-restaurante">Testar 6 dias grátis</a></article>
+<article class="vh-plan" data-r style="--d:.16s"><h3>Self-service por quilo</h3><p class="who">Tudo do restaurante, com a balança ligada ao sistema.</p><p class="v">R$ 253,80<small>/mês</small></p><p class="sum">Entrada + Restaurante + Pesagem R$ 60,00</p>
+<ul class="vh-list"><li>Tela grande para o cliente com peso e valor</li><li>Comanda impressa na hora</li><li>Pesagem também sem internet</li></ul>
+<a class="btn btn--ghost" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=pilar-preco-quilo" data-ms="teste" data-ms-origem="pilar-preco-quilo">Testar 6 dias grátis</a></article>
+</div>
+<p class="vh-addons" data-r>Precisa de nota fiscal? Some o <a href="/vende-mais/nota-fiscal/">Fiscal</a> (R$ 48,90). Opcionais: Catálogo online (R$ 48,90) e Atende+ (R$ 64,90, com 1 número). O teste grátis libera Entrada, Vende+, Fiscal e Catálogo online. <a href="/vende-mais/precos/">Ver a tabela completa de preços</a>.</p>
+</div>
+</section>
+
+<section class="vh-sec vh-sec--soft" id="migrar" aria-labelledby="migrar-t">
+<div class="wrap">
+<p class="vh-kick" data-r>Trocar de sistema</p>
+<h2 class="vh-h2" id="migrar-t" data-r>Já usa outro sistema? A gente traz seus dados.</h2>
+<p class="vh-p" data-r>Clientes, produtos e saldo de estoque, a partir de uma planilha ou da exportação do sistema atual. A migração assistida não tem custo separado.</p>
+<ol class="vh-mig">
+<li data-r><b>Você manda o arquivo</b><span>Uma planilha ou a exportação do sistema que você usa hoje.</span></li>
+<li data-r style="--d:.08s"><b>A gente importa</b><span>Clientes, produtos e saldo de estoque entram no VENDE+.</span></li>
+<li data-r style="--d:.16s"><b>Você confere e vende</b><span>Com os cadastros no lugar, a loja segue vendendo no sistema novo.</span></li>
+</ol>
+<a class="vh-more" data-r href="/vende-mais/migrar/">Como funciona a migração <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+</div>
+</section>
+
+<section class="vh-sec vh-faq" id="perguntas" aria-labelledby="faq-t">
+<div class="wrap">
+<p class="vh-kick" data-r>Perguntas frequentes</p>
+<h2 class="vh-h2" id="faq-t" data-r>Sem dúvida no próximo passo.</h2>
+<div class="faq">
+<details><summary>Como faço para testar o VENDE+?</summary><p>Crie seu cadastro em vendemais.makersystem.com.br e monte sua loja. São 6 dias grátis, sem cartão e sem precisar falar com vendedor. O teste libera os módulos Entrada, Vende+, Fiscal e Catálogo online. Para casa de comida, ao criar a loja escolha o segmento &quot;Restaurante e lanchonete&quot;, &quot;Açaiteria e sorveteria&quot; ou &quot;Self-service por quilo&quot;: o teste já vem com o módulo Restaurante, e o self-service também com a Pesagem automática.</p></details><details><summary>Quanto custa o VENDE+?</summary><p>Para loja de roupas e varejo, o plano indicado é Entrada (R$ 96,90) + Vende+ (R$ 128,90): R$ 225,80 por mês. Restaurante, lanchonete e açaiteria: Entrada + Restaurante, R$ 193,80 por mês. Quem precisa de nota fiscal soma o Fiscal (R$ 48,90). Catálogo online, Pesagem automática e Atende+ são opcionais com preço próprio.</p></details><details><summary>O preço é por usuário ou por computador?</summary><p>Não. O preço é por loja: não há cobrança por usuário, por computador nem por nota emitida. Cada loja pode ter até 20 usuários, e um mesmo login acessa até 5 lojas.</p></details><details><summary>O que são os gatilhos de venda?</summary><p>São sugestões diárias de contato. O VENDE+ cruza o histórico de compras e o perfil de gosto de cada cliente com o estoque disponível e mostra quem chamar, o que oferecer e por quê. Você decide o contato e conduz a conversa; as sugestões não garantem venda.</p></details><details><summary>Preciso instalar alguma coisa?</summary><p>Não. O VENDE+ funciona direto no navegador do computador, tablet ou celular, com internet. Se quiser, há também o aplicativo Android e programas para Windows: o VENDE+ PDV (caixa em janela própria), o CG Tray (impressão de cupom, etiqueta e A4 e gaveta) e o VENDE+ Pesagem (balança). Os programas se atualizam sozinhos.</p></details><details><summary>O VENDE+ funciona no celular?</summary><p>Sim. O sistema abre no navegador do celular e há aplicativo Android, instalado pelo link de download, com os ícones de cada função (PDV, inventário, fotos dos produtos, garçom, entregador, cozinha). O leitor de código de barras também funciona pela câmera do celular.</p></details><details><summary>O VENDE+ emite NFC-e e NF-e?</summary><p>Sim, com o módulo Fiscal (R$ 48,90 por mês): NFC-e e NF-e com o certificado digital da própria loja, conferência da tributação dos produtos, carta de correção, cancelamento, busca automática das notas emitidas contra o seu CNPJ e Portal do Contador. Lojas que não emitem nota, como muitos MEI, podem usar o sistema sem esse módulo.</p></details><details><summary>O VENDE+ tem crediário?</summary><p>Sim. Crediário com vencimento escolhido ou sem vencimento, limite por cliente, carnê, duplicata e cobrança pelo WhatsApp, junto de contas a receber.</p></details><details><summary>O VENDE+ manda comprovante pelo WhatsApp?</summary><p>Sim, sem custo extra. Comprovante, orçamento e cobrança saem pelo WhatsApp da loja com o PDF anexo, em folha A4 ou no formato do cupom.</p></details><details><summary>O que o robô do Atende+ faz?</summary><p>O Atende+ coloca o WhatsApp da loja dentro do VENDE+, dividido entre a equipe. O robô responde sozinho com o estoque da loja, sem inteligência artificial: produto, preço, tamanho, cor e foto, além das respostas prontas da loja, como horário, endereço e pagamento. Em desconto, troca, defeito e encomenda, ou quando o cliente pede uma pessoa, ele chama alguém da equipe. O Atende+ custa R$ 64,90 por mês, com 1 número incluído.</p></details><details><summary>Para que tipos de loja o VENDE+ serve?</summary><p>Moda e vestuário, semijoias, calçados, moda infantil, lingerie, cama mesa e banho, varejo geral e variedades, celulares e informática, autopeças e oficina, materiais de construção, casa agropecuária (com receituário), perfumaria, restaurante, lanchonete, açaiteria, sorveteria e self-service por quilo.</p></details><details><summary>O VENDE+ serve para restaurante?</summary><p>Sim. O módulo Restaurante (R$ 96,90 por mês, somado à Entrada) atende restaurante, lanchonete e açaiteria com mesas e comandas, tela do garçom, tela da cozinha, entregas com tela do entregador, cardápio digital com QR Code e pedido online pelo link. Para self-service por quilo há o módulo Pesagem automática.</p></details><details><summary>Consigo trazer meus dados de outro sistema?</summary><p>Sim. Trazemos clientes, produtos e saldo de estoque a partir de uma planilha ou da exportação do seu sistema atual. A migração assistida não tem custo separado.</p></details><details><summary>Meus dados ficam seguros?</summary><p>Os dados ficam em servidor no Brasil, com cópia de segurança fora do servidor principal. Cada pessoa entra com a própria senha, o dono decide quem vê o quê, e o sistema tem proteção contra tentativas de invasão.</p></details><details><summary>Quem faz o VENDE+?</summary><p>A Maker System LTDA, CNPJ 68.949.287/0001-34, de Formoso do Araguaia (TO). Contato: contato@makersystem.com.br.</p></details>
+</div>
+<p style="margin-top:20px"><a href="/vende-mais/perguntas/">Ver todas as perguntas →</a></p>
+</div>
+</section>
+
+<section class="vh-final" id="comecar" aria-labelledby="final-t">
+<div class="vh-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="wrap">
+<p class="vh-eyebrow" data-r>6 dias grátis</p>
+<h2 id="final-t" data-r>Teste o VENDE+ na sua loja por 6 dias.</h2>
+<p data-r>O cadastro leva um minuto. Depois você cria sua loja e testa sem cartão e sem falar com vendedor, direto no navegador.</p>
+<div class="vh-ctas" data-r><a class="btn" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=pilar-final" data-ms="teste" data-ms-origem="pilar-final">Criar minha loja grátis <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+<a class="vh-zap" data-r href="https://wa.me/5561999032545" data-zap="Olá! Quero conhecer o VENDE+." data-ms="whatsapp" data-ms-origem="pilar-final">Prefere conversar antes? Fale no WhatsApp</a>
+</div>
+</section>
 </main>
 <footer class="ft"><div class="wrap"><div class="cols">
 <div><img src="/img/vendemais-logo-branco.png" alt="VENDE+" width="120" height="38" loading="lazy"><p>VENDE+ by Maker System: sistema de gestão e PDV para lojas. Mostra quem chamar, o que oferecer e por quê.</p></div>
@@ -58,7 +520,9 @@
 <div><h4>Começar</h4><ul><li><a href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=rodape" data-ms="teste" data-ms-origem="rodape">Criar minha loja grátis</a></li><li><a href="https://vendemais.makersystem.com.br/">Entrar no sistema</a></li><li><a href="https://vendemais.makersystem.com.br/baixar">Programas e aplicativo</a></li></ul></div>
 <div><h4>Maker System</h4><ul><li><a href="/sobre/">Quem somos</a></li><li><a href="/">Desenvolvimento de software</a></li><li><a href="mailto:contato@makersystem.com.br">contato@makersystem.com.br</a></li><li><a href="https://wa.me/5561999032545" data-ms="whatsapp" data-ms-origem="rodape">WhatsApp (61) 99903-2545</a></li><li><a href="/privacidade.html">Privacidade</a></li></ul></div>
 </div><p class="legal">© 2026 Maker System LTDA · CNPJ 68.949.287/0001-34 · Formoso do Araguaia/TO. VENDE+ é um produto da Maker System.</p></div></footer>
+<div class="vh-bar" id="vh-bar"><p><b>6 dias grátis</b>Sem cartão, no navegador</p><a class="btn" href="https://vendemais.makersystem.com.br/?cadastro=1&amp;origem=pilar-barra" data-ms="teste" data-ms-origem="pilar-barra">Testar agora</a></div>
 <script>(function(){var b=document.querySelector('.hd .menu'),n=document.getElementById('nav');if(b&&n)b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});})();</script>
 <script src="/assets/js/site.js" defer></script>
+<script src="/assets/js/vm-home.js?v=20261008" defer></script>
 </body>
 </html>
