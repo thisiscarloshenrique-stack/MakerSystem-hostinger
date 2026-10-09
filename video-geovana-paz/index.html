@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Dra. Geovana Paz · Vídeo institucional (stories)</title>
+<link rel="stylesheet" href="fonts.css">
+<style>
+  :root {
+    --ink: #202c3c;
+    --navy: #1d2a3c;
+    --navy-2: #233f61;
+    --blue: #2f537b;
+    --sky: #c4d5e9;
+    --accent: #8fb0d6;
+    --paper: #f3f5f8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #000; }
+  body { display: grid; place-items: center; min-height: 100vh; }
+  #stage {
+    position: relative; width: 1080px; height: 1920px; overflow: hidden;
+    background: var(--navy); font-family: 'Manrope', sans-serif; color: #fff;
+  }
+  .scene { position: absolute; inset: 0; overflow: hidden; }
+  .abs { position: absolute; }
+  .fill { position: absolute; inset: 0; }
+  .photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; will-change: transform; }
+  .label {
+    font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 26px;
+    letter-spacing: .34em; text-transform: uppercase;
+  }
+  .head { font-weight: 400; letter-spacing: -.035em; line-height: 1.04; }
+  .line { display: block; overflow: hidden; padding-bottom: .08em; }
+  .line > span { display: inline-block; will-change: transform; }
+  .center { left: 0; right: 0; text-align: center; }
+
+  /* S1 — abertura */
+  #s1 { background: radial-gradient(120% 70% at 50% 45%, #2f537b 0%, #1d2a3c 55%, #141c28 100%); }
+  #s1 .mark { top: 840px; font-weight: 300; font-size: 148px; letter-spacing: -.045em; }
+  #s1 .rule { top: 1040px; left: 50%; width: 260px; height: 2px; margin-left: -130px; background: var(--sky); transform-origin: center; }
+  #s1 .sub { top: 1080px; color: var(--sky); }
+  #s1 .kicker { top: 760px; color: var(--accent); font-size: 22px; }
+
+  /* S2 — "Além do sorriso" */
+  #s2 .shade { background: linear-gradient(180deg, rgba(20,28,40,0) 48%, rgba(20,28,40,.78) 70%, rgba(20,28,40,.96) 100%); }
+  #s2 .label { top: 1250px; left: 96px; color: var(--accent); }
+  #s2 .head { top: 1305px; left: 90px; font-size: 104px; }
+
+  /* S3 — "Um olhar por inteiro" */
+  #s3 { background: var(--paper); }
+  #s3 .arch {
+    top: 250px; left: 110px; width: 860px; height: 1060px; overflow: hidden;
+    border-radius: 430px 430px 28px 28px; background: #d9dde2;
+  }
+  #s3 .arch img { object-position: 50% 18%; }
+  #s3 .head { top: 1370px; font-size: 108px; color: var(--ink); }
+  #s3 .head .tint { color: var(--blue); }
+
+  /* S4 — áreas de atuação */
+  #s4 { background: radial-gradient(110% 60% at 80% 20%, #2a4a70 0%, #1d2a3c 60%, #141c28 100%); }
+  #s4 .label { top: 560px; left: 96px; color: var(--accent); }
+  #s4 .row { left: 96px; right: 96px; height: 250px; }
+  #s4 .row .num { position: absolute; top: 46px; left: 0; font-family: 'DM Sans', sans-serif; font-size: 26px; font-weight: 500; color: var(--accent); letter-spacing: .1em; }
+  #s4 .row .title { position: absolute; top: 80px; left: 0; font-size: 92px; font-weight: 300; letter-spacing: -.035em; }
+  #s4 .row .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: rgba(196,213,233,.35); transform-origin: left center; }
+  #s4 .r1 { top: 680px; } #s4 .r2 { top: 930px; } #s4 .r3 { top: 1180px; }
+
+  /* S5 — "Cuidar de você" */
+  #s5 { background: var(--paper); }
+  #s5 .photo { object-position: 50% 0%; }
+  #s5 .fade { background: linear-gradient(180deg, rgba(243,245,248,0) 50%, rgba(243,245,248,.92) 66%, #f3f5f8 76%); }
+  #s5 .head { top: 1330px; left: 90px; font-size: 104px; color: var(--ink); }
+  #s5 .head .tint { color: var(--blue); }
+
+  /* S6 — chamada final */
+  #s6 { background: radial-gradient(120% 70% at 50% 40%, #2f537b 0%, #1d2a3c 58%, #141c28 100%); }
+  #s6 .mark { top: 380px; font-weight: 300; font-size: 64px; letter-spacing: -.04em; }
+  #s6 .msub { top: 470px; color: var(--sky); font-size: 19px; }
+  #s6 .head { top: 800px; font-size: 132px; }
+  #s6 .pill {
+    top: 1190px; left: 50%; width: 740px; margin-left: -370px; height: 124px; border-radius: 999px;
+    background: var(--paper); color: var(--ink); display: flex; align-items: center; justify-content: center; gap: 22px;
+    font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 40px; letter-spacing: -.01em;
+    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  }
+  #s6 .pill svg { width: 52px; height: 52px; }
+  #s6 .ig {
+    top: 1360px; color: var(--sky); font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 36px;
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+  }
+  #s6 .ig svg { width: 40px; height: 40px; }
+  #s6 .cta-label { top: 730px; color: var(--accent); }
+
+  /* acabamento */
+  #grain { position: absolute; inset: 0; pointer-events: none; opacity: .07; mix-blend-mode: overlay; }
+  #vignette { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 80% at 50% 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,.28) 100%); }
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- S1 -->
+  <section class="scene" id="s1">
+    <div class="abs center label kicker">Dra.</div>
+    <div class="abs center mark">geovana paz</div>
+    <div class="abs rule"></div>
+    <div class="abs center label sub">Cirurgiã Bucomaxilofacial</div>
+  </section>
+
+  <!-- S2 -->
+  <section class="scene" id="s2">
+    <img class="photo" src="photos/geovana-contato-1280.webp" alt="">
+    <div class="fill shade"></div>
+    <div class="abs label">Dra. Geovana Paz</div>
+    <div class="abs head">
+      <span class="line"><span>Além do sorriso,</span></span>
+      <span class="line"><span>existe você.</span></span>
+    </div>
+  </section>
+
+  <!-- S3 -->
+  <section class="scene" id="s3">
+    <div class="abs arch"><img class="photo" src="photos/geovana-retrato-1280.webp" alt=""></div>
+    <div class="abs center head">
+      <span class="line"><span>Um olhar</span></span>
+      <span class="line"><span class="tint">por inteiro.</span></span>
+    </div>
+  </section>
+
+  <!-- S4 -->
+  <section class="scene" id="s4">
+    <div class="abs label">Áreas de atuação</div>
+    <div class="abs row r1"><span class="num">01</span><span class="line title"><span>Odontologia</span></span><i class="bar"></i></div>
+    <div class="abs row r2"><span class="num">02</span><span class="line title"><span>Bucomaxilofacial</span></span><i class="bar"></i></div>
+    <div class="abs row r3"><span class="num">03</span><span class="line title"><span>Estética facial</span></span><i class="bar"></i></div>
+  </section>
+
+  <!-- S5 -->
+  <section class="scene" id="s5">
+    <img class="photo" src="photos/geovana-perfil-1280.webp" alt="">
+    <div class="fill fade"></div>
+    <div class="abs head">
+      <span class="line"><span>Cuidar de você.</span></span>
+      <span class="line"><span class="tint">Em cada detalhe.</span></span>
+    </div>
+  </section>
+
+  <!-- S6 -->
+  <section class="scene" id="s6">
+    <div class="abs center mark">geovana paz</div>
+    <div class="abs center label msub">Cirurgiã Bucomaxilofacial</div>
+    <div class="abs center label cta-label">O próximo passo</div>
+    <div class="abs center head">
+      <span class="line"><span>Agende sua</span></span>
+      <span class="line"><span>avaliação.</span></span>
+    </div>
+    <div class="abs pill">
+      <svg viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+      (63) 8419-1565
+    </div>
+    <div class="abs center ig">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
+      @dentista.geovanapaz
+    </div>
+  </section>
+
+  <svg id="grain" width="1080" height="1920" aria-hidden="true">
+    <filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/></filter>
+    <rect width="100%" height="100%" filter="url(#n)"/>
+  </svg>
+  <div id="vignette"></div>
+</div>
+
+<script>
+// ---------------------------------------------------------------------------
+// Linha do tempo determinística: render(t) desenha o quadro exato do tempo t
+// (em segundos). O render.mjs chama render(t) quadro a quadro; abrindo a
+// página com ?play o vídeo toca em tempo real para pré-visualização.
+// ---------------------------------------------------------------------------
+const DURATION = 24.5;
+const FPS = 30;
+
+const E = {
+  linear: x => x,
+  out: x => 1 - Math.pow(1 - x, 3),
+  outExpo: x => (x >= 1 ? 1 : 1 - Math.pow(2, -10 * x)),
+  inOut: x => (x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2),
+  inOutQuint: x => (x < .5 ? 16 * x ** 5 : 1 - Math.pow(-2 * x + 2, 5) / 2),
+  in: x => x * x * x,
+};
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+const lerp = (a, b, p) => a + (b - a) * p;
+
+// tracks: [ [elemento, [[tempo, {props}, ease?], ...]], ... ]
+const tracks = [];
+function key(target, frames) {
+  const els = typeof target === 'string' ? document.querySelectorAll(target) : [target];
+  els.forEach(el => tracks.push([el, frames]));
+}
+const DEF = { o: 1, x: 0, y: 0, s: 1, blur: 0, ct: 0, cb: 0, cr: 0, sx: 1, ls: null };
+
+function sample(frames, t) {
+  const props = new Set(); frames.forEach(f => Object.keys(f[1]).forEach(k => props.add(k)));
+  const out = {};
+  for (const p of props) {
+    const ks = frames.filter(f => p in f[1]);
+    if (t <= ks[0][0]) { out[p] = ks[0][1][p]; continue; }
+    const last = ks[ks.length - 1];
+    if (t >= last[0]) { out[p] = last[1][p]; continue; }
+    for (let i = 0; i < ks.length - 1; i++) {
+      const a = ks[i], b = ks[i + 1];
+      if (t >= a[0] && t <= b[0]) {
+        const ease = E[b[2] || 'out'];
+        out[p] = lerp(a[1][p], b[1][p], ease(clamp((t - a[0]) / (b[0] - a[0]))));
+        break;
+      }
+    }
+  }
+  return out;
+}
+
+function apply(el, v) {
+  const q = Object.assign({}, DEF, v);
+  el.style.opacity = q.o;
+  el.style.transform = `translate(${q.x}px, ${q.y}px) scale(${q.s * q.sx}, ${q.s})`;
+  if ('sx' in v) el.style.transform = `translate(${q.x}px, ${q.y}px) scaleX(${q.sx})`;
+  el.style.filter = q.blur ? `blur(${q.blur}px)` : 'none';
+  if ('ct' in v || 'cb' in v || 'cr' in v) el.style.clipPath = `inset(${q.ct}% ${q.cr}% ${q.cb}% 0%)`;
+  if (q.ls !== null) el.style.letterSpacing = `${q.ls}em`;
+}
+
+// Revela linhas de texto por máscara (sobe de baixo), com escalonamento.
+function lines(scope, tIn, tOut, stagger = .13) {
+  document.querySelectorAll(`${scope} .line > span`).forEach((sp, i) => {
+    const a = tIn + i * stagger;
+    const frames = [[a, { y: 120, o: 1 }], [a + .95, { y: 0 }, 'outExpo']];
+    if (tOut != null) frames.push([tOut, { o: 1 }], [tOut + .35, { o: 0 }, 'linear']);
+    key(sp, frames);
+  });
+}
+
+// Transição entre cenas: a nova entra cortina de baixo pra cima, a anterior sobe em paralaxe.
+function scene(id, tIn, tOut, { wipe = .85 } = {}) {
+  const frames = [];
+  if (tIn > 0) frames.push([tIn, { ct: 100, y: 0 }], [tIn + wipe, { ct: 0 }, 'inOutQuint']);
+  if (tOut != null) frames.push([tOut, { y: 0 }], [tOut + wipe, { y: -260 }, 'inOutQuint']);
+  if (!frames.length) frames.push([0, { ct: 0 }]);
+  key(id, frames);
+}
+
+// ---------------------------- roteiro --------------------------------------
+// S1 abertura 0 – 3.4
+scene('#s1', 0, 3.1);
+key('#s1 .kicker', [[.2, { o: 0, y: 14 }], [1.0, { o: 1, y: 0 }]]);
+key('#s1 .mark', [[.25, { o: 0, blur: 18, ls: .06, s: .98 }], [1.7, { o: 1, blur: 0, ls: -.045, s: 1 }, 'outExpo']]);
+key('#s1 .rule', [[.9, { sx: 0 }], [1.9, { sx: 1 }, 'outExpo']]);
+key('#s1 .sub', [[1.2, { o: 0, y: 16 }], [2.1, { o: 1, y: 0 }]]);
+
+// S2 "Além do sorriso, existe você." 3.1 – 7.6
+scene('#s2', 3.1, 7.3);
+key('#s2 .photo', [[3.1, { s: 1.16 }], [8.2, { s: 1.02 }, 'linear']]);
+key('#s2 .label', [[3.9, { o: 0, x: -20 }], [4.7, { o: 1, x: 0 }], [7.0, { o: 1 }], [7.35, { o: 0 }, 'linear']]);
+lines('#s2', 4.05, 7.0);
+
+// S3 "Um olhar por inteiro." 7.3 – 11.9
+scene('#s3', 7.3, 11.6);
+key('#s3 .arch', [[7.6, { ct: 100, s: .96 }], [8.9, { ct: 0, s: 1 }, 'inOutQuint']]);
+key('#s3 .arch img', [[7.6, { s: 1.22, y: 40 }], [12.4, { s: 1.04, y: 0 }, 'out']]);
+lines('#s3', 8.55, 11.3);
+
+// S4 Áreas de atuação 11.6 – 16.3
+scene('#s4', 11.6, 16.0);
+key('#s4 .label', [[12.3, { o: 0, x: -20 }], [13.0, { o: 1, x: 0 }], [15.7, { o: 1 }], [16.05, { o: 0 }, 'linear']]);
+['.r1', '.r2', '.r3'].forEach((r, i) => {
+  const a = 12.5 + i * .42;
+  key(`#s4 ${r} .num`, [[a, { o: 0, y: 12 }], [a + .6, { o: 1, y: 0 }], [15.7, { o: 1 }], [16.05, { o: 0 }, 'linear']]);
+  key(`#s4 ${r} .title > span`, [[a + .05, { y: 130 }], [a + 1.05, { y: 0 }, 'outExpo'], [15.7, { o: 1 }], [16.05, { o: 0 }, 'linear']]);
+  key(`#s4 ${r} .bar`, [[a + .2, { sx: 0 }], [a + 1.3, { sx: 1 }, 'outExpo']]);
+});
+
+// S5 "Cuidar de você. Em cada detalhe." 16.0 – 20.6
+scene('#s5', 16.0, 20.3);
+key('#s5 .photo', [[16.0, { s: 1.0, y: 0 }], [21.2, { s: 1.09, y: 30 }, 'linear']]);
+lines('#s5', 16.95, 20.0);
+
+// S6 Chamada final 20.3 – fim
+scene('#s6', 20.3, null);
+key('#s6 .mark', [[20.9, { o: 0, y: -14 }], [21.7, { o: 1, y: 0 }]]);
+key('#s6 .msub', [[21.1, { o: 0 }], [21.9, { o: 1 }]]);
+key('#s6 .cta-label', [[21.2, { o: 0, y: 12 }], [21.9, { o: 1, y: 0 }]]);
+lines('#s6', 21.3);
+key('#s6 .pill', [[22.0, { o: 0, y: 40, s: .94 }], [22.9, { o: 1, y: 0, s: 1 }, 'outExpo']]);
+key('#s6 .ig', [[22.35, { o: 0, y: 20 }], [23.2, { o: 1, y: 0 }]]);
+
+// Brilho que respira no botão (depois da entrada).
+const pill = document.querySelector('#s6 .pill');
+
+function render(t) {
+  for (const [el, frames] of tracks) apply(el, sample(frames, t));
+  // Cenas fora da janela ficam ocultas (economiza render e evita vazamentos).
+  const win = { s1: [0, 4.0], s2: [3.1, 8.2], s3: [7.3, 12.5], s4: [11.6, 16.9], s5: [16.0, 21.2], s6: [20.3, 99] };
+  for (const id in win) {
+    const [a, b] = win[id];
+    document.getElementById(id).style.visibility = t >= a && t <= b ? 'visible' : 'hidden';
+  }
+  // Ordem de empilhamento: a cena mais recente fica por cima.
+  ['s1', 's2', 's3', 's4', 's5', 's6'].forEach((id, i) => (document.getElementById(id).style.zIndex = i + 1));
+  if (t > 22.9) {
+    const k = (Math.sin((t - 22.9) * 3.2) + 1) / 2;
+    pill.style.boxShadow = `0 20px 60px rgba(0,0,0,.35), 0 0 0 ${6 + k * 14}px rgba(196,213,233,${.22 - k * .16})`;
+  } else pill.style.boxShadow = '0 20px 60px rgba(0,0,0,.35)';
+}
+
+window.DURATION = DURATION; window.FPS = FPS; window.render = render;
+window.ready = Promise.all([
+  document.fonts.ready,
+  ...[...document.images].map(i => i.decode().catch(() => {})),
+]);
+
+render(0);
+if (location.search.includes('play')) {
+  const t0 = performance.now();
+  const loop = () => { const t = ((performance.now() - t0) / 1000) % DURATION; render(t); requestAnimationFrame(loop); };
+  requestAnimationFrame(loop);
+} else if (location.search.includes('t=')) {
+  render(parseFloat(new URLSearchParams(location.search).get('t')));
+}
+</script>
+</body>
+</html>
